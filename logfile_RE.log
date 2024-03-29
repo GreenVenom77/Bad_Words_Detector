@@ -1,0 +1,762 @@
+ 2023-04-25 15:26:15,831 INFO     Main: run in threads
+ 2023-04-25 15:26:15,831 INFO     Initializing RarFile object...
+ 2023-04-25 15:26:15,831 INFO     RarFile object initialized successfully.
+ 2023-04-25 15:26:15,885 INFO     00:00:00.05  Producer: start reading chunks.
+ 2023-04-25 15:26:15,885 INFO     00:00:00.05  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 15:26:17,849 INFO     00:00:02.02  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 15:26:19,308 INFO     00:00:03.48  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 15:26:20,557 INFO     00:00:04.73  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 15:26:21,956 INFO     00:00:06.12  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 15:26:22,920 INFO     00:00:07.09  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 15:26:24,238 INFO     00:00:08.41  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 15:26:25,535 INFO     00:00:09.70  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 15:26:26,992 INFO     00:00:11.16  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 15:26:27,602 INFO     00:00:11.77  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 15:26:29,054 INFO     00:00:13.22  Producer:read 10 chunks and send it into queue.
+ 2023-04-25 15:26:30,260 INFO     00:00:14.43  Producer:read 11 chunks and send it into queue.
+ 2023-04-25 15:26:31,965 INFO     00:00:16.13  Producer:read 12 chunks and send it into queue.
+ 2023-04-25 15:26:33,392 INFO     00:00:17.56  Producer:read 13 chunks and send it into queue.
+ 2023-04-25 15:26:34,423 INFO     00:00:18.59  Producer:read 14 chunks and send it into queue.
+ 2023-04-25 15:26:35,595 INFO     00:00:19.76  Producer:read 15 chunks and send it into queue.
+ 2023-04-25 15:26:36,720 INFO     00:00:20.89  Producer:read 16 chunks and send it into queue.
+ 2023-04-25 15:26:37,876 INFO     00:00:22.04  Producer:read 17 chunks and send it into queue.
+ 2023-04-25 15:26:38,476 INFO     00:00:22.64  Producer:read 18 chunks and send it into queue.
+ 2023-04-25 15:26:38,511 INFO     00:00:22.68  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 15:26:38,751 INFO     00:00:22.92  Producer:read 19 chunks and send it into queue.
+ 2023-04-25 15:26:39,944 INFO     00:00:24.11  Producer:read 20 chunks and send it into queue.
+ 2023-04-25 15:26:40,882 INFO     00:00:25.05  Producer:read 21 chunks and send it into queue.
+ 2023-04-25 15:26:42,116 INFO     00:00:26.28  Producer:read 22 chunks and send it into queue.
+ 2023-04-25 15:26:43,116 INFO     00:00:27.28  Producer:read 23 chunks and send it into queue.
+ 2023-04-25 15:26:44,444 INFO     00:00:28.61  Producer:read 24 chunks and send it into queue.
+ 2023-04-25 15:26:45,725 INFO     00:00:29.89  Producer:read 25 chunks and send it into queue.
+ 2023-04-25 15:26:46,835 INFO     00:00:31.00  Producer:read 26 chunks and send it into queue.
+ 2023-04-25 15:26:48,085 INFO     00:00:32.25  Producer:read 27 chunks and send it into queue.
+ 2023-04-25 15:26:49,038 INFO     00:00:33.21  Producer:read 28 chunks and send it into queue.
+ 2023-04-25 15:26:50,147 INFO     00:00:34.32  Producer:read 29 chunks and send it into queue.
+ 2023-04-25 15:26:50,975 INFO     00:00:35.14  Producer:read 30 chunks and send it into queue.
+ 2023-04-25 15:26:52,194 INFO     00:00:36.36  Producer:read 31 chunks and send it into queue.
+ 2023-04-25 15:26:53,303 INFO     00:00:37.47  Producer:read 32 chunks and send it into queue.
+ 2023-04-25 15:26:54,085 INFO     00:00:38.25  Producer:read 33 chunks and send it into queue.
+ 2023-04-25 15:26:55,191 INFO     00:00:39.36  Producer:read 34 chunks and send it into queue.
+ 2023-04-25 15:26:56,004 INFO     00:00:40.17  Producer:read 35 chunks and send it into queue.
+ 2023-04-25 15:26:57,176 INFO     00:00:41.34  Producer:read 36 chunks and send it into queue.
+ 2023-04-25 15:26:58,004 INFO     00:00:42.17  Producer:read 37 chunks and send it into queue.
+ 2023-04-25 15:26:58,265 INFO     00:00:42.43  Producer:read 38 chunks and send it into queue.
+ 2023-04-25 15:26:58,294 INFO     00:00:42.46  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 15:26:58,738 INFO     00:00:42.91  Producer:read 39 chunks and send it into queue.
+ 2023-04-25 15:26:59,694 INFO     00:00:43.86  Producer:read 40 chunks and send it into queue.
+ 2023-04-25 15:27:00,866 INFO     00:00:45.03  Producer:read 41 chunks and send it into queue.
+ 2023-04-25 15:27:01,835 INFO     00:00:46.00  Producer:read 42 chunks and send it into queue.
+ 2023-04-25 15:27:02,882 INFO     00:00:47.05  Producer:read 43 chunks and send it into queue.
+ 2023-04-25 15:27:04,100 INFO     00:00:48.27  Producer:read 44 chunks and send it into queue.
+ 2023-04-25 15:27:05,069 INFO     00:00:49.24  Producer:read 45 chunks and send it into queue.
+ 2023-04-25 15:27:06,350 INFO     00:00:50.52  Producer:read 46 chunks and send it into queue.
+ 2023-04-25 15:27:07,210 INFO     00:00:51.38  Producer:read 47 chunks and send it into queue.
+ 2023-04-25 15:27:08,303 INFO     00:00:52.47  Producer:read 48 chunks and send it into queue.
+ 2023-04-25 15:27:09,272 INFO     00:00:53.44  Producer:read 49 chunks and send it into queue.
+ 2023-04-25 15:27:10,506 INFO     00:00:54.68  Producer:read 50 chunks and send it into queue.
+ 2023-04-25 15:27:11,725 INFO     00:00:55.89  Producer:read 51 chunks and send it into queue.
+ 2023-04-25 15:27:12,725 INFO     00:00:56.89  Producer:read 52 chunks and send it into queue.
+ 2023-04-25 15:27:13,803 INFO     00:00:57.97  Producer:read 53 chunks and send it into queue.
+ 2023-04-25 15:27:14,585 INFO     00:00:58.75  Producer:read 54 chunks and send it into queue.
+ 2023-04-25 15:27:15,663 INFO     00:00:59.83  Producer:read 55 chunks and send it into queue.
+ 2023-04-25 15:27:16,444 INFO     00:01:00.61  Producer:read 56 chunks and send it into queue.
+ 2023-04-25 15:27:17,428 INFO     00:01:01.60  Producer:read 57 chunks and send it into queue.
+ 2023-04-25 15:27:18,076 INFO     00:01:02.24  Producer:read 58 chunks and send it into queue.
+ 2023-04-25 15:27:18,106 INFO     00:01:02.27  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 15:27:18,471 INFO     00:01:02.64  Producer:read 59 chunks and send it into queue.
+ 2023-04-25 15:27:19,647 INFO     00:01:03.82  Producer:read 60 chunks and send it into queue.
+ 2023-04-25 15:27:20,710 INFO     00:01:04.88  Producer:read 61 chunks and send it into queue.
+ 2023-04-25 15:27:21,803 INFO     00:01:05.97  Producer:read 62 chunks and send it into queue.
+ 2023-04-25 15:27:22,991 INFO     00:01:07.16  Producer:read 63 chunks and send it into queue.
+ 2023-04-25 15:27:23,788 INFO     00:01:07.96  Producer:read 64 chunks and send it into queue.
+ 2023-04-25 15:27:24,866 INFO     00:01:09.03  Producer:read 65 chunks and send it into queue.
+ 2023-04-25 15:27:25,819 INFO     00:01:09.99  Producer:read 66 chunks and send it into queue.
+ 2023-04-25 15:27:26,928 INFO     00:01:11.10  Producer:read 67 chunks and send it into queue.
+ 2023-04-25 15:27:27,756 INFO     00:01:11.93  Producer:read 68 chunks and send it into queue.
+ 2023-04-25 15:27:28,647 INFO     00:01:12.82  Producer:read 69 chunks and send it into queue.
+ 2023-04-25 15:27:29,694 INFO     00:01:13.86  Producer:read 70 chunks and send it into queue.
+ 2023-04-25 15:27:30,475 INFO     00:01:14.64  Producer:read 71 chunks and send it into queue.
+ 2023-04-25 15:27:31,647 INFO     00:01:15.82  Producer:read 72 chunks and send it into queue.
+ 2023-04-25 15:27:32,506 INFO     00:01:16.67  Producer:read 73 chunks and send it into queue.
+ 2023-04-25 15:27:33,397 INFO     00:01:17.57  Producer:read 74 chunks and send it into queue.
+ 2023-04-25 15:27:34,258 INFO     00:01:18.43  Producer:read 75 chunks and send it into queue.
+ 2023-04-25 15:27:35,289 INFO     00:01:19.46  Producer:read 76 chunks and send it into queue.
+ 2023-04-25 15:27:36,289 INFO     00:01:20.46  Producer:read 77 chunks and send it into queue.
+ 2023-04-25 15:27:37,133 INFO     00:01:21.30  Producer:read 78 chunks and send it into queue.
+ 2023-04-25 15:27:37,835 INFO     00:01:22.00  Producer:read 79 chunks and send it into queue.
+ 2023-04-25 15:27:37,881 INFO     00:01:22.05  Producer:read 80 chunks and send it into queue.
+ 2023-04-25 15:27:37,881 INFO     00:01:22.05  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 15:27:38,856 INFO     00:01:23.03  Producer:read 81 chunks and send it into queue.
+ 2023-04-25 15:27:39,966 INFO     00:01:24.13  Producer:read 82 chunks and send it into queue.
+ 2023-04-25 15:27:40,919 INFO     00:01:25.09  Producer:read 83 chunks and send it into queue.
+ 2023-04-25 15:27:42,169 INFO     00:01:26.34  Producer:read 84 chunks and send it into queue.
+ 2023-04-25 15:27:43,091 INFO     00:01:27.26  Producer:read 85 chunks and send it into queue.
+ 2023-04-25 15:27:44,404 INFO     00:01:28.57  Producer:read 86 chunks and send it into queue.
+ 2023-04-25 15:27:45,436 INFO     00:01:29.60  Producer:read 87 chunks and send it into queue.
+ 2023-04-25 15:27:46,529 INFO     00:01:30.70  Producer:read 88 chunks and send it into queue.
+ 2023-04-25 15:27:47,685 INFO     00:01:31.85  Producer:read 89 chunks and send it into queue.
+ 2023-04-25 15:27:48,576 INFO     00:01:32.74  Producer:read 90 chunks and send it into queue.
+ 2023-04-25 15:27:49,779 INFO     00:01:33.95  Producer:read 91 chunks and send it into queue.
+ 2023-04-25 15:27:50,638 INFO     00:01:34.81  Producer:read 92 chunks and send it into queue.
+ 2023-04-25 15:27:51,732 INFO     00:01:35.90  Producer:read 93 chunks and send it into queue.
+ 2023-04-25 15:27:52,560 INFO     00:01:36.73  Producer:read 94 chunks and send it into queue.
+ 2023-04-25 15:27:53,560 INFO     00:01:37.73  Producer:read 95 chunks and send it into queue.
+ 2023-04-25 15:27:54,638 INFO     00:01:38.81  Producer:read 96 chunks and send it into queue.
+ 2023-04-25 15:27:55,482 INFO     00:01:39.65  Producer:read 97 chunks and send it into queue.
+ 2023-04-25 15:27:56,654 INFO     00:01:40.82  Producer:read 98 chunks and send it into queue.
+ 2023-04-25 15:27:57,466 INFO     00:01:41.64  Producer:read 99 chunks and send it into queue.
+ 2023-04-25 15:27:57,673 INFO     00:01:41.84  Producer:read 100 chunks and send it into queue.
+ 2023-04-25 15:27:57,673 INFO     00:01:41.84  Producer: finish reading all chunks.
+ 2023-04-25 15:27:57,690 INFO     00:01:41.86  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 15:28:16,913 INFO     00:02:01.08  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 15:28:36,264 INFO     00:02:20.43  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 15:28:56,428 INFO     00:02:40.60  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 15:29:16,054 INFO     00:03:00.22  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 15:29:35,718 INFO     00:03:19.89  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 15:29:55,445 INFO     00:03:39.61  Consumer: finish filtering and writing the chunk number 11
+ 2023-04-25 15:30:15,191 INFO     00:03:59.36  Consumer: finish filtering and writing the chunk number 12
+ 2023-04-25 15:30:34,792 INFO     00:04:18.96  Consumer: finish filtering and writing the chunk number 13
+ 2023-04-25 15:30:54,010 INFO     00:04:38.18  Consumer: finish filtering and writing the chunk number 14
+ 2023-04-25 15:31:13,282 INFO     00:04:57.45  Consumer: finish filtering and writing the chunk number 15
+ 2023-04-25 15:31:32,583 INFO     00:05:16.75  Consumer: finish filtering and writing the chunk number 16
+ 2023-04-25 15:31:51,878 INFO     00:05:36.05  Consumer: finish filtering and writing the chunk number 17
+ 2023-04-25 15:32:11,213 INFO     00:05:55.38  Consumer: finish filtering and writing the chunk number 18
+ 2023-04-25 15:32:30,438 INFO     00:06:14.61  Consumer: finish filtering and writing the chunk number 19
+ 2023-04-25 15:32:49,734 INFO     00:06:33.90  Consumer: finish filtering and writing the chunk number 20
+ 2023-04-25 15:33:09,268 INFO     00:06:53.44  Consumer: finish filtering and writing the chunk number 21
+ 2023-04-25 15:33:28,482 INFO     00:07:12.65  Consumer: finish filtering and writing the chunk number 22
+ 2023-04-25 15:33:47,623 INFO     00:07:31.79  Consumer: finish filtering and writing the chunk number 23
+ 2023-04-25 15:34:06,962 INFO     00:07:51.13  Consumer: finish filtering and writing the chunk number 24
+ 2023-04-25 15:34:26,223 INFO     00:08:10.39  Consumer: finish filtering and writing the chunk number 25
+ 2023-04-25 15:34:45,518 INFO     00:08:29.69  Consumer: finish filtering and writing the chunk number 26
+ 2023-04-25 15:35:04,659 INFO     00:08:48.83  Consumer: finish filtering and writing the chunk number 27
+ 2023-04-25 15:35:23,860 INFO     00:09:08.03  Consumer: finish filtering and writing the chunk number 28
+ 2023-04-25 15:35:43,160 INFO     00:09:27.33  Consumer: finish filtering and writing the chunk number 29
+ 2023-04-25 15:36:02,353 INFO     00:09:46.52  Consumer: finish filtering and writing the chunk number 30
+ 2023-04-25 15:36:21,452 INFO     00:10:05.62  Consumer: finish filtering and writing the chunk number 31
+ 2023-04-25 15:36:40,590 INFO     00:10:24.76  Consumer: finish filtering and writing the chunk number 32
+ 2023-04-25 15:36:59,791 INFO     00:10:43.96  Consumer: finish filtering and writing the chunk number 33
+ 2023-04-25 15:37:19,069 INFO     00:11:03.24  Consumer: finish filtering and writing the chunk number 34
+ 2023-04-25 15:37:38,359 INFO     00:11:22.53  Consumer: finish filtering and writing the chunk number 35
+ 2023-04-25 15:37:57,561 INFO     00:11:41.73  Consumer: finish filtering and writing the chunk number 36
+ 2023-04-25 15:38:16,784 INFO     00:12:00.95  Consumer: finish filtering and writing the chunk number 37
+ 2023-04-25 15:38:36,197 INFO     00:12:20.37  Consumer: finish filtering and writing the chunk number 38
+ 2023-04-25 15:38:55,460 INFO     00:12:39.63  Consumer: finish filtering and writing the chunk number 39
+ 2023-04-25 15:39:14,587 INFO     00:12:58.76  Consumer: finish filtering and writing the chunk number 40
+ 2023-04-25 15:39:33,890 INFO     00:13:18.06  Consumer: finish filtering and writing the chunk number 41
+ 2023-04-25 15:39:53,125 INFO     00:13:37.29  Consumer: finish filtering and writing the chunk number 42
+ 2023-04-25 15:40:12,294 INFO     00:13:56.46  Consumer: finish filtering and writing the chunk number 43
+ 2023-04-25 15:40:31,555 INFO     00:14:15.72  Consumer: finish filtering and writing the chunk number 44
+ 2023-04-25 15:40:50,776 INFO     00:14:34.94  Consumer: finish filtering and writing the chunk number 45
+ 2023-04-25 15:41:10,081 INFO     00:14:54.25  Consumer: finish filtering and writing the chunk number 46
+ 2023-04-25 15:41:29,435 INFO     00:15:13.60  Consumer: finish filtering and writing the chunk number 47
+ 2023-04-25 15:41:48,673 INFO     00:15:32.84  Consumer: finish filtering and writing the chunk number 48
+ 2023-04-25 15:42:08,210 INFO     00:15:52.38  Consumer: finish filtering and writing the chunk number 49
+ 2023-04-25 15:42:27,706 INFO     00:16:11.87  Consumer: finish filtering and writing the chunk number 50
+ 2023-04-25 15:42:47,667 INFO     00:16:31.84  Consumer: finish filtering and writing the chunk number 51
+ 2023-04-25 15:43:08,297 INFO     00:16:52.47  Consumer: finish filtering and writing the chunk number 52
+ 2023-04-25 15:43:28,539 INFO     00:17:12.71  Consumer: finish filtering and writing the chunk number 53
+ 2023-04-25 15:43:48,171 INFO     00:17:32.34  Consumer: finish filtering and writing the chunk number 54
+ 2023-04-25 15:44:07,861 INFO     00:17:52.03  Consumer: finish filtering and writing the chunk number 55
+ 2023-04-25 15:44:27,482 INFO     00:18:11.65  Consumer: finish filtering and writing the chunk number 56
+ 2023-04-25 15:44:47,173 INFO     00:18:31.34  Consumer: finish filtering and writing the chunk number 57
+ 2023-04-25 15:45:06,809 INFO     00:18:50.98  Consumer: finish filtering and writing the chunk number 58
+ 2023-04-25 15:45:26,698 INFO     00:19:10.87  Consumer: finish filtering and writing the chunk number 59
+ 2023-04-25 15:45:46,400 INFO     00:19:30.57  Consumer: finish filtering and writing the chunk number 60
+ 2023-04-25 15:46:06,102 INFO     00:19:50.27  Consumer: finish filtering and writing the chunk number 61
+ 2023-04-25 15:46:27,588 INFO     00:20:11.76  Consumer: finish filtering and writing the chunk number 62
+ 2023-04-25 15:46:47,757 INFO     00:20:31.93  Consumer: finish filtering and writing the chunk number 63
+ 2023-04-25 15:47:07,852 INFO     00:20:52.02  Consumer: finish filtering and writing the chunk number 64
+ 2023-04-25 15:47:27,768 INFO     00:21:11.94  Consumer: finish filtering and writing the chunk number 65
+ 2023-04-25 15:47:47,675 INFO     00:21:31.84  Consumer: finish filtering and writing the chunk number 66
+ 2023-04-25 15:48:08,707 INFO     00:21:52.88  Consumer: finish filtering and writing the chunk number 67
+ 2023-04-25 15:48:29,772 INFO     00:22:13.94  Consumer: finish filtering and writing the chunk number 68
+ 2023-04-25 15:48:49,693 INFO     00:22:33.86  Consumer: finish filtering and writing the chunk number 69
+ 2023-04-25 15:49:11,588 INFO     00:22:55.76  Consumer: finish filtering and writing the chunk number 70
+ 2023-04-25 15:49:32,610 INFO     00:23:16.78  Consumer: finish filtering and writing the chunk number 71
+ 2023-04-25 15:49:52,700 INFO     00:23:36.87  Consumer: finish filtering and writing the chunk number 72
+ 2023-04-25 15:50:12,352 INFO     00:23:56.52  Consumer: finish filtering and writing the chunk number 73
+ 2023-04-25 15:50:32,457 INFO     00:24:16.63  Consumer: finish filtering and writing the chunk number 74
+ 2023-04-25 15:50:52,225 INFO     00:24:36.39  Consumer: finish filtering and writing the chunk number 75
+ 2023-04-25 15:51:12,017 INFO     00:24:56.19  Consumer: finish filtering and writing the chunk number 76
+ 2023-04-25 15:51:31,793 INFO     00:25:15.96  Consumer: finish filtering and writing the chunk number 77
+ 2023-04-25 15:51:55,967 INFO     00:25:40.14  Consumer: finish filtering and writing the chunk number 78
+ 2023-04-25 15:52:19,973 INFO     00:26:04.14  Consumer: finish filtering and writing the chunk number 79
+ 2023-04-25 15:52:43,942 INFO     00:26:28.11  Consumer: finish filtering and writing the chunk number 80
+ 2023-04-25 15:53:06,667 INFO     00:26:50.84  Consumer: finish filtering and writing the chunk number 81
+ 2023-04-25 15:53:30,120 INFO     00:27:14.29  Consumer: finish filtering and writing the chunk number 82
+ 2023-04-25 15:53:52,806 INFO     00:27:36.98  Consumer: finish filtering and writing the chunk number 83
+ 2023-04-25 15:54:16,926 INFO     00:28:01.09  Consumer: finish filtering and writing the chunk number 84
+ 2023-04-25 15:54:40,601 INFO     00:28:24.77  Consumer: finish filtering and writing the chunk number 85
+ 2023-04-25 15:55:04,601 INFO     00:28:48.77  Consumer: finish filtering and writing the chunk number 86
+ 2023-04-25 15:55:29,063 INFO     00:29:13.23  Consumer: finish filtering and writing the chunk number 87
+ 2023-04-25 15:55:53,862 INFO     00:29:38.03  Consumer: finish filtering and writing the chunk number 88
+ 2023-04-25 15:56:17,475 INFO     00:30:01.64  Consumer: finish filtering and writing the chunk number 89
+ 2023-04-25 15:56:42,019 INFO     00:30:26.19  Consumer: finish filtering and writing the chunk number 90
+ 2023-04-25 15:57:05,099 INFO     00:30:49.27  Consumer: finish filtering and writing the chunk number 91
+ 2023-04-25 15:57:28,269 INFO     00:31:12.44  Consumer: finish filtering and writing the chunk number 92
+ 2023-04-25 15:57:51,883 INFO     00:31:36.05  Consumer: finish filtering and writing the chunk number 93
+ 2023-04-25 15:58:15,809 INFO     00:31:59.98  Consumer: finish filtering and writing the chunk number 94
+ 2023-04-25 15:58:41,088 INFO     00:32:25.26  Consumer: finish filtering and writing the chunk number 95
+ 2023-04-25 15:59:05,385 INFO     00:32:49.55  Consumer: finish filtering and writing the chunk number 96
+ 2023-04-25 15:59:29,828 INFO     00:33:14.00  Consumer: finish filtering and writing the chunk number 97
+ 2023-04-25 15:59:53,167 INFO     00:33:37.34  Consumer: finish filtering and writing the chunk number 98
+ 2023-04-25 16:00:17,584 INFO     00:34:01.75  Consumer: finish filtering and writing the chunk number 99
+ 2023-04-25 16:00:41,941 INFO     00:34:26.11  Consumer: finish filtering and writing the chunk number 100
+ 2023-04-25 16:00:41,942 INFO     00:34:26.11  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 16:00:42,006 INFO     00:34:26.17  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 16:00:42,007 INFO     Main: run in threads
+ 2023-04-25 16:00:42,007 INFO     Initializing RarFile object...
+ 2023-04-25 16:00:42,009 INFO     RarFile object initialized successfully.
+ 2023-04-25 16:00:42,036 INFO     00:00:00.03  Producer: start reading chunks.
+ 2023-04-25 16:00:42,037 INFO     00:00:00.03  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 16:00:44,817 INFO     00:00:02.81  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 16:00:47,411 INFO     00:00:05.40  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 16:00:50,177 INFO     00:00:08.17  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 16:00:52,706 INFO     00:00:10.70  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 16:00:55,346 INFO     00:00:13.34  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 16:00:58,015 INFO     00:00:16.01  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 16:01:00,689 INFO     00:00:18.68  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 16:01:02,917 INFO     00:00:20.91  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 16:01:05,494 INFO     00:00:23.49  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 16:01:08,213 INFO     00:00:26.21  Producer:read 10 chunks and send it into queue.
+ 2023-04-25 16:01:10,631 INFO     00:00:28.62  Producer:read 11 chunks and send it into queue.
+ 2023-04-25 16:01:13,250 INFO     00:00:31.24  Producer:read 12 chunks and send it into queue.
+ 2023-04-25 16:01:15,827 INFO     00:00:33.82  Producer:read 13 chunks and send it into queue.
+ 2023-04-25 16:01:18,464 INFO     00:00:36.46  Producer:read 14 chunks and send it into queue.
+ 2023-04-25 16:01:20,974 INFO     00:00:38.97  Producer:read 15 chunks and send it into queue.
+ 2023-04-25 16:01:23,802 INFO     00:00:41.80  Producer:read 16 chunks and send it into queue.
+ 2023-04-25 16:01:26,314 INFO     00:00:44.31  Producer:read 17 chunks and send it into queue.
+ 2023-04-25 16:01:28,760 INFO     00:00:46.75  Producer:read 18 chunks and send it into queue.
+ 2023-04-25 16:01:31,289 INFO     00:00:49.28  Producer:read 19 chunks and send it into queue.
+ 2023-04-25 16:01:33,754 INFO     00:00:51.75  Producer:read 20 chunks and send it into queue.
+ 2023-04-25 16:01:36,254 INFO     00:00:54.25  Producer:read 21 chunks and send it into queue.
+ 2023-04-25 16:01:36,373 INFO     00:00:54.37  Producer:read 22 chunks and send it into queue.
+ 2023-04-25 16:01:36,397 INFO     00:00:54.39  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 16:01:38,472 INFO     00:00:56.47  Producer:read 23 chunks and send it into queue.
+ 2023-04-25 16:01:41,095 INFO     00:00:59.09  Producer:read 24 chunks and send it into queue.
+ 2023-04-25 16:01:43,316 INFO     00:01:01.31  Producer:read 25 chunks and send it into queue.
+ 2023-04-25 16:01:45,873 INFO     00:01:03.87  Producer:read 26 chunks and send it into queue.
+ 2023-04-25 16:01:48,560 INFO     00:01:06.55  Producer:read 27 chunks and send it into queue.
+ 2023-04-25 16:01:51,199 INFO     00:01:09.19  Producer:read 28 chunks and send it into queue.
+ 2023-04-25 16:01:54,126 INFO     00:01:12.12  Producer:read 29 chunks and send it into queue.
+ 2023-04-25 16:01:56,795 INFO     00:01:14.79  Producer:read 30 chunks and send it into queue.
+ 2023-04-25 16:01:59,419 INFO     00:01:17.41  Producer:read 31 chunks and send it into queue.
+ 2023-04-25 16:02:02,042 INFO     00:01:20.03  Producer:read 32 chunks and send it into queue.
+ 2023-04-25 16:02:04,712 INFO     00:01:22.70  Producer:read 33 chunks and send it into queue.
+ 2023-04-25 16:02:07,382 INFO     00:01:25.37  Producer:read 34 chunks and send it into queue.
+ 2023-04-25 16:02:10,385 INFO     00:01:28.38  Producer:read 35 chunks and send it into queue.
+ 2023-04-25 16:02:12,828 INFO     00:01:30.82  Producer:read 36 chunks and send it into queue.
+ 2023-04-25 16:02:15,419 INFO     00:01:33.41  Producer:read 37 chunks and send it into queue.
+ 2023-04-25 16:02:18,061 INFO     00:01:36.05  Producer:read 38 chunks and send it into queue.
+ 2023-04-25 16:02:20,807 INFO     00:01:38.80  Producer:read 39 chunks and send it into queue.
+ 2023-04-25 16:02:23,414 INFO     00:01:41.41  Producer:read 40 chunks and send it into queue.
+ 2023-04-25 16:02:26,212 INFO     00:01:44.20  Producer:read 41 chunks and send it into queue.
+ 2023-04-25 16:02:27,713 INFO     00:01:45.71  Producer:read 42 chunks and send it into queue.
+ 2023-04-25 16:02:27,809 INFO     00:01:45.80  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 16:02:28,895 INFO     00:01:46.89  Producer:read 43 chunks and send it into queue.
+ 2023-04-25 16:02:31,565 INFO     00:01:49.56  Producer:read 44 chunks and send it into queue.
+ 2023-04-25 16:02:34,156 INFO     00:01:52.15  Producer:read 45 chunks and send it into queue.
+ 2023-04-25 16:02:36,697 INFO     00:01:54.69  Producer:read 46 chunks and send it into queue.
+ 2023-04-25 16:02:39,067 INFO     00:01:57.06  Producer:read 47 chunks and send it into queue.
+ 2023-04-25 16:02:40,922 INFO     00:01:58.91  Producer:read 48 chunks and send it into queue.
+ 2023-04-25 16:02:43,514 INFO     00:02:01.51  Producer:read 49 chunks and send it into queue.
+ 2023-04-25 16:02:46,025 INFO     00:02:04.02  Producer:read 50 chunks and send it into queue.
+ 2023-04-25 16:02:46,104 INFO     00:02:04.10  Producer: finish reading all chunks.
+ 2023-04-25 16:03:16,121 INFO     00:02:34.11  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 16:04:04,838 INFO     00:03:22.83  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 16:04:52,713 INFO     00:04:10.71  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 16:05:42,301 INFO     00:05:00.29  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 16:06:31,666 INFO     00:05:49.66  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 16:07:21,963 INFO     00:06:39.96  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 16:08:09,915 INFO     00:07:27.91  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 16:08:56,707 INFO     00:08:14.70  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 16:09:46,051 INFO     00:09:04.04  Consumer: finish filtering and writing the chunk number 11
+ 2023-04-25 16:10:35,159 INFO     00:09:53.15  Consumer: finish filtering and writing the chunk number 12
+ 2023-04-25 16:11:24,192 INFO     00:10:42.19  Consumer: finish filtering and writing the chunk number 13
+ 2023-04-25 16:12:11,921 INFO     00:11:29.91  Consumer: finish filtering and writing the chunk number 14
+ 2023-04-25 16:13:00,258 INFO     00:12:18.25  Consumer: finish filtering and writing the chunk number 15
+ 2023-04-25 16:13:48,045 INFO     00:13:06.04  Consumer: finish filtering and writing the chunk number 16
+ 2023-04-25 16:14:37,750 INFO     00:13:55.74  Consumer: finish filtering and writing the chunk number 17
+ 2023-04-25 16:15:24,296 INFO     00:14:42.29  Consumer: finish filtering and writing the chunk number 18
+ 2023-04-25 16:16:10,088 INFO     00:15:28.08  Consumer: finish filtering and writing the chunk number 19
+ 2023-04-25 16:16:56,096 INFO     00:16:14.09  Consumer: finish filtering and writing the chunk number 20
+ 2023-04-25 16:17:42,807 INFO     00:17:00.80  Consumer: finish filtering and writing the chunk number 21
+ 2023-04-25 16:18:29,183 INFO     00:17:47.18  Consumer: finish filtering and writing the chunk number 22
+ 2023-04-25 16:19:15,699 INFO     00:18:33.69  Consumer: finish filtering and writing the chunk number 23
+ 2023-04-25 16:20:02,660 INFO     00:19:20.65  Consumer: finish filtering and writing the chunk number 24
+ 2023-04-25 16:20:49,898 INFO     00:20:07.89  Consumer: finish filtering and writing the chunk number 25
+ 2023-04-25 16:21:35,466 INFO     00:20:53.46  Consumer: finish filtering and writing the chunk number 26
+ 2023-04-25 16:22:22,020 INFO     00:21:40.01  Consumer: finish filtering and writing the chunk number 27
+ 2023-04-25 16:23:10,609 INFO     00:22:28.60  Consumer: finish filtering and writing the chunk number 28
+ 2023-04-25 16:23:59,282 INFO     00:23:17.27  Consumer: finish filtering and writing the chunk number 29
+ 2023-04-25 16:24:48,682 INFO     00:24:06.68  Consumer: finish filtering and writing the chunk number 30
+ 2023-04-25 16:25:37,574 INFO     00:24:55.57  Consumer: finish filtering and writing the chunk number 31
+ 2023-04-25 16:26:25,483 INFO     00:25:43.48  Consumer: finish filtering and writing the chunk number 32
+ 2023-04-25 16:27:11,836 INFO     00:26:29.83  Consumer: finish filtering and writing the chunk number 33
+ 2023-04-25 16:27:59,371 INFO     00:27:17.36  Consumer: finish filtering and writing the chunk number 34
+ 2023-04-25 16:28:47,573 INFO     00:28:05.57  Consumer: finish filtering and writing the chunk number 35
+ 2023-04-25 16:29:36,229 INFO     00:28:54.22  Consumer: finish filtering and writing the chunk number 36
+ 2023-04-25 16:30:25,184 INFO     00:29:43.18  Consumer: finish filtering and writing the chunk number 37
+ 2023-04-25 16:31:14,717 INFO     00:30:32.71  Consumer: finish filtering and writing the chunk number 38
+ 2023-04-25 16:32:03,152 INFO     00:31:21.15  Consumer: finish filtering and writing the chunk number 39
+ 2023-04-25 16:32:50,364 INFO     00:32:08.36  Consumer: finish filtering and writing the chunk number 40
+ 2023-04-25 16:33:38,853 INFO     00:32:56.85  Consumer: finish filtering and writing the chunk number 41
+ 2023-04-25 16:34:27,090 INFO     00:33:45.08  Consumer: finish filtering and writing the chunk number 42
+ 2023-04-25 16:35:13,985 INFO     00:34:31.98  Consumer: finish filtering and writing the chunk number 43
+ 2023-04-25 16:36:02,972 INFO     00:35:20.96  Consumer: finish filtering and writing the chunk number 44
+ 2023-04-25 16:36:52,871 INFO     00:36:10.86  Consumer: finish filtering and writing the chunk number 45
+ 2023-04-25 16:37:41,716 INFO     00:36:59.71  Consumer: finish filtering and writing the chunk number 46
+ 2023-04-25 16:38:30,568 INFO     00:37:48.56  Consumer: finish filtering and writing the chunk number 47
+ 2023-04-25 16:39:19,326 INFO     00:38:37.32  Consumer: finish filtering and writing the chunk number 48
+ 2023-04-25 16:40:06,516 INFO     00:39:24.51  Consumer: finish filtering and writing the chunk number 49
+ 2023-04-25 16:40:51,863 INFO     00:40:09.86  Consumer: finish filtering and writing the chunk number 50
+ 2023-04-25 16:40:51,865 INFO     00:40:09.86  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 16:40:51,919 INFO     00:40:09.91  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 16:40:51,920 INFO     Main: run in threads
+ 2023-04-25 16:40:51,920 INFO     Initializing RarFile object...
+ 2023-04-25 16:40:51,922 INFO     RarFile object initialized successfully.
+ 2023-04-25 16:40:51,957 INFO     00:00:00.04  Producer: start reading chunks.
+ 2023-04-25 16:40:51,959 INFO     00:00:00.04  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 16:40:54,171 INFO     00:00:02.25  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 16:40:58,148 INFO     00:00:06.23  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 16:41:01,759 INFO     00:00:09.84  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 16:41:04,922 INFO     00:00:13.00  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 16:41:08,918 INFO     00:00:17.00  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 16:41:12,603 INFO     00:00:20.68  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 16:41:16,620 INFO     00:00:24.70  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 16:41:20,586 INFO     00:00:28.67  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 16:41:22,971 INFO     00:00:31.05  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 16:41:26,603 INFO     00:00:34.68  Producer:read 10 chunks and send it into queue.
+ 2023-04-25 16:41:30,473 INFO     00:00:38.55  Producer:read 11 chunks and send it into queue.
+ 2023-04-25 16:41:33,939 INFO     00:00:42.02  Producer:read 12 chunks and send it into queue.
+ 2023-04-25 16:41:37,666 INFO     00:00:45.75  Producer:read 13 chunks and send it into queue.
+ 2023-04-25 16:41:40,721 INFO     00:00:48.80  Producer:read 14 chunks and send it into queue.
+ 2023-04-25 16:41:44,637 INFO     00:00:52.72  Producer:read 15 chunks and send it into queue.
+ 2023-04-25 16:41:48,620 INFO     00:00:56.70  Producer:read 16 chunks and send it into queue.
+ 2023-04-25 16:41:52,649 INFO     00:01:00.73  Producer:read 17 chunks and send it into queue.
+ 2023-04-25 16:41:56,360 INFO     00:01:04.44  Producer:read 18 chunks and send it into queue.
+ 2023-04-25 16:42:00,200 INFO     00:01:08.28  Producer:read 19 chunks and send it into queue.
+ 2023-04-25 16:42:04,280 INFO     00:01:12.36  Producer:read 20 chunks and send it into queue.
+ 2023-04-25 16:42:07,656 INFO     00:01:15.74  Producer:read 21 chunks and send it into queue.
+ 2023-04-25 16:42:11,432 INFO     00:01:19.51  Producer:read 22 chunks and send it into queue.
+ 2023-04-25 16:42:13,292 INFO     00:01:21.37  Producer:read 23 chunks and send it into queue.
+ 2023-04-25 16:42:13,343 INFO     00:01:21.42  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 16:42:14,644 INFO     00:01:22.72  Producer:read 24 chunks and send it into queue.
+ 2023-04-25 16:42:18,211 INFO     00:01:26.29  Producer:read 25 chunks and send it into queue.
+ 2023-04-25 16:42:22,322 INFO     00:01:30.40  Producer:read 26 chunks and send it into queue.
+ 2023-04-25 16:42:26,416 INFO     00:01:34.50  Producer:read 27 chunks and send it into queue.
+ 2023-04-25 16:42:30,417 INFO     00:01:38.50  Producer:read 28 chunks and send it into queue.
+ 2023-04-25 16:42:34,175 INFO     00:01:42.26  Producer:read 29 chunks and send it into queue.
+ 2023-04-25 16:42:38,223 INFO     00:01:46.30  Producer:read 30 chunks and send it into queue.
+ 2023-04-25 16:42:42,096 INFO     00:01:50.18  Producer:read 31 chunks and send it into queue.
+ 2023-04-25 16:42:45,934 INFO     00:01:54.01  Producer:read 32 chunks and send it into queue.
+ 2023-04-25 16:42:49,581 INFO     00:01:57.66  Producer:read 33 chunks and send it into queue.
+ 2023-04-25 16:42:51,069 INFO     00:01:59.15  Producer:read 34 chunks and send it into queue.
+ 2023-04-25 16:42:51,146 INFO     00:01:59.23  Producer: finish reading all chunks.
+ 2023-04-25 16:43:28,796 INFO     00:02:36.88  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 16:44:41,068 INFO     00:03:49.15  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 16:45:56,193 INFO     00:05:04.27  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 16:47:10,372 INFO     00:06:18.45  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 16:48:23,102 INFO     00:07:31.18  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 16:49:37,488 INFO     00:08:45.57  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 16:50:48,965 INFO     00:09:57.04  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 16:51:59,274 INFO     00:11:07.35  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 16:53:08,102 INFO     00:12:16.18  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 16:54:19,030 INFO     00:13:27.11  Consumer: finish filtering and writing the chunk number 11
+ 2023-04-25 16:55:30,226 INFO     00:14:38.31  Consumer: finish filtering and writing the chunk number 12
+ 2023-04-25 16:56:41,578 INFO     00:15:49.66  Consumer: finish filtering and writing the chunk number 13
+ 2023-04-25 16:57:52,700 INFO     00:17:00.78  Consumer: finish filtering and writing the chunk number 14
+ 2023-04-25 16:59:02,467 INFO     00:18:10.55  Consumer: finish filtering and writing the chunk number 15
+ 2023-04-25 17:00:14,519 INFO     00:19:22.60  Consumer: finish filtering and writing the chunk number 16
+ 2023-04-25 17:01:27,414 INFO     00:20:35.49  Consumer: finish filtering and writing the chunk number 17
+ 2023-04-25 17:02:38,703 INFO     00:21:46.78  Consumer: finish filtering and writing the chunk number 18
+ 2023-04-25 17:03:48,702 INFO     00:22:56.78  Consumer: finish filtering and writing the chunk number 19
+ 2023-04-25 17:05:00,424 INFO     00:24:08.50  Consumer: finish filtering and writing the chunk number 20
+ 2023-04-25 17:06:11,012 INFO     00:25:19.09  Consumer: finish filtering and writing the chunk number 21
+ 2023-04-25 17:07:18,068 INFO     00:26:26.15  Consumer: finish filtering and writing the chunk number 22
+ 2023-04-25 17:08:25,917 INFO     00:27:34.00  Consumer: finish filtering and writing the chunk number 23
+ 2023-04-25 17:09:34,758 INFO     00:28:42.84  Consumer: finish filtering and writing the chunk number 24
+ 2023-04-25 17:10:44,760 INFO     00:29:52.84  Consumer: finish filtering and writing the chunk number 25
+ 2023-04-25 17:11:56,195 INFO     00:31:04.28  Consumer: finish filtering and writing the chunk number 26
+ 2023-04-25 17:13:06,216 INFO     00:32:14.30  Consumer: finish filtering and writing the chunk number 27
+ 2023-04-25 17:14:17,390 INFO     00:33:25.47  Consumer: finish filtering and writing the chunk number 28
+ 2023-04-25 17:15:28,229 INFO     00:34:36.31  Consumer: finish filtering and writing the chunk number 29
+ 2023-04-25 17:16:40,029 INFO     00:35:48.11  Consumer: finish filtering and writing the chunk number 30
+ 2023-04-25 17:17:51,190 INFO     00:36:59.27  Consumer: finish filtering and writing the chunk number 31
+ 2023-04-25 17:19:02,687 INFO     00:38:10.77  Consumer: finish filtering and writing the chunk number 32
+ 2023-04-25 17:20:13,018 INFO     00:39:21.10  Consumer: finish filtering and writing the chunk number 33
+ 2023-04-25 17:20:35,776 INFO     00:39:43.86  Consumer: finish filtering and writing the chunk number 34
+ 2023-04-25 17:20:35,779 INFO     00:39:43.86  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 17:20:35,826 INFO     00:39:43.91  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 17:20:35,827 INFO     Main: run in threads
+ 2023-04-25 17:20:35,828 INFO     Initializing RarFile object...
+ 2023-04-25 17:20:35,829 INFO     RarFile object initialized successfully.
+ 2023-04-25 17:20:35,862 INFO     00:00:00.03  Producer: start reading chunks.
+ 2023-04-25 17:20:35,864 INFO     00:00:00.04  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 17:20:40,874 INFO     00:00:05.05  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 17:20:45,912 INFO     00:00:10.09  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 17:20:50,873 INFO     00:00:15.05  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 17:20:56,199 INFO     00:00:20.37  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 17:21:01,402 INFO     00:00:25.57  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 17:21:06,405 INFO     00:00:30.58  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 17:21:11,174 INFO     00:00:35.35  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 17:21:16,628 INFO     00:00:40.80  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 17:21:21,556 INFO     00:00:45.73  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 17:21:26,387 INFO     00:00:50.56  Producer:read 10 chunks and send it into queue.
+ 2023-04-25 17:21:31,396 INFO     00:00:55.57  Producer:read 11 chunks and send it into queue.
+ 2023-04-25 17:21:36,563 INFO     00:01:00.74  Producer:read 12 chunks and send it into queue.
+ 2023-04-25 17:21:41,666 INFO     00:01:05.84  Producer:read 13 chunks and send it into queue.
+ 2023-04-25 17:21:46,781 INFO     00:01:10.95  Producer:read 14 chunks and send it into queue.
+ 2023-04-25 17:21:52,028 INFO     00:01:16.20  Producer:read 15 chunks and send it into queue.
+ 2023-04-25 17:21:57,003 INFO     00:01:21.18  Producer:read 16 chunks and send it into queue.
+ 2023-04-25 17:22:02,094 INFO     00:01:26.27  Producer:read 17 chunks and send it into queue.
+ 2023-04-25 17:22:07,610 INFO     00:01:31.78  Producer:read 18 chunks and send it into queue.
+ 2023-04-25 17:22:12,485 INFO     00:01:36.66  Producer:read 19 chunks and send it into queue.
+ 2023-04-25 17:22:17,444 INFO     00:01:41.62  Producer:read 20 chunks and send it into queue.
+ 2023-04-25 17:22:22,708 INFO     00:01:46.88  Producer:read 21 chunks and send it into queue.
+ 2023-04-25 17:22:23,883 INFO     00:01:48.06  Producer:read 22 chunks and send it into queue.
+ 2023-04-25 17:22:23,893 INFO     00:01:48.07  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 17:22:28,510 INFO     00:01:52.68  Producer:read 23 chunks and send it into queue.
+ 2023-04-25 17:22:33,945 INFO     00:01:58.12  Producer:read 24 chunks and send it into queue.
+ 2023-04-25 17:22:38,707 INFO     00:02:02.88  Producer:read 25 chunks and send it into queue.
+ 2023-04-25 17:22:38,752 INFO     00:02:02.93  Producer: finish reading all chunks.
+ 2023-04-25 17:23:57,138 INFO     00:03:21.31  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 17:25:29,708 INFO     00:04:53.88  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 17:27:09,133 INFO     00:06:33.31  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 17:28:49,066 INFO     00:08:13.24  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 17:30:30,630 INFO     00:09:54.80  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 17:32:10,739 INFO     00:11:34.91  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 17:33:48,293 INFO     00:13:12.47  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 17:35:25,467 INFO     00:14:49.64  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 17:37:04,383 INFO     00:16:28.56  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 17:38:38,307 INFO     00:18:02.48  Consumer: finish filtering and writing the chunk number 11
+ 2023-04-25 17:40:13,576 INFO     00:19:37.75   Consumer: finish filtering and writing the chunk number 12
+ 2023-04-25 17:41:50,639 INFO     00:21:14.81  Consumer: finish filtering and writing the chunk number 13
+ 2023-04-25 17:43:32,943 INFO     00:22:57.12  Consumer: finish filtering and writing the chunk number 14
+ 2023-04-25 17:45:16,810 INFO     00:24:40.98  Consumer: finish filtering and writing the chunk number 15
+ 2023-04-25 17:46:54,127 INFO     00:26:18.30  Consumer: finish filtering and writing the chunk number 16
+ 2023-04-25 17:48:31,091 INFO     00:27:55.26  Consumer: finish filtering and writing the chunk number 17
+ 2023-04-25 17:50:10,827 INFO     00:29:35.00  Consumer: finish filtering and writing the chunk number 18
+ 2023-04-25 17:51:48,155 INFO     00:31:12.33  Consumer: finish filtering and writing the chunk number 19
+ 2023-04-25 17:53:23,172 INFO     00:32:47.35  Consumer: finish filtering and writing the chunk number 20
+ 2023-04-25 17:54:58,267 INFO     00:34:22.44  Consumer: finish filtering and writing the chunk number 21
+ 2023-04-25 17:56:19,321 INFO     00:35:43.49  Consumer: finish filtering and writing the chunk number 22
+ 2023-04-25 17:57:38,108 INFO     00:37:02.28  Consumer: finish filtering and writing the chunk number 23
+ 2023-04-25 17:58:58,137 INFO     00:38:22.31  Consumer: finish filtering and writing the chunk number 24
+ 2023-04-25 18:00:18,833 INFO     00:39:43.01  Consumer: finish filtering and writing the chunk number 25
+ 2023-04-25 18:00:18,836 INFO     00:39:43.01  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 18:00:18,882 INFO     00:39:43.06  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 18:00:18,883 INFO     Main: run in threads
+ 2023-04-25 18:00:18,884 INFO     Initializing RarFile object...
+ 2023-04-25 18:00:18,885 INFO     RarFile object initialized successfully.
+ 2023-04-25 18:00:18,911 INFO     00:00:00.03  Producer: start reading chunks.
+ 2023-04-25 18:00:18,913 INFO     00:00:00.03  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 18:00:24,450 INFO     00:00:05.57  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 18:00:30,856 INFO     00:00:11.97  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 18:00:36,580 INFO     00:00:17.70  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 18:00:42,905 INFO     00:00:24.02  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 18:00:48,383 INFO     00:00:29.50  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 18:00:54,538 INFO     00:00:35.65  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 18:01:00,737 INFO     00:00:41.85  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 18:01:07,074 INFO     00:00:48.19  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 18:01:12,736 INFO     00:00:53.85  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 18:01:18,784 INFO     00:00:59.90  Producer:read 10 chunks and send it into queue.
+ 2023-04-25 18:01:25,196 INFO     00:01:06.31  Producer:read 11 chunks and send it into queue.
+ 2023-04-25 18:01:31,277 INFO     00:01:12.39  Producer:read 12 chunks and send it into queue.
+ 2023-04-25 18:01:37,258 INFO     00:01:18.37  Producer:read 13 chunks and send it into queue.
+ 2023-04-25 18:01:43,833 INFO     00:01:24.95  Producer:read 14 chunks and send it into queue.
+ 2023-04-25 18:01:49,236 INFO     00:01:30.35  Producer:read 15 chunks and send it into queue.
+ 2023-04-25 18:01:55,700 INFO     00:01:36.82  Producer:read 16 chunks and send it into queue.
+ 2023-04-25 18:02:00,915 INFO     00:01:42.03  Producer:read 17 chunks and send it into queue.
+ 2023-04-25 18:02:06,664 INFO     00:01:47.78  Producer:read 18 chunks and send it into queue.
+ 2023-04-25 18:02:06,838 INFO     00:01:47.95  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 18:02:08,029 INFO     00:01:49.15  Producer:read 19 chunks and send it into queue.
+ 2023-04-25 18:02:14,082 INFO     00:01:55.20  Producer:read 20 chunks and send it into queue.
+ 2023-04-25 18:02:14,126 INFO     00:01:55.24  Producer: finish reading all chunks.
+ 2023-04-25 18:03:46,674 INFO     00:03:27.79  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 18:05:26,838 INFO     00:05:07.95  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 18:07:07,155 INFO     00:06:48.27  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 18:08:46,964 INFO     00:08:28.08  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 18:10:27,636 INFO     00:10:08.75  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 18:12:07,199 INFO     00:11:48.32  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 18:13:46,793 INFO     00:13:27.91  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 18:15:29,345 INFO     00:15:10.46  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 18:17:10,351 INFO     00:16:51.47  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 18:18:50,048 INFO     00:18:31.16  Consumer: finish filtering and writing the chunk number 11
+ 2023-04-25 18:20:29,335 INFO     00:20:10.45  Consumer: finish filtering and writing the chunk number 12
+ 2023-04-25 18:22:09,083 INFO     00:21:50.20  Consumer: finish filtering and writing the chunk number 13
+ 2023-04-25 18:23:49,666 INFO     00:23:30.78  Consumer: finish filtering and writing the chunk number 14
+ 2023-04-25 18:25:30,715 INFO     00:25:11.83  Consumer: finish filtering and writing the chunk number 15
+ 2023-04-25 18:27:10,094 INFO     00:26:51.21  Consumer: finish filtering and writing the chunk number 16
+ 2023-04-25 18:28:48,965 INFO     00:28:30.08  Consumer: finish filtering and writing the chunk number 17
+ 2023-04-25 18:30:25,728 INFO     00:30:06.85  Consumer: finish filtering and writing the chunk number 18
+ 2023-04-25 18:32:02,232 INFO     00:31:43.35  Consumer: finish filtering and writing the chunk number 19
+ 2023-04-25 18:33:40,013 INFO     00:33:21.13  Consumer: finish filtering and writing the chunk number 20
+ 2023-04-25 18:33:40,020 INFO     00:33:21.14  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 18:33:40,065 INFO     00:33:21.18  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 18:33:40,066 INFO     Main: run in threads
+ 2023-04-25 18:33:40,066 INFO     Initializing RarFile object...
+ 2023-04-25 18:33:40,073 INFO     RarFile object initialized successfully.
+ 2023-04-25 18:33:40,105 INFO     00:00:00.04  Producer: start reading chunks.
+ 2023-04-25 18:33:40,107 INFO     00:00:00.04  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 18:33:47,511 INFO     00:00:07.44  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 18:33:55,268 INFO     00:00:15.20  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 18:34:02,915 INFO     00:00:22.85  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 18:34:10,432 INFO     00:00:30.37  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 18:34:18,143 INFO     00:00:38.08  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 18:34:25,742 INFO     00:00:45.68  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 18:34:33,084 INFO     00:00:53.02  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 18:34:41,179 INFO     00:01:01.11  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 18:34:48,679 INFO     00:01:08.61  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 18:34:55,603 INFO     00:01:15.54  Producer:read 10 chunks and send it into queue.
+ 2023-04-25 18:35:02,448 INFO     00:01:22.38  Producer:read 11 chunks and send it into queue.
+ 2023-04-25 18:35:09,580 INFO     00:01:29.51  Producer:read 12 chunks and send it into queue.
+ 2023-04-25 18:35:16,182 INFO     00:01:36.11  Producer:read 13 chunks and send it into queue.
+ 2023-04-25 18:35:23,344 INFO     00:01:43.28  Producer:read 14 chunks and send it into queue.
+ 2023-04-25 18:35:29,916 INFO     00:01:49.85  Producer:read 15 chunks and send it into queue.
+ 2023-04-25 18:35:36,729 INFO     00:01:56.66  Producer:read 16 chunks and send it into queue.
+ 2023-04-25 18:35:41,188 INFO     00:02:01.12  Producer:read 17 chunks and send it into queue.
+ 2023-04-25 18:35:41,233 INFO     00:02:01.17  Producer: finish reading all chunks.
+ 2023-04-25 18:35:48,636 INFO     00:02:08.57  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 18:37:44,610 INFO     00:04:04.54  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 18:39:40,404 INFO     00:06:00.34  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 18:41:36,280 INFO     00:07:56.21  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 18:43:32,153 INFO     00:09:52.09  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 18:45:29,079 INFO     00:11:49.01  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 18:47:26,002 INFO     00:13:45.94  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 18:49:22,870 INFO     00:15:42.80  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 18:51:20,271 INFO     00:17:40.21  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 18:53:16,431 INFO     00:19:36.37  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 18:55:12,530 INFO     00:21:32.46  Consumer: finish filtering and writing the chunk number 11
+ 2023-04-25 18:57:08,975 INFO     00:23:28.91  Consumer: finish filtering and writing the chunk number 12
+ 2023-04-25 18:59:05,212 INFO     00:25:25.15  Consumer: finish filtering and writing the chunk number 13
+ 2023-04-25 19:24:40,260 INFO     00:18:26.06  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 19:26:57,662 INFO     00:20:43.46  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 19:29:14,874 INFO     00:23:00.67  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 19:31:32,422 INFO     00:25:18.22  Consumer: finish filtering and writing the chunk number 11
+ 2023-04-25 19:33:49,515 INFO     00:27:35.31  Consumer: finish filtering and writing the chunk number 12
+ 2023-04-25 19:36:07,613 INFO     00:29:53.41  Consumer: finish filtering and writing the chunk number 13
+ 2023-04-25 19:38:24,711 INFO     00:32:10.51  Consumer: finish filtering and writing the chunk number 14
+ 2023-04-25 19:39:03,902 INFO     00:32:49.70  Consumer: finish filtering and writing the chunk number 15
+ 2023-04-25 19:39:03,903 INFO     00:32:49.70  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 19:39:03,946 INFO     00:32:49.74  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 19:39:03,946 INFO     Main: run in threads
+ 2023-04-25 19:39:03,947 INFO     Initializing RarFile object...
+ 2023-04-25 19:39:03,948 INFO     RarFile object initialized successfully.
+ 2023-04-25 19:39:03,976 INFO     00:00:00.03  Producer: start reading chunks.
+ 2023-04-25 19:39:03,977 INFO     00:00:00.03  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 19:39:13,300 INFO     00:00:09.35  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 19:39:22,382 INFO     00:00:18.44  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 19:39:31,783 INFO     00:00:27.84  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 19:39:41,220 INFO     00:00:37.27  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 19:39:50,028 INFO     00:00:46.08  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 19:39:59,720 INFO     00:00:55.77  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 19:40:08,962 INFO     00:01:05.02  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 19:40:18,380 INFO     00:01:14.43  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 19:40:27,881 INFO     00:01:23.93  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 19:40:37,424 INFO     00:01:33.48  Producer:read 10 chunks and send it into queue.
+ 2023-04-25 19:40:46,505 INFO     00:01:42.56  Producer:read 11 chunks and send it into queue.
+ 2023-04-25 19:40:55,909 INFO     00:01:51.96  Producer:read 12 chunks and send it into queue.
+ 2023-04-25 19:41:00,399 INFO     00:01:56.45  Producer:read 13 chunks and send it into queue.
+ 2023-04-25 19:41:00,461 INFO     00:01:56.51  Producer: finish reading all chunks.
+ 2023-04-25 19:41:53,377 INFO     00:02:49.43  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 19:44:29,341 INFO     00:05:25.39  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 19:47:04,896 INFO     00:08:00.95  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 19:49:41,580 INFO     00:10:37.63  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 19:52:16,261 INFO     00:13:12.32  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 19:54:51,239 INFO     00:15:47.29  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 19:57:25,810 INFO     00:18:21.86  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 20:00:02,413 INFO     00:20:58.47  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 20:02:37,228 INFO     00:23:33.28  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 20:05:12,342 INFO     00:26:08.40  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 20:07:46,984 INFO     00:28:43.04  Consumer: finish filtering and writing the chunk number 11
+ 2023-04-25 20:10:21,927 INFO     00:31:17.98  Consumer: finish filtering and writing the chunk number 12
+ 2023-04-25 20:11:39,363 INFO     00:32:35.42  Consumer: finish filtering and writing the chunk number 13
+ 2023-04-25 20:11:39,370 INFO     00:32:35.42  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 20:11:39,405 INFO     00:32:35.46  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 20:11:39,405 INFO     Main: run in threads
+ 2023-04-25 20:11:39,405 INFO     Initializing RarFile object...
+ 2023-04-25 20:11:39,406 INFO     RarFile object initialized successfully.
+ 2023-04-25 20:11:39,429 INFO     00:00:00.02  Producer: start reading chunks.
+ 2023-04-25 20:11:39,430 INFO     00:00:00.03  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 20:11:49,812 INFO     00:00:10.41  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 20:12:00,315 INFO     00:00:20.91  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 20:12:11,032 INFO     00:00:31.63  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 20:12:20,994 INFO     00:00:41.59  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 20:12:30,425 INFO     00:00:51.02  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 20:12:40,289 INFO     00:01:00.88  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 20:12:51,035 INFO     00:01:11.63  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 20:13:01,478 INFO     00:01:22.07  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 20:13:11,632 INFO     00:01:32.23  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 20:13:21,657 INFO     00:01:42.25  Producer:read 10 chunks and send it into queue.
+ 2023-04-25 20:13:31,875 INFO     00:01:52.47  Producer:read 11 chunks and send it into queue.
+ 2023-04-25 20:13:33,260 INFO     00:01:53.86  Producer:read 12 chunks and send it into queue.
+ 2023-04-25 20:13:33,307 INFO     00:01:53.90  Producer: finish reading all chunks.
+ 2023-04-25 20:14:47,470 INFO     00:03:08.07  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 20:17:41,326 INFO     00:06:01.92  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 20:20:34,762 INFO     00:08:55.36  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 20:23:28,780 INFO     00:11:49.37  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 20:26:22,308 INFO     00:14:42.90  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 20:29:17,866 INFO     00:17:38.46  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 20:32:11,797 INFO     00:20:32.39  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 20:35:06,230 INFO     00:23:26.83  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 20:38:01,139 INFO     00:26:21.73  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 20:40:55,054 INFO     00:29:15.65  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 20:43:49,587 INFO     00:32:10.18  Consumer: finish filtering and writing the chunk number 11
+ 2023-04-25 20:44:09,042 INFO     00:32:29.64  Consumer: finish filtering and writing the chunk number 12
+ 2023-04-25 20:44:09,043 INFO     00:32:29.64  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 20:44:09,092 INFO     00:32:29.69  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 20:44:09,092 INFO     Main: run in threads
+ 2023-04-25 20:44:09,093 INFO     Initializing RarFile object...
+ 2023-04-25 20:44:09,093 INFO     RarFile object initialized successfully.
+ 2023-04-25 20:44:09,114 INFO     00:00:00.02  Producer: start reading chunks.
+ 2023-04-25 20:44:09,116 INFO     00:00:00.02  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 20:44:20,872 INFO     00:00:11.78  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 20:44:32,480 INFO     00:00:23.39  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 20:44:43,689 INFO     00:00:34.60  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 20:44:55,151 INFO     00:00:46.06  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 20:45:06,757 INFO     00:00:57.66  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 20:45:18,059 INFO     00:01:08.97  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 20:45:29,832 INFO     00:01:20.74  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 20:45:40,846 INFO     00:01:31.75  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 20:45:52,261 INFO     00:01:43.17  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 20:46:03,579 INFO     00:01:54.49  Producer:read 10 chunks and send it into queue.
+ 2023-04-25 20:46:03,634 INFO     00:01:54.54  Producer: finish reading all chunks.
+ 2023-04-25 20:47:38,069 INFO     00:03:28.98  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 20:50:51,631 INFO     00:06:42.54  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 20:54:52,408 INFO     00:10:43.32  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 20:58:57,697 INFO     00:14:48.60  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 21:03:04,465 INFO     00:18:55.37  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 21:07:10,791 INFO     00:23:01.70  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 21:11:15,797 INFO     00:27:06.70  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 21:15:20,947 INFO     00:31:11.85  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 21:19:26,880 INFO     00:35:17.79  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 21:23:38,656 INFO     00:39:29.56  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 21:23:38,660 INFO     00:39:29.57  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 21:23:38,719 INFO     00:39:29.63  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 21:23:38,720 INFO     Main: run in threads
+ 2023-04-25 21:23:38,720 INFO     Initializing RarFile object...
+ 2023-04-25 21:23:38,722 INFO     RarFile object initialized successfully.
+ 2023-04-25 21:23:38,749 INFO     00:00:00.03  Producer: start reading chunks.
+ 2023-04-25 21:23:38,751 INFO     00:00:00.03  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 21:23:51,883 INFO     00:00:13.16  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 21:24:06,021 INFO     00:00:27.30  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 21:24:19,725 INFO     00:00:41.01  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 21:24:32,792 INFO     00:00:54.07  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 21:24:46,470 INFO     00:01:07.75  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 21:25:00,255 INFO     00:01:21.54  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 21:25:12,605 INFO     00:01:33.88  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 21:25:26,661 INFO     00:01:47.94  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 21:25:40,297 INFO     00:02:01.58  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 21:25:41,741 INFO     00:02:03.02  Producer:read 10 chunks and send it into queue.
+ 2023-04-25 21:25:41,788 INFO     00:02:03.07  Producer: finish reading all chunks.
+ 2023-04-25 21:28:31,097 INFO     00:04:52.38  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 21:32:59,690 INFO     00:09:20.97  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 21:37:33,092 INFO     00:13:54.37  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 21:42:01,461 INFO     00:18:22.74  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 21:46:32,650 INFO     00:22:53.93  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 21:50:57,982 INFO     00:27:19.26  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 21:54:50,222 INFO     00:31:11.50  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 21:58:24,520 INFO     00:34:45.80  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 22:01:58,600 INFO     00:38:19.88  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 22:02:18,157 INFO     00:38:39.44  Consumer: finish filtering and writing the chunk number 10
+ 2023-04-25 22:02:18,157 INFO     00:38:39.44  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 22:02:18,216 INFO     00:38:39.50  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 22:02:18,217 INFO     Main: run in threads
+ 2023-04-25 22:02:18,217 INFO     Initializing RarFile object...
+ 2023-04-25 22:02:18,218 INFO     RarFile object initialized successfully.
+ 2023-04-25 22:02:18,241 INFO     00:00:00.02  Producer: start reading chunks.
+ 2023-04-25 22:02:18,243 INFO     00:00:00.03  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 22:02:31,965 INFO     00:00:13.75  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 22:02:45,680 INFO     00:00:27.46  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 22:02:59,269 INFO     00:00:41.05  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 22:03:13,036 INFO     00:00:54.82  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 22:03:26,659 INFO     00:01:08.44  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 22:03:40,691 INFO     00:01:22.47  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 22:03:54,553 INFO     00:01:36.34  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 22:04:08,294 INFO     00:01:50.08  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 22:04:12,892 INFO     00:01:54.68  Producer:read 9 chunks and send it into queue.
+ 2023-04-25 22:04:12,953 INFO     00:01:54.74  Producer: finish reading all chunks.
+ 2023-04-25 22:06:28,507 INFO     00:04:10.29  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 22:10:20,928 INFO     00:08:02.71  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 22:14:13,182 INFO     00:11:54.97  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 22:18:05,444 INFO     00:15:47.23  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 22:21:57,253 INFO     00:19:39.04  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 22:25:51,024 INFO     00:23:32.81  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 22:29:44,283 INFO     00:27:26.07  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 22:33:37,601 INFO     00:31:19.38  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 22:34:55,382 INFO     00:32:37.17  Consumer: finish filtering and writing the chunk number 9
+ 2023-04-25 22:34:55,387 INFO     00:32:37.17  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 22:34:55,427 INFO     00:32:37.21  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 22:34:55,428 INFO     Main: run in threads
+ 2023-04-25 22:34:55,428 INFO     Initializing RarFile object...
+ 2023-04-25 22:34:55,429 INFO     RarFile object initialized successfully.
+ 2023-04-25 22:34:55,450 INFO     00:00:00.02  Producer: start reading chunks.
+ 2023-04-25 22:34:55,451 INFO     00:00:00.02  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 22:35:10,782 INFO     00:00:15.35  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 22:35:25,857 INFO     00:00:30.43  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 22:35:40,513 INFO     00:00:45.08  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 22:35:55,510 INFO     00:01:00.08  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 22:36:10,687 INFO     00:01:15.26  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 22:36:25,354 INFO     00:01:29.93  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 22:36:40,750 INFO     00:01:45.32  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 22:36:51,080 INFO     00:01:55.65  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 22:36:51,120 INFO     00:01:55.69  Producer: finish reading all chunks.
+ 2023-04-25 22:39:43,681 INFO     00:04:48.25  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 22:44:11,889 INFO     00:09:16.46  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 22:48:38,919 INFO     00:13:43.49  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 22:53:05,992 INFO     00:18:10.56  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 22:57:33,212 INFO     00:22:37.78  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 23:02:01,352 INFO     00:27:05.92  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 23:06:30,870 INFO     00:31:35.44  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 23:09:37,082 INFO     00:34:41.65  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 23:09:37,086 INFO     00:34:41.66  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 23:09:37,146 INFO     00:34:41.72  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 23:09:37,147 INFO     Main: run in threads
+ 2023-04-25 23:09:37,148 INFO     Initializing RarFile object...
+ 2023-04-25 23:09:37,149 INFO     RarFile object initialized successfully.
+ 2023-04-25 23:09:37,172 INFO     00:00:00.03  Producer: start reading chunks.
+ 2023-04-25 23:09:37,173 INFO     00:00:00.03  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 23:09:53,009 INFO     00:00:15.86  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 23:10:08,966 INFO     00:00:31.82  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 23:10:25,006 INFO     00:00:47.86  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 23:10:41,114 INFO     00:01:03.97  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 23:10:57,616 INFO     00:01:20.47  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 23:11:13,655 INFO     00:01:36.51  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 23:11:29,980 INFO     00:01:52.83  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 23:11:32,256 INFO     00:01:55.11  Producer:read 8 chunks and send it into queue.
+ 2023-04-25 23:11:32,319 INFO     00:01:55.17  Producer: finish reading all chunks.
+ 2023-04-25 23:14:28,151 INFO     00:04:51.00  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 23:18:59,660 INFO     00:09:22.51  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 23:23:30,394 INFO     00:13:53.25  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-25 23:28:01,387 INFO     00:18:24.24  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-25 23:32:32,453 INFO     00:22:55.31  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-25 23:37:04,301 INFO     00:27:27.15  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-25 23:41:36,503 INFO     00:31:59.36  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-25 23:42:15,264 INFO     00:32:38.12  Consumer: finish filtering and writing the chunk number 8
+ 2023-04-25 23:42:15,266 INFO     00:32:38.12  Consumer:starting write excel and csv files statistics ....
+ 2023-04-25 23:42:15,320 INFO     00:32:38.17  Consumer:finish of write excel and csv files statistics .
+ 2023-04-25 23:42:15,321 INFO     Main: run in threads
+ 2023-04-25 23:42:15,321 INFO     Initializing RarFile object...
+ 2023-04-25 23:42:15,322 INFO     RarFile object initialized successfully.
+ 2023-04-25 23:42:15,344 INFO     00:00:00.02  Producer: start reading chunks.
+ 2023-04-25 23:42:15,345 INFO     00:00:00.02  consumer:start filtering and writing chunks using RE.
+ 2023-04-25 23:42:32,830 INFO     00:00:17.51  Producer:read 1 chunks and send it into queue.
+ 2023-04-25 23:42:50,221 INFO     00:00:34.90  Producer:read 2 chunks and send it into queue.
+ 2023-04-25 23:43:07,915 INFO     00:00:52.59  Producer:read 3 chunks and send it into queue.
+ 2023-04-25 23:43:25,228 INFO     00:01:09.91  Producer:read 4 chunks and send it into queue.
+ 2023-04-25 23:43:42,464 INFO     00:01:27.14  Producer:read 5 chunks and send it into queue.
+ 2023-04-25 23:44:00,451 INFO     00:01:45.13  Producer:read 6 chunks and send it into queue.
+ 2023-04-25 23:44:11,844 INFO     00:01:56.52  Producer:read 7 chunks and send it into queue.
+ 2023-04-25 23:44:11,885 INFO     00:01:56.56  Producer: finish reading all chunks.
+ 2023-04-25 23:47:30,187 INFO     00:05:14.87  Consumer: finish filtering and writing the chunk number 1
+ 2023-04-25 23:52:23,616 INFO     00:10:08.29  Consumer: finish filtering and writing the chunk number 2
+ 2023-04-25 23:57:15,076 INFO     00:14:59.75  Consumer: finish filtering and writing the chunk number 3
+ 2023-04-26 00:02:06,232 INFO     00:19:50.91  Consumer: finish filtering and writing the chunk number 4
+ 2023-04-26 00:07:01,927 INFO     00:24:46.61  Consumer: finish filtering and writing the chunk number 5
+ 2023-04-26 00:11:57,267 INFO     00:29:41.95  Consumer: finish filtering and writing the chunk number 6
+ 2023-04-26 00:15:15,190 INFO     00:32:59.87  Consumer: finish filtering and writing the chunk number 7
+ 2023-04-26 00:15:15,195 INFO     00:32:59.87  Consumer:starting write excel and csv files statistics ....
+ 2023-04-26 00:15:15,246 INFO     00:32:59.93  Consumer:finish of write excel and csv files statistics .
