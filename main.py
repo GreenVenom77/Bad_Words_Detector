@@ -21,19 +21,19 @@ logging.basicConfig(
 
 def main(args: Args):
     producer, consumer = setup_producer_consumer(args)
-    concurrent_model = setup_concurrent_model(args)
+    concurrent_model = setup_concurrent_model(args.processing_mode)
     try:
         concurrent_model.start(producer, consumer)
     except Exception as e:
         logging.exception("Exception occurred while running program: {}".format(str(e)))
 
 
-def setup_concurrent_model(args: Args) -> ConcurrentModel:
-    match args.processing_mode:
+def setup_concurrent_model(processing_mode: ProcessingMode) -> ConcurrentModel:
+    match processing_mode:
         case ProcessingMode.MultiThreading:
             logging.info("Main: run in threads")
             return MultiThreadingModel()
-        case ProcessingMode.Multiprocessing:
+        case ProcessingMode.MultiProcessing:
             logging.info("Main: run in processes")
             return MultiProcessingModel()
         case ProcessingMode.ProcessesPool:

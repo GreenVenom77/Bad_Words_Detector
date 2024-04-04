@@ -8,5 +8,5 @@ class FilterMode(Enum):
 
 class ProcessingMode(Enum):
     MultiThreading = 0
-    Multiprocessing = 1
+    MultiProcessing = 1
     ProcessesPool = 2
