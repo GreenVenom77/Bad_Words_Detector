@@ -3,7 +3,7 @@ import multiprocessing
 
 from consumer_copy import Consumer
 from threading import Thread
-from producer_copy import Producer
+from producer import Producer
 
 
 # interface (abstract class)
