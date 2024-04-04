@@ -1,93 +1,87 @@
+from queue import Queue
+from typing import Any, Dict, Iterator
 import pandas as pd
 import time
-import re
-import rarfile
+from rarfile import RarFile
 import logging
-#i/o bounds
-logging.basicConfig(filename='logfile.log', format=' %(asctime)s %(levelname)-8s %(message)s', level=logging.INFO)
+from time_helper import elapsed
 
-class ProducerThread():
-    def __init__(self, filename, chunksize, input_queue,timedict,badwords_filename ,badWordsQueue,specify_cols,start_time):
-        
+# i/o bounds
+logging.basicConfig(
+    filename="logfile.log",
+    format=" %(asctime)s %(levelname)-8s %(message)s",
+    level=logging.INFO,
+)
+
+
+class Producer:
+    def __init__(
+        self,
+        filename: str,
+        columns: list[int],
+        chunk_size: int,
+        input_queue: Queue[pd.DataFrame],
+        time_dict: dict[str, Any],
+    ):
+        """
+        A class to read chunks of data from a RAR file and put them into a queue for further processing.
+
+        Attributes:
+            filename (str): The path to the RAR file.
+            columns (List[int]): List of column indices to be read from the CSV.
+            chunk_size (int): Size of each chunk to be read.
+            input_queue (multiprocessing.Queue | Queue): The queue to put the chunks of data into.
+            time_dict (dict[str, Any] | DictProxy[str, Any]): A dictionary for time statistics.
+        """
         logging.info("Initializing RarFile object...")
-        self.filename = rarfile.RarFile(filename)
+        self.stream = RarFile(filename)
         logging.info("RarFile object initialized successfully.")
-        self.chunksize = chunksize
-        self.input_queue = input_queue
-        self.timedict=timedict
-        self.badWordsQueue=badWordsQueue
-        self.badWordsQueue.put(badwords_filename)
-        self.specify_cols=specify_cols
-        self.start_time=start_time
-        self.num_chunks =0
-        #assign the chunksize value to timedict 
-        self.timedict['chunksize']=self.chunksize
-    
-        
-    def elapsed_time(self,starting_time):
-        curr_time=time.time()
-        elapsed_time = curr_time - starting_time
-        # Format the elapsed time as hh:mm:ss
-        hours, remainder = divmod(elapsed_time, 3600)
-        minutes, seconds = divmod(remainder, 60)
-        elapsed_time_str = f"{hours:02.0f}:{minutes:02.0f}:{seconds:05.2f}"
+        self.__chunk_size = chunk_size
+        self.__input_queue = input_queue
+        self.__time_dict = time_dict
+        self.columns = columns
 
-        # Log a message with the elapsed time and timestamp
-        return elapsed_time_str
-    
-    
-    
-        #using yiled
+    def __read_chunks(self) -> Iterator[pd.DataFrame]:
+        """
+        A generator function to read chunks of data from the RAR file.
 
-    
-    def read_csv_chunks(self,filename, chunksize):
-        chunks = pd.read_csv(filename.open(filename.namelist()[0]), usecols=self.specify_cols , chunksize=chunksize, iterator=True)
-        
+        Yields:
+            pd.DataFrame: A DataFrame containing a chunk of data.
+        """
+        chunks = pd.read_csv(
+            self.stream.open(self.stream.namelist()[0]),
+            usecols=self.columns,
+            chunksize=self.__chunk_size,
+            iterator=True,
+        )
         start_time = time.time()
         for chunk in chunks:
-            end_time=time.time()
+            end_time = time.time()
             yield chunk
-            self.timedict['reading'].append(end_time-start_time)
-           
+            self.__time_dict["reading"].append(end_time - start_time)
             start_time = time.time()
+        chunks.close()
+        self.stream.close()
 
-    
-
-    
     def run(self):
-        elapsed_time_str = self.elapsed_time(self.start_time)
-        logging.info("%s  Producer: start reading chunks.",elapsed_time_str)
-        
-        
-        count=1
+        """
+        Run the producer to read chunks of data from the RAR file and put them into the input queue.
+        """
+        elapsed_time: str = elapsed(self.__time_dict["start_time"])
+        logging.info("%s  Producer: start reading chunks.", elapsed_time)
         # Process chunks of data until there are no more chunks
-        for chunk in self.read_csv_chunks(self.filename,self.chunksize):
-            self.input_queue.put(chunk)
-            self.num_chunks += 1
-            
-            elapsed_time=self.elapsed_time(self.start_time)
-            logging.info("%s  Producer:read %s chunks and send it into queue.",elapsed_time,count)
-            
-            count+=1
-
-        #send number of chunks in dict that has time statistics as well
-        self.timedict['number of chunks']=self.num_chunks
-        
+        for number, chunk in enumerate(self.__read_chunks()):
+            self.__input_queue.put(chunk)
+            elapsed_time = elapsed(self.__time_dict["start_time"])
+            logging.info(
+                "%s  Producer:read %s chunks and send it into input queue.",
+                elapsed_time,
+                number + 1,
+            )
+        else:
+            # add number of founded chunks to statistics dict
+            self.__time_dict["number of chunks"] = number + 1
         # Signal end of input and compute read time statistics
-        self.input_queue.put(None)
-        elapsed_time_str = self.elapsed_time(self.start_time)
-        logging.info("%s  Producer: finish reading all chunks.",elapsed_time_str)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        self.__input_queue.put(None)
+        elapsed_time: str = elapsed(self.__time_dict["start_time"])
+        logging.info("%s  Producer: finish reading all chunks.", elapsed_time)
