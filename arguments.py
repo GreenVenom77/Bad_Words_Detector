@@ -42,14 +42,14 @@ def add_arguments(parser: ArgumentParser):
     parser.add_argument(
         "-f",
         "--filter_mode",
-        choices=["Regex", "AhoCorasick"],
+        choices=[i.name for i in FilterMode],  # names of Enum fields
         default=FilterMode.Regex,
         help="The mode of filtering.",
     )
     parser.add_argument(
         "-p",
         "--processing_mode",
-        choices=["MultiThreading", "Multiprocessing", "ProcessesPool"],
+        choices=[i.name for i in ProcessingMode],  # names of Enum fields
         default=ProcessingMode.MultiThreading,
         help="the concurrent model that will work",
     )
