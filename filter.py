@@ -2,8 +2,7 @@ from abc import ABC, abstractmethod
 from functools import reduce
 import re
 import ahocorasick
-from pandas import DataFrame, Series
-import pandas
+from pandas import DataFrame
 
 
 # interface (abstract class)
@@ -38,10 +37,10 @@ class AhoCorasickFilter(TextFilter):
         health_filter = reduce(
             lambda x, y: x & y,
             [
-                ~chunk[column]
+                chunk[column]
                 .astype(str)
                 .apply(
-                    lambda field: len(list(self.__automaton.iter(field.lower()))) != 0
+                    lambda field: len(list(self.__automaton.iter(field.lower()))) == 0
                 )
                 for column in chunk.columns
             ],
@@ -74,12 +73,3 @@ class RegexFilter(TextFilter):
 
     def __repr__(self) -> str:
         return "Regex"
-
-
-if __name__ == "__main__":
-    bad_words = pandas.read_csv("./BadWords.csv", header=None).iloc[:, 0].tolist()
-    print(bad_words[0])
-    filter = AhoCorasickFilter(bad_words)
-    filter.prepare()
-    _, A = filter.filter(pandas.read_csv("./sample.csv", header=None))
-    # print(A)
