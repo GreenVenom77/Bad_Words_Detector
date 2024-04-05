@@ -33,13 +33,12 @@ class Producer:
             input_queue (multiprocessing.Queue | Queue): The queue to put the chunks of data into.
             time_dict (dict[str, Any] | DictProxy[str, Any]): A dictionary for time statistics.
         """
-        logging.info("Initializing RarFile object...")
-        self.stream = RarFile(filename)
-        logging.info("RarFile object initialized successfully.")
+
+        self.__file_name = filename
         self.__chunk_size = chunk_size
         self.__input_queue = input_queue
         self.__time_dict = time_dict
-        self.columns = columns
+        self.__columns = columns
 
     def __read_chunks(self) -> Iterator[pd.DataFrame]:
         """
@@ -48,20 +47,23 @@ class Producer:
         Yields:
             pd.DataFrame: A DataFrame containing a chunk of data.
         """
-        chunks = pd.read_csv(
-            self.stream.open(self.stream.namelist()[0]),
-            usecols=self.columns,
-            chunksize=self.__chunk_size,
-            iterator=True,
-        )
-        start_time = time.time()
-        for chunk in chunks:
-            end_time = time.time()
-            yield chunk
-            self.__time_dict["reading"].append(end_time - start_time)
-            start_time = time.time()
-        chunks.close()
-        self.stream.close()
+        logging.info("Initializing RarFile object...")
+        with RarFile(self.__file_name) as rar_ref:
+            logging.info("RarFile object initialized successfully.")
+            with rar_ref.open(rar_ref.namelist()[0]) as file:
+                # (chunk size) parameter represents rows count for each chunk
+                chunks = pd.read_csv(
+                    file,
+                    usecols=self.__columns,
+                    chunksize=self.__chunk_size,
+                    iterator=True,
+                )
+                start_time = time.time()
+                for chunk in chunks:
+                    end_time = time.time()
+                    yield chunk
+                    self.__time_dict["reading"].append(end_time - start_time)
+                    start_time = time.time()
 
     def run(self):
         """

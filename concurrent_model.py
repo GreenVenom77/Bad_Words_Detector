@@ -27,6 +27,7 @@ class ProcessesPoolModel(ConcurrentModel):
         consumer_process1.start()
         consumer_process2.start()
         consumer_process3.start()
+        producer_process.join()
         consumer_process1.join()
         consumer_process2.join()
         consumer_process3.join()
