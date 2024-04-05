@@ -2,7 +2,7 @@ import pandas as pd
 from Enums import FilterMode, ProcessingMode
 from concurrent_model import *
 from producer import Producer
-from consumer_copy import Consumer
+from consumer import Consumer
 from queue import Queue
 import threading
 import multiprocessing

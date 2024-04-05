@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 import multiprocessing
+import multiprocessing.process
 
-from consumer_copy import Consumer
+from consumer import Consumer
 from threading import Thread
 from producer import Producer
 
@@ -18,17 +19,17 @@ class ConcurrentModel(ABC):
 class ProcessesPoolModel(ConcurrentModel):
 
     def start(self, producer: Producer, consumer: Consumer) -> None:
-        # Create a pool with 3 processes
-        pool = multiprocessing.Pool(processes=4)
-        # Start the producer process asynchronously
-        pool.apply_async(producer.run)
-        # Start the 4 consumer processes asynchronously
-        pool.apply_async(consumer.run)
-        pool.apply_async(consumer.run)
-        pool.apply_async(consumer.run)
-        # Close the pool and wait for all processes to finish
-        pool.close()
-        pool.join()
+        producer_process = multiprocessing.Process(target=producer.run)
+        consumer_process1 = multiprocessing.Process(target=consumer.run)
+        consumer_process2 = multiprocessing.Process(target=consumer.run)
+        consumer_process3 = multiprocessing.Process(target=consumer.run)
+        producer_process.start()
+        consumer_process1.start()
+        consumer_process2.start()
+        consumer_process3.start()
+        consumer_process1.join()
+        consumer_process2.join()
+        consumer_process3.join()
 
 
 class MultiProcessingModel(ConcurrentModel):
