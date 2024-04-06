@@ -1,18 +1,25 @@
+from dataclasses import dataclass
 import multiprocessing
 from time import time
 from typing import Any
 
 
-def generate_time_dict() -> dict[str, Any]:
+@dataclass
+class ChunkInfo:
+    reading_time: float
+    filtering_time: float
+    number_of_healthy: int
+    number_of_unhealthy: int
+
+
+def generate_statistics_dict() -> dict[str, Any]:
 
     return {
         "start_time": float(),
         "chunk_size": int(),
+        "filtering_algorithm": str(),
         "number_of_chunks": int(),
-        "reading": [],
-        "filtering": [],
-        "number_of_healthy": int(),
-        "number_of_unhealthy": int(),
+        "chunks_info": list[float | ChunkInfo](),
     }
 
 

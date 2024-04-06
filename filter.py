@@ -24,14 +24,14 @@ class TextFilter(ABC):
 
 class AhoCorasickFilter(TextFilter):
     def __init__(self, bad_words: list[str]):
-        self.__bad_words = bad_words
+        self.bad_words = bad_words
 
     def prepare(self) -> None:
         # making the trie and aho search
-        self.__automaton = ahocorasick.Automaton()
-        for word in map(lambda x: x.lower(), self.__bad_words):
-            self.__automaton.add_word(word, word)
-        self.__automaton.make_automaton()
+        self.automaton = ahocorasick.Automaton()
+        for word in map(lambda x: x.lower(), self.bad_words):
+            self.automaton.add_word(word, word)
+        self.automaton.make_automaton()
 
     def filter(self, chunk: DataFrame) -> tuple[DataFrame, DataFrame]:
         health_filter = reduce(
@@ -39,9 +39,7 @@ class AhoCorasickFilter(TextFilter):
             [
                 chunk[column]
                 .astype(str)
-                .apply(
-                    lambda field: len(list(self.__automaton.iter(field.lower()))) == 0
-                )
+                .apply(lambda field: len(list(self.automaton.iter(field.lower()))) == 0)
                 for column in chunk.columns
             ],
         )
@@ -53,10 +51,10 @@ class AhoCorasickFilter(TextFilter):
 
 class RegexFilter(TextFilter):
     def __init__(self, bad_words: list[str]):
-        self.__bad_words = bad_words
+        self.bad_words = bad_words
 
     def prepare(self) -> None:
-        self.__pattern = "|".join(map(re.escape, self.__bad_words))
+        self.pattern = "|".join(map(re.escape, self.bad_words))
 
     def filter(self, chunk: DataFrame) -> tuple[DataFrame, DataFrame]:
 
@@ -65,7 +63,7 @@ class RegexFilter(TextFilter):
             [
                 ~chunk[column]
                 .astype(str)
-                .str.contains(self.__pattern, regex=True, flags=re.I, na=False)
+                .str.contains(self.pattern, regex=True, flags=re.I, na=False)
                 for column in chunk.columns
             ],
         )

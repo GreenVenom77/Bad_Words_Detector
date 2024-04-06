@@ -10,7 +10,7 @@ import logging
 from time import time
 from arguments import Args, parse_args
 from filter import *
-from time_helper import generate_time_dict
+from time_helper import generate_statistics_dict
 
 logging.basicConfig(
     filename="logfile.log",
@@ -52,19 +52,20 @@ def setup_producer_consumer(args: Args) -> tuple[Producer, Consumer]:
         text_filter: TextFilter = RegexFilter(bad_words)
 
     if args.processing_mode == ProcessingMode.MultiThreading:
-        time_dict = generate_time_dict()
+        time_dict = generate_statistics_dict()
         input_queue = Queue(maxsize=1000)
     else:
         manager = multiprocessing.Manager()
-        time_dict = manager.dict(generate_time_dict())
+        time_dict = manager.dict(generate_statistics_dict())
         input_queue = multiprocessing.Queue(maxsize=1000)
 
     if args.processing_mode == ProcessingMode.ProcessesPool:
         use_time_dict_lock = True
     else:
         use_time_dict_lock = False
-    time_dict["chunk_size"] = args.chunk_size
     time_dict["start_time"] = time()
+    time_dict["chunk_size"] = args.chunk_size
+    time_dict["filtering_algorithm"] = args.filter_mode.name
 
     producer = Producer(
         args.data_file, args.specify_columns, args.chunk_size, input_queue, time_dict
