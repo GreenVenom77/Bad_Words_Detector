@@ -1,3 +1,4 @@
+import multiprocessing
 from time import time
 from typing import Any
 
@@ -5,12 +6,13 @@ from typing import Any
 def generate_time_dict() -> dict[str, Any]:
 
     return {
-        "start_time": float,
+        "start_time": float(),
         "chunk_size": int(),
         "number_of_chunks": int(),
         "reading": [],
         "filtering": [],
-        "writing": [],
+        "number_of_healthy": int(),
+        "number_of_unhealthy": int(),
     }
 
 
