@@ -53,25 +53,23 @@ def setup_producer_consumer(args: Args) -> tuple[Producer, Consumer]:
 
     if args.processing_mode == ProcessingMode.MultiThreading:
         time_dict = generate_time_dict()
-        input_queue = Queue(maxsize=10000)
-        success_queue = Queue()
-        fail_queue = Queue()
-        lock = threading.Lock()
+        input_queue = Queue(maxsize=1000)
     else:
         manager = multiprocessing.Manager()
         time_dict = manager.dict(generate_time_dict())
-        input_queue = multiprocessing.Queue()
-        success_queue = multiprocessing.Queue()
-        fail_queue = multiprocessing.Queue()
-        lock = multiprocessing.Lock()
+        input_queue = multiprocessing.Queue(maxsize=1000)
+
+    if args.processing_mode == ProcessingMode.ProcessesPool:
+        use_time_dict_lock = True
+    else:
+        use_time_dict_lock = False
     time_dict["chunk_size"] = args.chunk_size
     time_dict["start_time"] = time()
+
     producer = Producer(
         args.data_file, args.specify_columns, args.chunk_size, input_queue, time_dict
     )
-    consumer = Consumer(
-        text_filter, input_queue, success_queue, fail_queue, time_dict, lock
-    )
+    consumer = Consumer(text_filter, input_queue, time_dict, use_time_dict_lock)
 
     return producer, consumer
 

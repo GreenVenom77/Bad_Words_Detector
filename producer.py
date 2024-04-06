@@ -20,7 +20,7 @@ class Producer:
         filename: str,
         columns: list[int],
         chunk_size: int,
-        input_queue: Queue[pd.DataFrame],
+        input_queue: Queue[tuple[int, pd.DataFrame]],
         time_dict: dict[str, Any],
     ):
         """
@@ -73,13 +73,14 @@ class Producer:
         logging.info("%s  Producer: start reading chunks.", elapsed_time)
         # Process chunks of data until there are no more chunks
         for number, chunk in enumerate(self.__read_chunks()):
-            self.__input_queue.put(chunk)
+            self.__input_queue.put((number, chunk))
             elapsed_time = elapsed(self.__time_dict["start_time"])
             logging.info(
                 "%s  Producer:read %s chunks and send it into input queue.",
                 elapsed_time,
                 number + 1,
             )
+
         else:
             # add number of founded chunks to statistics dict
             self.__time_dict["number of chunks"] = number + 1

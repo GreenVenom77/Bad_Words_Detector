@@ -1,3 +1,4 @@
+import multiprocessing.process
 import multiprocessing.queues
 from queue import Queue
 import threading
@@ -18,51 +19,30 @@ logging.basicConfig(
 )
 
 
+class DummyLock:
+    def acquire(self):
+        pass
+
+    def release(self):
+        pass
+
+
 # cpu bounds
 class Consumer:
     def __init__(
         self,
         text_filter: TextFilter,
-        input_queue: Queue[pd.DataFrame],
-        success_queue: Queue[pd.DataFrame],
-        fail_queue: multiprocessing.queues.Queue[pd.DataFrame] | Queue[pd.DataFrame],
+        input_queue: Queue[tuple[int, pd.DataFrame]],
         time_dict,
-        lock,
+        use_time_dict_lock: bool,
     ):
         self.__text_filter = text_filter
-        self.input_queue = input_queue
-        self.success_queue = success_queue
-        self.fail_queue = fail_queue
+        self.__input_queue = input_queue
         self.__time_dict = time_dict
-        self.lock = lock
-
-    def write_csv(self, queue, fileName):
-        if not os.path.exists("output"):
-            os.makedirs("output")
-
-        # create folder store healty and unhealty files
-
-        if not os.path.exists("output/FrameSize" + str(self.__time_dict["chunk_size"])):
-            os.makedirs("output/FrameSize" + str(self.__time_dict["chunk_size"]))
-
-        fileName = (
-            "output/FrameSize" + str(self.__time_dict["chunk_size"]) + "/" + fileName
-        )
-
-        while True:
-            if queue.empty():
-                break
-
-            record = queue.get()
-
-            # Check if the file already exists
-            if not os.path.exists(fileName):
-                # write the first chunk with header
-                record.to_csv(fileName, mode="w", header=True, index=False)
-
-            else:
-                # append chunk without header
-                record.to_csv(fileName, mode="a", header=False, index=False)
+        if use_time_dict_lock:
+            self.__time_dict_lock = multiprocessing.Lock()
+        else:
+            self.__time_dict_lock = DummyLock()
 
     def write_csv_statistics(self, filename):
         with open("output/" + filename, "a", newline="") as csvfile:
@@ -147,57 +127,32 @@ class Consumer:
     def start_filtering(self):
         elapsed_time = elapsed(self.__time_dict["start_time"])
         logging.info(
-            "%s  consumer:start filtering and writing chunks using %s.",
+            "%s  consumer:start filtering chunks using %s.",
             elapsed_time,
             self.__text_filter,
         )
-        count = 1
         self.__text_filter.prepare()
         while True:
-            if self.input_queue.empty():
+            if self.__input_queue.empty():
                 continue
-
-            if (chunk := self.input_queue.get()) is None:
-                self.success_queue.put(None)
-                self.fail_queue.put(None)
+            if (tuple := self.__input_queue.get()) is None:
                 break
-
             # filtering
             start_time = time.time()
-            healthy_chunk, unhealthy_chunk = self.__text_filter.filter(chunk)
+            healthy_chunk, unhealthy_chunk = self.__text_filter.filter(tuple[1])
             end_time = time.time()
 
-            self.success_queue.put(healthy_chunk)
-            self.fail_queue.put(unhealthy_chunk)
+            # add the time taken to filter each chunk
+            self.__time_dict_lock.acquire()
+            self.__time_dict["filtering"].append((tuple[0] + 1, end_time - start_time))
+            self.__time_dict_lock.release()
 
-            self.__time_dict["filtering"].append(end_time - start_time)
-
-            with self.lock:
-                start_time = time.time()
-
-                healthy_thread = threading.Thread(
-                    target=self.write_csv,
-                    args=(self.success_queue, "Healthy Record"),
-                )
-                healthy_thread.start()
-                unhealthy_thread = threading.Thread(
-                    target=self.write_csv, args=(self.fail_queue, "UnHealthy Record")
-                )
-                unhealthy_thread.start()
-
-                healthy_thread.join()
-                unhealthy_thread.join()
-
-                end_time = time.time()
-
-            self.__time_dict["writing"].append(end_time - start_time)
             elapsed_time = elapsed(self.__time_dict["start_time"])
             logging.info(
-                "%s  Consumer: finish filtering and writing the chunk number %s",
+                "%s  Consumer: finish filtering chunk number %s",
                 elapsed_time,
-                count,
+                tuple[0] + 1,
             )
-            count += 1
 
     def run(self):
 
