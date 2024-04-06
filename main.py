@@ -10,6 +10,7 @@ import logging
 from time import time
 from arguments import Args, parse_args
 from filter import *
+from statistics_writer import StatisticsWriter
 from time_helper import generate_statistics_dict
 
 logging.basicConfig(
@@ -21,9 +22,11 @@ logging.basicConfig(
 
 def main(args: Args):
     producer, consumer = setup_producer_consumer(args)
+    writer = StatisticsWriter(producer.statistics_dict)
     concurrent_model = setup_concurrent_model(args.processing_mode)
     try:
         concurrent_model.start(producer, consumer)
+        writer.start()
     except Exception as e:
         logging.exception("Exception occurred while running program: {}".format(str(e)))
 
