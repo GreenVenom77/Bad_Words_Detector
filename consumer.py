@@ -142,9 +142,11 @@ class Consumer:
             healthy_chunk, unhealthy_chunk = self.__text_filter.filter(tuple[1])
             end_time = time.time()
 
-            # add the time taken to filter each chunk
+            # add the time taken to filter the chunk
             self.__time_dict_lock.acquire()
             self.__time_dict["filtering"].append((tuple[0] + 1, end_time - start_time))
+            self.__time_dict["number_of_healthy"] += healthy_chunk.shape[0]
+            self.__time_dict["number_of_unhealthy"] += unhealthy_chunk.shape[0]
             self.__time_dict_lock.release()
 
             elapsed_time = elapsed(self.__time_dict["start_time"])
