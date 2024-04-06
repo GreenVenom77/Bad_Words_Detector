@@ -56,7 +56,7 @@ class Consumer:
             self.statistics_dict_lock.acquire()
             chunks_info: list[float | ChunkInfo] = self.statistics_dict["chunks_info"]
             chunks_info[index] = ChunkInfo(
-                reading_time=self.statistics_dict["chunk_info"][index],
+                reading_time=self.statistics_dict["chunks_info"][index],
                 filtering_time=round(end_time - start_time, 4),
                 number_of_healthy=healthy_chunk.shape[0],
                 number_of_unhealthy=unhealthy_chunk.shape[0],
