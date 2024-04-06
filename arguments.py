@@ -36,7 +36,7 @@ def add_arguments(parser: ArgumentParser):
         "-s",
         "--chunk_size",
         type=int,
-        default="1000",
+        default=1000,
         help="The chunk size will be processed",
     )
     parser.add_argument(
