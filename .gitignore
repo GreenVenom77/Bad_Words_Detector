@@ -1,5 +1,10 @@
+# Folders
+**/__pycache__
 .venv
-46,080,374Rows_365Columns.rar
-args.json
 .vscode
 .idea
+
+# Files
+46,080,374Rows_365Columns.rar
+args.json
+*.log
