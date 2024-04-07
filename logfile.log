@@ -1,156 +1,929 @@
- 2024-04-05 04:24:36,989 INFO     Main: run in threads
- 2024-04-05 04:24:36,992 INFO     00:00:00.00  Producer: start reading chunks.
- 2024-04-05 04:24:36,992 INFO     Initializing RarFile object...
- 2024-04-05 04:24:36,992 INFO     00:00:00.00  consumer:start filtering and writing chunks using AhoCorasick.
- 2024-04-05 04:24:37,080 INFO     RarFile object initialized successfully.
- 2024-04-05 04:25:32,106 INFO     Main: run in processes
- 2024-04-05 04:25:33,765 INFO     00:00:01.66  Producer: start reading chunks.
- 2024-04-05 04:25:33,765 INFO     Initializing RarFile object...
- 2024-04-05 04:25:33,766 INFO     RarFile object initialized successfully.
- 2024-04-05 04:25:33,804 INFO     00:00:01.70  consumer:start filtering and writing chunks using AhoCorasick.
- 2024-04-05 04:25:37,556 INFO     00:00:05.45  Producer:read 1 chunks and send it into input queue.
- 2024-04-05 04:25:38,497 INFO     00:00:06.39  Consumer: finish filtering and writing the chunk number 1
- 2024-04-05 04:25:41,116 INFO     00:00:09.01  Producer:read 2 chunks and send it into input queue.
- 2024-04-05 04:25:42,022 INFO     00:00:09.92  Consumer: finish filtering and writing the chunk number 2
- 2024-04-05 04:25:44,147 INFO     00:00:12.04  Producer:read 3 chunks and send it into input queue.
- 2024-04-05 04:25:45,104 INFO     00:00:13.00  Consumer: finish filtering and writing the chunk number 3
- 2024-04-05 04:25:47,189 INFO     00:00:15.08  Producer:read 4 chunks and send it into input queue.
- 2024-04-05 04:25:48,112 INFO     00:00:16.01  Consumer: finish filtering and writing the chunk number 4
- 2024-04-05 04:25:50,032 INFO     00:00:17.92  Producer:read 5 chunks and send it into input queue.
- 2024-04-05 04:25:50,876 INFO     00:00:18.77  Consumer: finish filtering and writing the chunk number 5
- 2024-04-05 04:25:53,208 INFO     00:00:21.10  Producer:read 6 chunks and send it into input queue.
- 2024-04-05 04:25:54,312 INFO     00:00:22.21  Consumer: finish filtering and writing the chunk number 6
- 2024-04-05 04:25:56,181 INFO     00:00:24.07  Producer:read 7 chunks and send it into input queue.
- 2024-04-05 04:25:57,069 INFO     00:00:24.96  Consumer: finish filtering and writing the chunk number 7
- 2024-04-05 04:25:59,156 INFO     00:00:27.05  Producer:read 8 chunks and send it into input queue.
- 2024-04-05 04:26:00,037 INFO     00:00:27.93  Consumer: finish filtering and writing the chunk number 8
- 2024-04-05 04:26:02,150 INFO     00:00:30.04  Producer:read 9 chunks and send it into input queue.
- 2024-04-05 04:26:03,015 INFO     00:00:30.91  Consumer: finish filtering and writing the chunk number 9
- 2024-04-05 04:26:04,963 INFO     00:00:32.85  Producer:read 10 chunks and send it into input queue.
- 2024-04-05 04:26:05,852 INFO     00:00:33.75  Consumer: finish filtering and writing the chunk number 10
- 2024-04-05 04:26:08,265 INFO     00:00:36.16  Producer:read 11 chunks and send it into input queue.
- 2024-04-05 04:26:09,284 INFO     00:00:37.18  Consumer: finish filtering and writing the chunk number 11
- 2024-04-05 04:26:11,261 INFO     00:00:39.15  Producer:read 12 chunks and send it into input queue.
- 2024-04-05 04:26:12,134 INFO     00:00:40.03  Consumer: finish filtering and writing the chunk number 12
- 2024-04-05 04:26:14,535 INFO     00:00:42.43  Producer:read 13 chunks and send it into input queue.
- 2024-04-05 04:26:15,449 INFO     00:00:43.34  Consumer: finish filtering and writing the chunk number 13
- 2024-04-05 04:26:17,537 INFO     00:00:45.43  Producer:read 14 chunks and send it into input queue.
- 2024-04-05 04:26:18,595 INFO     00:00:46.49  Consumer: finish filtering and writing the chunk number 14
- 2024-04-05 04:26:20,825 INFO     00:00:48.72  Producer:read 15 chunks and send it into input queue.
- 2024-04-05 04:26:21,948 INFO     00:00:49.84  Consumer: finish filtering and writing the chunk number 15
- 2024-04-05 04:26:24,157 INFO     00:00:52.05  Producer:read 16 chunks and send it into input queue.
- 2024-04-05 04:26:25,192 INFO     00:00:53.09  Consumer: finish filtering and writing the chunk number 16
- 2024-04-05 04:26:27,481 INFO     00:00:55.38  Producer:read 17 chunks and send it into input queue.
- 2024-04-05 04:26:28,430 INFO     00:00:56.32  Consumer: finish filtering and writing the chunk number 17
- 2024-04-05 04:26:30,756 INFO     00:00:58.65  Producer:read 18 chunks and send it into input queue.
- 2024-04-05 04:26:31,809 INFO     00:00:59.70  Consumer: finish filtering and writing the chunk number 18
- 2024-04-05 04:26:34,040 INFO     00:01:01.93  Producer:read 19 chunks and send it into input queue.
- 2024-04-05 04:26:35,045 INFO     00:01:02.94  Consumer: finish filtering and writing the chunk number 19
- 2024-04-05 04:26:36,995 INFO     00:01:04.89  Producer:read 20 chunks and send it into input queue.
- 2024-04-05 04:26:37,870 INFO     00:01:05.76  Consumer: finish filtering and writing the chunk number 20
- 2024-04-05 04:26:40,114 INFO     00:01:08.01  Producer:read 21 chunks and send it into input queue.
- 2024-04-05 04:26:41,071 INFO     00:01:08.96  Consumer: finish filtering and writing the chunk number 21
- 2024-04-05 04:26:43,573 INFO     00:01:11.47  Producer:read 22 chunks and send it into input queue.
- 2024-04-05 04:26:44,696 INFO     00:01:12.59  Consumer: finish filtering and writing the chunk number 22
- 2024-04-05 04:26:47,039 INFO     00:01:14.93  Producer:read 23 chunks and send it into input queue.
- 2024-04-05 04:26:48,133 INFO     00:01:16.03  Consumer: finish filtering and writing the chunk number 23
- 2024-04-05 04:26:50,564 INFO     00:01:18.46  Producer:read 24 chunks and send it into input queue.
- 2024-04-05 04:26:51,490 INFO     00:01:19.38  Consumer: finish filtering and writing the chunk number 24
- 2024-04-05 04:26:53,584 INFO     00:01:21.48  Producer:read 25 chunks and send it into input queue.
- 2024-04-05 04:26:54,495 INFO     00:01:22.39  Consumer: finish filtering and writing the chunk number 25
- 2024-04-05 04:26:56,566 INFO     00:01:24.46  Producer:read 26 chunks and send it into input queue.
- 2024-04-05 04:26:57,458 INFO     00:01:25.35  Consumer: finish filtering and writing the chunk number 26
- 2024-04-05 04:26:59,482 INFO     00:01:27.37  Producer:read 27 chunks and send it into input queue.
- 2024-04-05 04:27:00,345 INFO     00:01:28.24  Consumer: finish filtering and writing the chunk number 27
- 2024-04-05 04:27:02,343 INFO     00:01:30.24  Producer:read 28 chunks and send it into input queue.
- 2024-04-05 04:27:03,269 INFO     00:01:31.16  Consumer: finish filtering and writing the chunk number 28
- 2024-04-05 04:27:05,661 INFO     00:01:33.55  Producer:read 29 chunks and send it into input queue.
- 2024-04-05 04:27:06,860 INFO     00:01:34.75  Consumer: finish filtering and writing the chunk number 29
- 2024-04-05 04:27:08,875 INFO     00:01:36.77  Producer:read 30 chunks and send it into input queue.
- 2024-04-05 04:27:09,795 INFO     00:01:37.69  Consumer: finish filtering and writing the chunk number 30
- 2024-04-05 04:27:12,413 INFO     00:01:40.31  Producer:read 31 chunks and send it into input queue.
- 2024-04-05 04:27:13,356 INFO     00:01:41.25  Consumer: finish filtering and writing the chunk number 31
- 2024-04-05 04:27:15,495 INFO     00:01:43.38  Producer:read 32 chunks and send it into input queue.
- 2024-04-05 04:27:16,602 INFO     00:01:44.50  Consumer: finish filtering and writing the chunk number 32
- 2024-04-05 04:27:18,711 INFO     00:01:46.60  Producer:read 33 chunks and send it into input queue.
- 2024-04-05 04:27:19,628 INFO     00:01:47.52  Consumer: finish filtering and writing the chunk number 33
- 2024-04-05 04:27:21,867 INFO     00:01:49.76  Producer:read 34 chunks and send it into input queue.
- 2024-04-05 04:27:23,054 INFO     00:01:50.95  Consumer: finish filtering and writing the chunk number 34
- 2024-04-05 04:27:25,293 INFO     00:01:53.18  Producer:read 35 chunks and send it into input queue.
- 2024-04-05 04:27:26,324 INFO     00:01:54.22  Consumer: finish filtering and writing the chunk number 35
- 2024-04-05 04:27:28,335 INFO     00:01:56.23  Producer:read 36 chunks and send it into input queue.
- 2024-04-05 04:27:29,239 INFO     00:01:57.13  Consumer: finish filtering and writing the chunk number 36
- 2024-04-05 04:27:30,933 INFO     00:01:58.83  Producer:read 37 chunks and send it into input queue.
- 2024-04-05 04:27:31,878 INFO     00:01:59.77  Consumer: finish filtering and writing the chunk number 37
- 2024-04-05 04:27:34,282 INFO     00:02:02.18  Producer:read 38 chunks and send it into input queue.
- 2024-04-05 04:27:35,172 INFO     00:02:03.07  Consumer: finish filtering and writing the chunk number 38
- 2024-04-05 04:27:36,967 INFO     00:02:04.86  Producer:read 39 chunks and send it into input queue.
- 2024-04-05 04:27:38,066 INFO     00:02:05.96  Consumer: finish filtering and writing the chunk number 39
- 2024-04-05 04:27:40,043 INFO     00:02:07.94  Producer:read 40 chunks and send it into input queue.
- 2024-04-05 04:27:40,858 INFO     00:02:08.75  Consumer: finish filtering and writing the chunk number 40
- 2024-04-05 04:27:43,039 INFO     00:02:10.93  Producer:read 41 chunks and send it into input queue.
- 2024-04-05 04:27:43,897 INFO     00:02:11.79  Consumer: finish filtering and writing the chunk number 41
- 2024-04-05 04:27:45,994 INFO     00:02:13.89  Producer:read 42 chunks and send it into input queue.
- 2024-04-05 04:27:47,071 INFO     00:02:14.96  Consumer: finish filtering and writing the chunk number 42
- 2024-04-05 04:27:49,018 INFO     00:02:16.91  Producer:read 43 chunks and send it into input queue.
- 2024-04-05 04:27:49,903 INFO     00:02:17.80  Consumer: finish filtering and writing the chunk number 43
- 2024-04-05 04:27:52,176 INFO     00:02:20.07  Producer:read 44 chunks and send it into input queue.
- 2024-04-05 04:27:53,181 INFO     00:02:21.08  Consumer: finish filtering and writing the chunk number 44
- 2024-04-05 04:27:55,181 INFO     00:02:23.07  Producer:read 45 chunks and send it into input queue.
- 2024-04-05 04:27:56,084 INFO     00:02:23.98  Consumer: finish filtering and writing the chunk number 45
- 2024-04-05 04:27:58,088 INFO     00:02:25.98  Producer:read 46 chunks and send it into input queue.
- 2024-04-05 04:27:58,990 INFO     00:02:26.88  Consumer: finish filtering and writing the chunk number 46
- 2024-04-05 04:28:01,203 INFO     00:02:29.10  Producer:read 47 chunks and send it into input queue.
- 2024-04-05 04:28:02,242 INFO     00:02:30.14  Consumer: finish filtering and writing the chunk number 47
- 2024-04-05 04:28:04,292 INFO     00:02:32.19  Producer:read 48 chunks and send it into input queue.
- 2024-04-05 04:28:05,150 INFO     00:02:33.04  Consumer: finish filtering and writing the chunk number 48
- 2024-04-05 04:28:07,301 INFO     00:02:35.20  Producer:read 49 chunks and send it into input queue.
- 2024-04-05 04:28:08,387 INFO     00:02:36.28  Consumer: finish filtering and writing the chunk number 49
- 2024-04-05 04:28:10,649 INFO     00:02:38.54  Producer:read 50 chunks and send it into input queue.
- 2024-04-05 04:28:11,742 INFO     00:02:39.64  Consumer: finish filtering and writing the chunk number 50
- 2024-04-05 04:28:14,133 INFO     00:02:42.03  Producer:read 51 chunks and send it into input queue.
- 2024-04-05 04:28:14,946 INFO     00:02:42.84  Consumer: finish filtering and writing the chunk number 51
- 2024-04-05 04:28:16,771 INFO     00:02:44.67  Producer:read 52 chunks and send it into input queue.
- 2024-04-05 04:28:17,709 INFO     00:02:45.60  Consumer: finish filtering and writing the chunk number 52
- 2024-04-05 04:28:19,798 INFO     00:02:47.69  Producer:read 53 chunks and send it into input queue.
- 2024-04-05 04:28:20,654 INFO     00:02:48.55  Consumer: finish filtering and writing the chunk number 53
- 2024-04-05 04:28:22,685 INFO     00:02:50.58  Producer:read 54 chunks and send it into input queue.
- 2024-04-05 04:28:23,529 INFO     00:02:51.42  Consumer: finish filtering and writing the chunk number 54
- 2024-04-05 04:28:25,720 INFO     00:02:53.61  Producer:read 55 chunks and send it into input queue.
- 2024-04-05 04:28:26,662 INFO     00:02:54.56  Consumer: finish filtering and writing the chunk number 55
- 2024-04-05 04:28:28,654 INFO     00:02:56.55  Producer:read 56 chunks and send it into input queue.
- 2024-04-05 04:28:29,757 INFO     00:02:57.65  Consumer: finish filtering and writing the chunk number 56
- 2024-04-05 04:28:31,765 INFO     00:02:59.65  Producer:read 57 chunks and send it into input queue.
- 2024-04-05 04:28:32,541 INFO     00:03:00.44  Consumer: finish filtering and writing the chunk number 57
- 2024-04-05 04:28:34,722 INFO     00:03:02.62  Producer:read 58 chunks and send it into input queue.
- 2024-04-05 04:28:35,847 INFO     00:03:03.74  Consumer: finish filtering and writing the chunk number 58
- 2024-04-05 04:28:38,223 INFO     00:03:06.12  Producer:read 59 chunks and send it into input queue.
- 2024-04-05 04:28:39,114 INFO     00:03:07.01  Consumer: finish filtering and writing the chunk number 59
- 2024-04-05 04:28:40,896 INFO     00:03:08.79  Producer:read 60 chunks and send it into input queue.
- 2024-04-05 04:28:41,784 INFO     00:03:09.68  Consumer: finish filtering and writing the chunk number 60
- 2024-04-05 04:28:44,025 INFO     00:03:11.92  Producer:read 61 chunks and send it into input queue.
- 2024-04-05 04:28:45,359 INFO     00:03:13.25  Consumer: finish filtering and writing the chunk number 61
- 2024-04-05 04:28:47,121 INFO     00:03:15.01  Producer:read 62 chunks and send it into input queue.
- 2024-04-05 04:28:47,947 INFO     00:03:15.84  Consumer: finish filtering and writing the chunk number 62
- 2024-04-05 04:28:49,836 INFO     00:03:17.73  Producer:read 63 chunks and send it into input queue.
- 2024-04-05 04:28:50,759 INFO     00:03:18.65  Consumer: finish filtering and writing the chunk number 63
- 2024-04-05 04:28:52,916 INFO     00:03:20.81  Producer:read 64 chunks and send it into input queue.
- 2024-04-05 04:28:53,717 INFO     00:03:21.61  Consumer: finish filtering and writing the chunk number 64
- 2024-04-05 04:28:55,917 INFO     00:03:23.81  Producer:read 65 chunks and send it into input queue.
- 2024-04-05 04:28:56,877 INFO     00:03:24.77  Consumer: finish filtering and writing the chunk number 65
- 2024-04-05 04:28:59,170 INFO     00:03:27.06  Producer:read 66 chunks and send it into input queue.
- 2024-04-05 04:29:00,146 INFO     00:03:28.04  Consumer: finish filtering and writing the chunk number 66
- 2024-04-05 04:29:02,427 INFO     00:03:30.32  Producer:read 67 chunks and send it into input queue.
- 2024-04-05 04:29:03,473 INFO     00:03:31.37  Consumer: finish filtering and writing the chunk number 67
- 2024-04-05 04:29:05,662 INFO     00:03:33.56  Producer:read 68 chunks and send it into input queue.
- 2024-04-05 04:29:06,705 INFO     00:03:34.60  Consumer: finish filtering and writing the chunk number 68
- 2024-04-05 04:29:08,528 INFO     00:03:36.42  Producer:read 69 chunks and send it into input queue.
- 2024-04-05 04:29:09,392 INFO     00:03:37.29  Consumer: finish filtering and writing the chunk number 69
- 2024-04-05 04:29:11,379 INFO     00:03:39.27  Producer:read 70 chunks and send it into input queue.
- 2024-04-05 04:29:12,219 INFO     00:03:40.11  Consumer: finish filtering and writing the chunk number 70
- 2024-04-05 04:29:14,234 INFO     00:03:42.13  Producer:read 71 chunks and send it into input queue.
- 2024-04-05 04:29:15,117 INFO     00:03:43.01  Consumer: finish filtering and writing the chunk number 71
- 2024-04-05 04:29:17,291 INFO     00:03:45.18  Producer:read 72 chunks and send it into input queue.
- 2024-04-05 04:29:18,286 INFO     00:03:46.18  Consumer: finish filtering and writing the chunk number 72
- 2024-04-05 04:29:20,420 INFO     00:03:48.31  Producer:read 73 chunks and send it into input queue.
- 2024-04-05 04:29:21,374 INFO     00:03:49.27  Consumer: finish filtering and writing the chunk number 73
+ 2024-04-07 11:14:47,280 INFO     Main: run in processes
+ 2024-04-07 11:14:48,314 INFO     00:00:01.28  Producer: start reading chunks.
+ 2024-04-07 11:14:48,315 INFO     Initializing RarFile object...
+ 2024-04-07 11:14:48,315 INFO     00:00:01.28  consumer:start filtering chunks using AhoCorasick.
+ 2024-04-07 11:14:48,317 INFO     RarFile object initialized successfully.
+ 2024-04-07 11:14:50,181 INFO     00:00:03.15  Producer:read 1 chunks and send it into input queue.
+ 2024-04-07 11:14:50,552 INFO     00:00:03.52  Consumer: finish filtering chunk number 1
+ 2024-04-07 11:14:52,115 INFO     00:00:05.08  Producer:read 2 chunks and send it into input queue.
+ 2024-04-07 11:14:52,481 INFO     00:00:05.45  Consumer: finish filtering chunk number 2
+ 2024-04-07 11:14:53,922 INFO     00:00:06.89  Producer:read 3 chunks and send it into input queue.
+ 2024-04-07 11:14:54,293 INFO     00:00:07.26  Consumer: finish filtering chunk number 3
+ 2024-04-07 11:14:55,505 INFO     00:00:08.47  Producer:read 4 chunks and send it into input queue.
+ 2024-04-07 11:14:55,819 INFO     00:00:08.79  Consumer: finish filtering chunk number 4
+ 2024-04-07 11:14:56,917 INFO     00:00:09.88  Producer:read 5 chunks and send it into input queue.
+ 2024-04-07 11:14:57,231 INFO     00:00:10.20  Consumer: finish filtering chunk number 5
+ 2024-04-07 11:14:58,360 INFO     00:00:11.33  Producer:read 6 chunks and send it into input queue.
+ 2024-04-07 11:14:58,674 INFO     00:00:11.64  Consumer: finish filtering chunk number 6
+ 2024-04-07 11:14:59,772 INFO     00:00:12.74  Producer:read 7 chunks and send it into input queue.
+ 2024-04-07 11:15:00,102 INFO     00:00:13.07  Consumer: finish filtering chunk number 7
+ 2024-04-07 11:15:01,207 INFO     00:00:14.17  Producer:read 8 chunks and send it into input queue.
+ 2024-04-07 11:15:01,523 INFO     00:00:14.49  Consumer: finish filtering chunk number 8
+ 2024-04-07 11:15:02,638 INFO     00:00:15.61  Producer:read 9 chunks and send it into input queue.
+ 2024-04-07 11:15:02,951 INFO     00:00:15.92  Consumer: finish filtering chunk number 9
+ 2024-04-07 11:15:04,035 INFO     00:00:17.00  Producer:read 10 chunks and send it into input queue.
+ 2024-04-07 11:15:04,349 INFO     00:00:17.32  Consumer: finish filtering chunk number 10
+ 2024-04-07 11:15:05,462 INFO     00:00:18.40  Producer:read 11 chunks and send it into input queue.
+ 2024-04-07 11:15:05,760 INFO     00:00:18.73  Consumer: finish filtering chunk number 11
+ 2024-04-07 11:15:06,834 INFO     00:00:19.80  Producer:read 12 chunks and send it into input queue.
+ 2024-04-07 11:15:07,140 INFO     00:00:20.11  Consumer: finish filtering chunk number 12
+ 2024-04-07 11:15:08,223 INFO     00:00:21.19  Producer:read 13 chunks and send it into input queue.
+ 2024-04-07 11:15:08,537 INFO     00:00:21.50  Consumer: finish filtering chunk number 13
+ 2024-04-07 11:15:09,618 INFO     00:00:22.59  Producer:read 14 chunks and send it into input queue.
+ 2024-04-07 11:15:09,932 INFO     00:00:22.90  Consumer: finish filtering chunk number 14
+ 2024-04-07 11:15:11,015 INFO     00:00:23.98  Producer:read 15 chunks and send it into input queue.
+ 2024-04-07 11:15:11,342 INFO     00:00:24.31  Consumer: finish filtering chunk number 15
+ 2024-04-07 11:15:12,444 INFO     00:00:25.41  Producer:read 16 chunks and send it into input queue.
+ 2024-04-07 11:15:12,745 INFO     00:00:25.71  Consumer: finish filtering chunk number 16
+ 2024-04-07 11:15:13,839 INFO     00:00:26.81  Producer:read 17 chunks and send it into input queue.
+ 2024-04-07 11:15:14,153 INFO     00:00:27.12  Consumer: finish filtering chunk number 17
+ 2024-04-07 11:15:15,235 INFO     00:00:28.20  Producer:read 18 chunks and send it into input queue.
+ 2024-04-07 11:15:15,550 INFO     00:00:28.52  Consumer: finish filtering chunk number 18
+ 2024-04-07 11:15:16,646 INFO     00:00:29.61  Producer:read 19 chunks and send it into input queue.
+ 2024-04-07 11:15:16,960 INFO     00:00:29.93  Consumer: finish filtering chunk number 19
+ 2024-04-07 11:15:18,011 INFO     00:00:30.98  Producer:read 20 chunks and send it into input queue.
+ 2024-04-07 11:15:18,340 INFO     00:00:31.31  Consumer: finish filtering chunk number 20
+ 2024-04-07 11:15:19,438 INFO     00:00:32.41  Producer:read 21 chunks and send it into input queue.
+ 2024-04-07 11:15:19,752 INFO     00:00:32.72  Consumer: finish filtering chunk number 21
+ 2024-04-07 11:15:20,803 INFO     00:00:33.77  Producer:read 22 chunks and send it into input queue.
+ 2024-04-07 11:15:21,116 INFO     00:00:34.08  Consumer: finish filtering chunk number 22
+ 2024-04-07 11:15:22,215 INFO     00:00:35.18  Producer:read 23 chunks and send it into input queue.
+ 2024-04-07 11:15:22,544 INFO     00:00:35.51  Consumer: finish filtering chunk number 23
+ 2024-04-07 11:15:23,565 INFO     00:00:36.53  Producer:read 24 chunks and send it into input queue.
+ 2024-04-07 11:15:23,878 INFO     00:00:36.84  Consumer: finish filtering chunk number 24
+ 2024-04-07 11:15:24,928 INFO     00:00:37.90  Producer:read 25 chunks and send it into input queue.
+ 2024-04-07 11:15:25,257 INFO     00:00:38.22  Consumer: finish filtering chunk number 25
+ 2024-04-07 11:15:26,308 INFO     00:00:39.28  Producer:read 26 chunks and send it into input queue.
+ 2024-04-07 11:15:26,606 INFO     00:00:39.57  Consumer: finish filtering chunk number 26
+ 2024-04-07 11:15:27,673 INFO     00:00:40.64  Producer:read 27 chunks and send it into input queue.
+ 2024-04-07 11:15:27,974 INFO     00:00:40.94  Consumer: finish filtering chunk number 27
+ 2024-04-07 11:15:29,021 INFO     00:00:41.99  Producer:read 28 chunks and send it into input queue.
+ 2024-04-07 11:15:29,335 INFO     00:00:42.30  Consumer: finish filtering chunk number 28
+ 2024-04-07 11:15:30,401 INFO     00:00:43.37  Producer:read 29 chunks and send it into input queue.
+ 2024-04-07 11:15:30,716 INFO     00:00:43.68  Consumer: finish filtering chunk number 29
+ 2024-04-07 11:15:31,798 INFO     00:00:44.76  Producer:read 30 chunks and send it into input queue.
+ 2024-04-07 11:15:32,111 INFO     00:00:45.08  Consumer: finish filtering chunk number 30
+ 2024-04-07 11:15:33,161 INFO     00:00:46.13  Producer:read 31 chunks and send it into input queue.
+ 2024-04-07 11:15:33,484 INFO     00:00:46.45  Consumer: finish filtering chunk number 31
+ 2024-04-07 11:15:34,573 INFO     00:00:47.54  Producer:read 32 chunks and send it into input queue.
+ 2024-04-07 11:15:34,887 INFO     00:00:47.85  Consumer: finish filtering chunk number 32
+ 2024-04-07 11:15:35,938 INFO     00:00:48.90  Producer:read 33 chunks and send it into input queue.
+ 2024-04-07 11:15:36,288 INFO     00:00:49.26  Consumer: finish filtering chunk number 33
+ 2024-04-07 11:15:37,401 INFO     00:00:50.37  Producer:read 34 chunks and send it into input queue.
+ 2024-04-07 11:15:37,715 INFO     00:00:50.68  Consumer: finish filtering chunk number 34
+ 2024-04-07 11:15:38,849 INFO     00:00:51.82  Producer:read 35 chunks and send it into input queue.
+ 2024-04-07 11:15:39,173 INFO     00:00:52.14  Consumer: finish filtering chunk number 35
+ 2024-04-07 11:15:40,255 INFO     00:00:53.22  Producer:read 36 chunks and send it into input queue.
+ 2024-04-07 11:15:40,569 INFO     00:00:53.54  Consumer: finish filtering chunk number 36
+ 2024-04-07 11:15:41,717 INFO     00:00:54.68  Producer:read 37 chunks and send it into input queue.
+ 2024-04-07 11:15:42,044 INFO     00:00:55.01  Consumer: finish filtering chunk number 37
+ 2024-04-07 11:15:43,188 INFO     00:00:56.15  Producer:read 38 chunks and send it into input queue.
+ 2024-04-07 11:15:43,533 INFO     00:00:56.50  Consumer: finish filtering chunk number 38
+ 2024-04-07 11:15:44,646 INFO     00:00:57.61  Producer:read 39 chunks and send it into input queue.
+ 2024-04-07 11:15:45,013 INFO     00:00:57.98  Consumer: finish filtering chunk number 39
+ 2024-04-07 11:15:46,194 INFO     00:00:59.16  Producer:read 40 chunks and send it into input queue.
+ 2024-04-07 11:15:46,558 INFO     00:00:59.53  Consumer: finish filtering chunk number 40
+ 2024-04-07 11:15:47,741 INFO     00:01:00.71  Producer:read 41 chunks and send it into input queue.
+ 2024-04-07 11:15:48,091 INFO     00:01:01.06  Consumer: finish filtering chunk number 41
+ 2024-04-07 11:15:49,316 INFO     00:01:02.28  Producer:read 42 chunks and send it into input queue.
+ 2024-04-07 11:15:49,692 INFO     00:01:02.66  Consumer: finish filtering chunk number 42
+ 2024-04-07 11:15:51,025 INFO     00:01:03.99  Producer:read 43 chunks and send it into input queue.
+ 2024-04-07 11:15:51,423 INFO     00:01:04.39  Consumer: finish filtering chunk number 43
+ 2024-04-07 11:15:52,699 INFO     00:01:05.67  Producer:read 44 chunks and send it into input queue.
+ 2024-04-07 11:15:53,029 INFO     00:01:06.00  Consumer: finish filtering chunk number 44
+ 2024-04-07 11:15:54,224 INFO     00:01:07.19  Producer:read 45 chunks and send it into input queue.
+ 2024-04-07 11:15:54,627 INFO     00:01:07.59  Consumer: finish filtering chunk number 45
+ 2024-04-07 11:15:55,876 INFO     00:01:08.84  Producer:read 46 chunks and send it into input queue.
+ 2024-04-07 11:15:56,190 INFO     00:01:09.16  Consumer: finish filtering chunk number 46
+ 2024-04-07 11:15:57,318 INFO     00:01:10.29  Producer:read 47 chunks and send it into input queue.
+ 2024-04-07 11:15:57,633 INFO     00:01:10.60  Consumer: finish filtering chunk number 47
+ 2024-04-07 11:15:58,746 INFO     00:01:11.71  Producer:read 48 chunks and send it into input queue.
+ 2024-04-07 11:15:59,060 INFO     00:01:12.03  Consumer: finish filtering chunk number 48
+ 2024-04-07 11:16:00,173 INFO     00:01:13.14  Producer:read 49 chunks and send it into input queue.
+ 2024-04-07 11:16:00,487 INFO     00:01:13.45  Consumer: finish filtering chunk number 49
+ 2024-04-07 11:16:01,659 INFO     00:01:14.63  Producer:read 50 chunks and send it into input queue.
+ 2024-04-07 11:16:01,999 INFO     00:01:14.97  Consumer: finish filtering chunk number 50
+ 2024-04-07 11:16:03,174 INFO     00:01:16.14  Producer:read 51 chunks and send it into input queue.
+ 2024-04-07 11:16:03,524 INFO     00:01:16.49  Consumer: finish filtering chunk number 51
+ 2024-04-07 11:16:04,757 INFO     00:01:17.72  Producer:read 52 chunks and send it into input queue.
+ 2024-04-07 11:16:05,107 INFO     00:01:18.07  Consumer: finish filtering chunk number 52
+ 2024-04-07 11:16:06,306 INFO     00:01:19.27  Producer:read 53 chunks and send it into input queue.
+ 2024-04-07 11:16:06,673 INFO     00:01:19.64  Consumer: finish filtering chunk number 53
+ 2024-04-07 11:16:07,889 INFO     00:01:20.86  Producer:read 54 chunks and send it into input queue.
+ 2024-04-07 11:16:08,256 INFO     00:01:21.22  Consumer: finish filtering chunk number 54
+ 2024-04-07 11:16:09,538 INFO     00:01:22.51  Producer:read 55 chunks and send it into input queue.
+ 2024-04-07 11:16:09,901 INFO     00:01:22.87  Consumer: finish filtering chunk number 55
+ 2024-04-07 11:16:11,113 INFO     00:01:24.08  Producer:read 56 chunks and send it into input queue.
+ 2024-04-07 11:16:11,468 INFO     00:01:24.44  Consumer: finish filtering chunk number 56
+ 2024-04-07 11:16:12,686 INFO     00:01:25.65  Producer:read 57 chunks and send it into input queue.
+ 2024-04-07 11:16:13,042 INFO     00:01:26.01  Consumer: finish filtering chunk number 57
+ 2024-04-07 11:16:14,096 INFO     00:01:27.06  Producer:read 58 chunks and send it into input queue.
+ 2024-04-07 11:16:14,442 INFO     00:01:27.41  Consumer: finish filtering chunk number 58
+ 2024-04-07 11:16:15,637 INFO     00:01:28.60  Producer:read 59 chunks and send it into input queue.
+ 2024-04-07 11:16:16,018 INFO     00:01:28.99  Consumer: finish filtering chunk number 59
+ 2024-04-07 11:16:17,451 INFO     00:01:30.42  Producer:read 60 chunks and send it into input queue.
+ 2024-04-07 11:16:17,801 INFO     00:01:30.77  Consumer: finish filtering chunk number 60
+ 2024-04-07 11:16:19,026 INFO     00:01:31.99  Producer:read 61 chunks and send it into input queue.
+ 2024-04-07 11:16:19,351 INFO     00:01:32.32  Consumer: finish filtering chunk number 61
+ 2024-04-07 11:16:20,600 INFO     00:01:33.57  Producer:read 62 chunks and send it into input queue.
+ 2024-04-07 11:16:20,937 INFO     00:01:33.90  Consumer: finish filtering chunk number 62
+ 2024-04-07 11:16:22,182 INFO     00:01:35.15  Producer:read 63 chunks and send it into input queue.
+ 2024-04-07 11:16:22,517 INFO     00:01:35.48  Consumer: finish filtering chunk number 63
+ 2024-04-07 11:16:23,791 INFO     00:01:36.76  Producer:read 64 chunks and send it into input queue.
+ 2024-04-07 11:16:24,148 INFO     00:01:37.12  Consumer: finish filtering chunk number 64
+ 2024-04-07 11:16:25,306 INFO     00:01:38.27  Producer:read 65 chunks and send it into input queue.
+ 2024-04-07 11:16:25,635 INFO     00:01:38.60  Consumer: finish filtering chunk number 65
+ 2024-04-07 11:16:26,909 INFO     00:01:39.88  Producer:read 66 chunks and send it into input queue.
+ 2024-04-07 11:16:27,291 INFO     00:01:40.26  Consumer: finish filtering chunk number 66
+ 2024-04-07 11:16:28,532 INFO     00:01:41.50  Producer:read 67 chunks and send it into input queue.
+ 2024-04-07 11:16:28,875 INFO     00:01:41.84  Consumer: finish filtering chunk number 67
+ 2024-04-07 11:16:30,055 INFO     00:01:43.02  Producer:read 68 chunks and send it into input queue.
+ 2024-04-07 11:16:30,397 INFO     00:01:43.36  Consumer: finish filtering chunk number 68
+ 2024-04-07 11:16:31,597 INFO     00:01:44.56  Producer:read 69 chunks and send it into input queue.
+ 2024-04-07 11:16:31,965 INFO     00:01:44.93  Consumer: finish filtering chunk number 69
+ 2024-04-07 11:16:33,097 INFO     00:01:46.06  Producer:read 70 chunks and send it into input queue.
+ 2024-04-07 11:16:33,439 INFO     00:01:46.41  Consumer: finish filtering chunk number 70
+ 2024-04-07 11:16:34,701 INFO     00:01:47.67  Producer:read 71 chunks and send it into input queue.
+ 2024-04-07 11:16:35,042 INFO     00:01:48.01  Consumer: finish filtering chunk number 71
+ 2024-04-07 11:16:36,194 INFO     00:01:49.16  Producer:read 72 chunks and send it into input queue.
+ 2024-04-07 11:16:36,524 INFO     00:01:49.49  Consumer: finish filtering chunk number 72
+ 2024-04-07 11:16:37,709 INFO     00:01:50.68  Producer:read 73 chunks and send it into input queue.
+ 2024-04-07 11:16:38,039 INFO     00:01:51.01  Consumer: finish filtering chunk number 73
+ 2024-04-07 11:16:39,239 INFO     00:01:52.21  Producer:read 74 chunks and send it into input queue.
+ 2024-04-07 11:16:39,572 INFO     00:01:52.54  Consumer: finish filtering chunk number 74
+ 2024-04-07 11:16:40,687 INFO     00:01:53.65  Producer:read 75 chunks and send it into input queue.
+ 2024-04-07 11:16:41,028 INFO     00:01:53.99  Consumer: finish filtering chunk number 75
+ 2024-04-07 11:16:42,209 INFO     00:01:55.18  Producer:read 76 chunks and send it into input queue.
+ 2024-04-07 11:16:42,577 INFO     00:01:55.54  Consumer: finish filtering chunk number 76
+ 2024-04-07 11:16:43,814 INFO     00:01:56.78  Producer:read 77 chunks and send it into input queue.
+ 2024-04-07 11:16:44,139 INFO     00:01:57.11  Consumer: finish filtering chunk number 77
+ 2024-04-07 11:16:45,298 INFO     00:01:58.26  Producer:read 78 chunks and send it into input queue.
+ 2024-04-07 11:16:45,634 INFO     00:01:58.60  Consumer: finish filtering chunk number 78
+ 2024-04-07 11:16:46,891 INFO     00:01:59.86  Producer:read 79 chunks and send it into input queue.
+ 2024-04-07 11:16:47,307 INFO     00:02:00.27  Consumer: finish filtering chunk number 79
+ 2024-04-07 11:16:48,621 INFO     00:02:01.59  Producer:read 80 chunks and send it into input queue.
+ 2024-04-07 11:16:49,269 INFO     00:02:02.24  Consumer: finish filtering chunk number 80
+ 2024-04-07 11:16:50,443 INFO     00:02:03.41  Producer:read 81 chunks and send it into input queue.
+ 2024-04-07 11:16:50,788 INFO     00:02:03.76  Consumer: finish filtering chunk number 81
+ 2024-04-07 11:16:51,917 INFO     00:02:04.88  Producer:read 82 chunks and send it into input queue.
+ 2024-04-07 11:16:52,231 INFO     00:02:05.20  Consumer: finish filtering chunk number 82
+ 2024-04-07 11:16:53,485 INFO     00:02:06.45  Producer:read 83 chunks and send it into input queue.
+ 2024-04-07 11:16:53,889 INFO     00:02:06.86  Consumer: finish filtering chunk number 83
+ 2024-04-07 11:16:55,169 INFO     00:02:08.14  Producer:read 84 chunks and send it into input queue.
+ 2024-04-07 11:16:55,499 INFO     00:02:08.47  Consumer: finish filtering chunk number 84
+ 2024-04-07 11:16:56,653 INFO     00:02:09.62  Producer:read 85 chunks and send it into input queue.
+ 2024-04-07 11:16:56,986 INFO     00:02:09.95  Consumer: finish filtering chunk number 85
+ 2024-04-07 11:16:58,081 INFO     00:02:11.05  Producer:read 86 chunks and send it into input queue.
+ 2024-04-07 11:16:58,441 INFO     00:02:11.41  Consumer: finish filtering chunk number 86
+ 2024-04-07 11:16:59,506 INFO     00:02:12.47  Producer:read 87 chunks and send it into input queue.
+ 2024-04-07 11:16:59,835 INFO     00:02:12.80  Consumer: finish filtering chunk number 87
+ 2024-04-07 11:17:00,950 INFO     00:02:13.92  Producer:read 88 chunks and send it into input queue.
+ 2024-04-07 11:17:01,280 INFO     00:02:14.25  Consumer: finish filtering chunk number 88
+ 2024-04-07 11:17:02,390 INFO     00:02:15.36  Producer:read 89 chunks and send it into input queue.
+ 2024-04-07 11:17:02,701 INFO     00:02:15.67  Consumer: finish filtering chunk number 89
+ 2024-04-07 11:17:03,858 INFO     00:02:16.83  Producer:read 90 chunks and send it into input queue.
+ 2024-04-07 11:17:04,185 INFO     00:02:17.15  Consumer: finish filtering chunk number 90
+ 2024-04-07 11:17:05,404 INFO     00:02:18.37  Producer:read 91 chunks and send it into input queue.
+ 2024-04-07 11:17:05,814 INFO     00:02:18.78  Consumer: finish filtering chunk number 91
+ 2024-04-07 11:17:06,920 INFO     00:02:19.89  Producer:read 92 chunks and send it into input queue.
+ 2024-04-07 11:17:07,234 INFO     00:02:20.20  Consumer: finish filtering chunk number 92
+ 2024-04-07 11:17:08,440 INFO     00:02:21.41  Producer:read 93 chunks and send it into input queue.
+ 2024-04-07 11:17:08,804 INFO     00:02:21.77  Consumer: finish filtering chunk number 93
+ 2024-04-07 11:17:10,103 INFO     00:02:23.07  Producer:read 94 chunks and send it into input queue.
+ 2024-04-07 11:17:10,444 INFO     00:02:23.41  Consumer: finish filtering chunk number 94
+ 2024-04-07 11:17:11,701 INFO     00:02:24.67  Producer:read 95 chunks and send it into input queue.
+ 2024-04-07 11:17:12,067 INFO     00:02:25.03  Consumer: finish filtering chunk number 95
+ 2024-04-07 11:17:13,314 INFO     00:02:26.28  Producer:read 96 chunks and send it into input queue.
+ 2024-04-07 11:17:13,659 INFO     00:02:26.63  Consumer: finish filtering chunk number 96
+ 2024-04-07 11:17:14,844 INFO     00:02:27.81  Producer:read 97 chunks and send it into input queue.
+ 2024-04-07 11:17:15,198 INFO     00:02:28.16  Consumer: finish filtering chunk number 97
+ 2024-04-07 11:17:16,352 INFO     00:02:29.32  Producer:read 98 chunks and send it into input queue.
+ 2024-04-07 11:17:16,687 INFO     00:02:29.65  Consumer: finish filtering chunk number 98
+ 2024-04-07 11:17:17,832 INFO     00:02:30.80  Producer:read 99 chunks and send it into input queue.
+ 2024-04-07 11:17:18,191 INFO     00:02:31.16  Consumer: finish filtering chunk number 99
+ 2024-04-07 11:17:19,341 INFO     00:02:32.31  Producer:read 100 chunks and send it into input queue.
+ 2024-04-07 11:17:19,706 INFO     00:02:32.67  Consumer: finish filtering chunk number 100
+ 2024-04-07 11:17:20,859 INFO     00:02:33.83  Producer:read 101 chunks and send it into input queue.
+ 2024-04-07 11:17:21,214 INFO     00:02:34.18  Consumer: finish filtering chunk number 101
+ 2024-04-07 11:17:22,442 INFO     00:02:35.41  Producer:read 102 chunks and send it into input queue.
+ 2024-04-07 11:17:22,778 INFO     00:02:35.75  Consumer: finish filtering chunk number 102
+ 2024-04-07 11:17:23,941 INFO     00:02:36.91  Producer:read 103 chunks and send it into input queue.
+ 2024-04-07 11:17:24,285 INFO     00:02:37.25  Consumer: finish filtering chunk number 103
+ 2024-04-07 11:17:25,491 INFO     00:02:38.46  Producer:read 104 chunks and send it into input queue.
+ 2024-04-07 11:17:25,838 INFO     00:02:38.81  Consumer: finish filtering chunk number 104
+ 2024-04-07 11:17:27,027 INFO     00:02:39.99  Producer:read 105 chunks and send it into input queue.
+ 2024-04-07 11:17:27,418 INFO     00:02:40.39  Consumer: finish filtering chunk number 105
+ 2024-04-07 11:17:28,527 INFO     00:02:41.49  Producer:read 106 chunks and send it into input queue.
+ 2024-04-07 11:17:28,844 INFO     00:02:41.81  Consumer: finish filtering chunk number 106
+ 2024-04-07 11:17:29,981 INFO     00:02:42.95  Producer:read 107 chunks and send it into input queue.
+ 2024-04-07 11:17:30,415 INFO     00:02:43.38  Consumer: finish filtering chunk number 107
+ 2024-04-07 11:17:31,745 INFO     00:02:44.71  Producer:read 108 chunks and send it into input queue.
+ 2024-04-07 11:17:32,099 INFO     00:02:45.07  Consumer: finish filtering chunk number 108
+ 2024-04-07 11:17:33,350 INFO     00:02:46.32  Producer:read 109 chunks and send it into input queue.
+ 2024-04-07 11:17:33,729 INFO     00:02:46.70  Consumer: finish filtering chunk number 109
+ 2024-04-07 11:17:35,258 INFO     00:02:48.23  Producer:read 110 chunks and send it into input queue.
+ 2024-04-07 11:17:35,626 INFO     00:02:48.59  Consumer: finish filtering chunk number 110
+ 2024-04-07 11:17:37,066 INFO     00:02:50.03  Producer:read 111 chunks and send it into input queue.
+ 2024-04-07 11:17:37,418 INFO     00:02:50.39  Consumer: finish filtering chunk number 111
+ 2024-04-07 11:17:38,662 INFO     00:02:51.63  Producer:read 112 chunks and send it into input queue.
+ 2024-04-07 11:17:39,026 INFO     00:02:51.99  Consumer: finish filtering chunk number 112
+ 2024-04-07 11:17:40,198 INFO     00:02:53.17  Producer:read 113 chunks and send it into input queue.
+ 2024-04-07 11:17:40,549 INFO     00:02:53.52  Consumer: finish filtering chunk number 113
+ 2024-04-07 11:17:41,812 INFO     00:02:54.78  Producer:read 114 chunks and send it into input queue.
+ 2024-04-07 11:17:42,149 INFO     00:02:55.12  Consumer: finish filtering chunk number 114
+ 2024-04-07 11:17:43,358 INFO     00:02:56.32  Producer:read 115 chunks and send it into input queue.
+ 2024-04-07 11:17:43,709 INFO     00:02:56.68  Consumer: finish filtering chunk number 115
+ 2024-04-07 11:17:44,938 INFO     00:02:57.91  Producer:read 116 chunks and send it into input queue.
+ 2024-04-07 11:17:45,344 INFO     00:02:58.31  Consumer: finish filtering chunk number 116
+ 2024-04-07 11:17:46,616 INFO     00:02:59.58  Producer:read 117 chunks and send it into input queue.
+ 2024-04-07 11:17:46,972 INFO     00:02:59.94  Consumer: finish filtering chunk number 117
+ 2024-04-07 11:17:48,259 INFO     00:03:01.23  Producer:read 118 chunks and send it into input queue.
+ 2024-04-07 11:17:48,608 INFO     00:03:01.58  Consumer: finish filtering chunk number 118
+ 2024-04-07 11:17:49,772 INFO     00:03:02.74  Producer:read 119 chunks and send it into input queue.
+ 2024-04-07 11:17:50,130 INFO     00:03:03.10  Consumer: finish filtering chunk number 119
+ 2024-04-07 11:17:51,422 INFO     00:03:04.39  Producer:read 120 chunks and send it into input queue.
+ 2024-04-07 11:17:51,828 INFO     00:03:04.80  Consumer: finish filtering chunk number 120
+ 2024-04-07 11:17:53,377 INFO     00:03:06.34  Producer:read 121 chunks and send it into input queue.
+ 2024-04-07 11:17:53,857 INFO     00:03:06.82  Consumer: finish filtering chunk number 121
+ 2024-04-07 11:17:55,056 INFO     00:03:08.02  Producer:read 122 chunks and send it into input queue.
+ 2024-04-07 11:17:55,437 INFO     00:03:08.40  Consumer: finish filtering chunk number 122
+ 2024-04-07 11:17:56,683 INFO     00:03:09.65  Producer:read 123 chunks and send it into input queue.
+ 2024-04-07 11:17:57,028 INFO     00:03:10.00  Consumer: finish filtering chunk number 123
+ 2024-04-07 11:17:58,156 INFO     00:03:11.12  Producer:read 124 chunks and send it into input queue.
+ 2024-04-07 11:17:58,486 INFO     00:03:11.45  Consumer: finish filtering chunk number 124
+ 2024-04-07 11:17:59,583 INFO     00:03:12.55  Producer:read 125 chunks and send it into input queue.
+ 2024-04-07 11:17:59,897 INFO     00:03:12.86  Consumer: finish filtering chunk number 125
+ 2024-04-07 11:18:01,222 INFO     00:03:14.19  Producer:read 126 chunks and send it into input queue.
+ 2024-04-07 11:18:01,669 INFO     00:03:14.64  Consumer: finish filtering chunk number 126
+ 2024-04-07 11:18:02,836 INFO     00:03:15.80  Producer:read 127 chunks and send it into input queue.
+ 2024-04-07 11:18:03,201 INFO     00:03:16.17  Consumer: finish filtering chunk number 127
+ 2024-04-07 11:18:04,375 INFO     00:03:17.34  Producer:read 128 chunks and send it into input queue.
+ 2024-04-07 11:18:04,741 INFO     00:03:17.71  Consumer: finish filtering chunk number 128
+ 2024-04-07 11:18:05,965 INFO     00:03:18.93  Producer:read 129 chunks and send it into input queue.
+ 2024-04-07 11:18:06,370 INFO     00:03:19.34  Consumer: finish filtering chunk number 129
+ 2024-04-07 11:18:07,608 INFO     00:03:20.58  Producer:read 130 chunks and send it into input queue.
+ 2024-04-07 11:18:07,951 INFO     00:03:20.92  Consumer: finish filtering chunk number 130
+ 2024-04-07 11:18:09,127 INFO     00:03:22.09  Producer:read 131 chunks and send it into input queue.
+ 2024-04-07 11:18:09,457 INFO     00:03:22.42  Consumer: finish filtering chunk number 131
+ 2024-04-07 11:18:10,669 INFO     00:03:23.64  Producer:read 132 chunks and send it into input queue.
+ 2024-04-07 11:18:11,012 INFO     00:03:23.98  Consumer: finish filtering chunk number 132
+ 2024-04-07 11:18:12,119 INFO     00:03:25.09  Producer:read 133 chunks and send it into input queue.
+ 2024-04-07 11:18:12,463 INFO     00:03:25.43  Consumer: finish filtering chunk number 133
+ 2024-04-07 11:18:13,624 INFO     00:03:26.59  Producer:read 134 chunks and send it into input queue.
+ 2024-04-07 11:18:13,979 INFO     00:03:26.95  Consumer: finish filtering chunk number 134
+ 2024-04-07 11:18:15,180 INFO     00:03:28.15  Producer:read 135 chunks and send it into input queue.
+ 2024-04-07 11:18:15,531 INFO     00:03:28.50  Consumer: finish filtering chunk number 135
+ 2024-04-07 11:18:16,671 INFO     00:03:29.64  Producer:read 136 chunks and send it into input queue.
+ 2024-04-07 11:18:16,998 INFO     00:03:29.97  Consumer: finish filtering chunk number 136
+ 2024-04-07 11:18:18,205 INFO     00:03:31.17  Producer:read 137 chunks and send it into input queue.
+ 2024-04-07 11:18:18,544 INFO     00:03:31.51  Consumer: finish filtering chunk number 137
+ 2024-04-07 11:18:19,810 INFO     00:03:32.78  Producer:read 138 chunks and send it into input queue.
+ 2024-04-07 11:18:20,141 INFO     00:03:33.11  Consumer: finish filtering chunk number 138
+ 2024-04-07 11:18:21,382 INFO     00:03:34.35  Producer:read 139 chunks and send it into input queue.
+ 2024-04-07 11:18:21,716 INFO     00:03:34.68  Consumer: finish filtering chunk number 139
+ 2024-04-07 11:18:22,948 INFO     00:03:35.92  Producer:read 140 chunks and send it into input queue.
+ 2024-04-07 11:18:23,294 INFO     00:03:36.26  Consumer: finish filtering chunk number 140
+ 2024-04-07 11:18:24,554 INFO     00:03:37.52  Producer:read 141 chunks and send it into input queue.
+ 2024-04-07 11:18:24,918 INFO     00:03:37.88  Consumer: finish filtering chunk number 141
+ 2024-04-07 11:18:26,162 INFO     00:03:39.13  Producer:read 142 chunks and send it into input queue.
+ 2024-04-07 11:18:26,492 INFO     00:03:39.46  Consumer: finish filtering chunk number 142
+ 2024-04-07 11:18:27,678 INFO     00:03:40.65  Producer:read 143 chunks and send it into input queue.
+ 2024-04-07 11:18:28,024 INFO     00:03:40.99  Consumer: finish filtering chunk number 143
+ 2024-04-07 11:18:29,208 INFO     00:03:42.18  Producer:read 144 chunks and send it into input queue.
+ 2024-04-07 11:18:29,561 INFO     00:03:42.53  Consumer: finish filtering chunk number 144
+ 2024-04-07 11:18:30,750 INFO     00:03:43.72  Producer:read 145 chunks and send it into input queue.
+ 2024-04-07 11:18:31,125 INFO     00:03:44.09  Consumer: finish filtering chunk number 145
+ 2024-04-07 11:18:32,467 INFO     00:03:45.43  Producer:read 146 chunks and send it into input queue.
+ 2024-04-07 11:18:32,922 INFO     00:03:45.89  Consumer: finish filtering chunk number 146
+ 2024-04-07 11:18:34,217 INFO     00:03:47.18  Producer:read 147 chunks and send it into input queue.
+ 2024-04-07 11:18:34,563 INFO     00:03:47.53  Consumer: finish filtering chunk number 147
+ 2024-04-07 11:18:35,818 INFO     00:03:48.79  Producer:read 148 chunks and send it into input queue.
+ 2024-04-07 11:18:36,293 INFO     00:03:49.26  Consumer: finish filtering chunk number 148
+ 2024-04-07 11:18:37,357 INFO     00:03:50.32  Producer:read 149 chunks and send it into input queue.
+ 2024-04-07 11:18:37,700 INFO     00:03:50.67  Consumer: finish filtering chunk number 149
+ 2024-04-07 11:18:38,761 INFO     00:03:51.73  Producer:read 150 chunks and send it into input queue.
+ 2024-04-07 11:18:39,080 INFO     00:03:52.05  Consumer: finish filtering chunk number 150
+ 2024-04-07 11:18:40,190 INFO     00:03:53.16  Producer:read 151 chunks and send it into input queue.
+ 2024-04-07 11:18:40,561 INFO     00:03:53.53  Consumer: finish filtering chunk number 151
+ 2024-04-07 11:18:41,697 INFO     00:03:54.66  Producer:read 152 chunks and send it into input queue.
+ 2024-04-07 11:18:42,035 INFO     00:03:55.00  Consumer: finish filtering chunk number 152
+ 2024-04-07 11:18:43,162 INFO     00:03:56.13  Producer:read 153 chunks and send it into input queue.
+ 2024-04-07 11:18:43,566 INFO     00:03:56.53  Consumer: finish filtering chunk number 153
+ 2024-04-07 11:18:44,904 INFO     00:03:57.87  Producer:read 154 chunks and send it into input queue.
+ 2024-04-07 11:18:45,301 INFO     00:03:58.27  Consumer: finish filtering chunk number 154
+ 2024-04-07 11:18:46,628 INFO     00:03:59.60  Producer:read 155 chunks and send it into input queue.
+ 2024-04-07 11:18:46,993 INFO     00:03:59.96  Consumer: finish filtering chunk number 155
+ 2024-04-07 11:18:48,127 INFO     00:04:01.09  Producer:read 156 chunks and send it into input queue.
+ 2024-04-07 11:18:48,455 INFO     00:04:01.42  Consumer: finish filtering chunk number 156
+ 2024-04-07 11:18:49,745 INFO     00:04:02.71  Producer:read 157 chunks and send it into input queue.
+ 2024-04-07 11:18:50,095 INFO     00:04:03.06  Consumer: finish filtering chunk number 157
+ 2024-04-07 11:18:51,303 INFO     00:04:04.27  Producer:read 158 chunks and send it into input queue.
+ 2024-04-07 11:18:51,629 INFO     00:04:04.60  Consumer: finish filtering chunk number 158
+ 2024-04-07 11:18:52,828 INFO     00:04:05.79  Producer:read 159 chunks and send it into input queue.
+ 2024-04-07 11:18:53,161 INFO     00:04:06.13  Consumer: finish filtering chunk number 159
+ 2024-04-07 11:18:54,328 INFO     00:04:07.29  Producer:read 160 chunks and send it into input queue.
+ 2024-04-07 11:18:54,653 INFO     00:04:07.62  Consumer: finish filtering chunk number 160
+ 2024-04-07 11:18:55,776 INFO     00:04:08.74  Producer:read 161 chunks and send it into input queue.
+ 2024-04-07 11:18:56,105 INFO     00:04:09.07  Consumer: finish filtering chunk number 161
+ 2024-04-07 11:18:57,263 INFO     00:04:10.23  Producer:read 162 chunks and send it into input queue.
+ 2024-04-07 11:18:57,598 INFO     00:04:10.57  Consumer: finish filtering chunk number 162
+ 2024-04-07 11:18:58,716 INFO     00:04:11.68  Producer:read 163 chunks and send it into input queue.
+ 2024-04-07 11:18:59,058 INFO     00:04:12.03  Consumer: finish filtering chunk number 163
+ 2024-04-07 11:19:00,168 INFO     00:04:13.14  Producer:read 164 chunks and send it into input queue.
+ 2024-04-07 11:19:00,505 INFO     00:04:13.47  Consumer: finish filtering chunk number 164
+ 2024-04-07 11:19:01,656 INFO     00:04:14.62  Producer:read 165 chunks and send it into input queue.
+ 2024-04-07 11:19:01,978 INFO     00:04:14.95  Consumer: finish filtering chunk number 165
+ 2024-04-07 11:19:03,156 INFO     00:04:16.12  Producer:read 166 chunks and send it into input queue.
+ 2024-04-07 11:19:03,483 INFO     00:04:16.45  Consumer: finish filtering chunk number 166
+ 2024-04-07 11:19:04,686 INFO     00:04:17.65  Producer:read 167 chunks and send it into input queue.
+ 2024-04-07 11:19:05,030 INFO     00:04:18.00  Consumer: finish filtering chunk number 167
+ 2024-04-07 11:19:06,269 INFO     00:04:19.24  Producer:read 168 chunks and send it into input queue.
+ 2024-04-07 11:19:06,605 INFO     00:04:19.57  Consumer: finish filtering chunk number 168
+ 2024-04-07 11:19:07,961 INFO     00:04:20.93  Producer:read 169 chunks and send it into input queue.
+ 2024-04-07 11:19:08,410 INFO     00:04:21.38  Consumer: finish filtering chunk number 169
+ 2024-04-07 11:19:09,737 INFO     00:04:22.70  Producer:read 170 chunks and send it into input queue.
+ 2024-04-07 11:19:10,112 INFO     00:04:23.08  Consumer: finish filtering chunk number 170
+ 2024-04-07 11:19:11,341 INFO     00:04:24.31  Producer:read 171 chunks and send it into input queue.
+ 2024-04-07 11:19:11,681 INFO     00:04:24.65  Consumer: finish filtering chunk number 171
+ 2024-04-07 11:19:12,900 INFO     00:04:25.87  Producer:read 172 chunks and send it into input queue.
+ 2024-04-07 11:19:13,268 INFO     00:04:26.24  Consumer: finish filtering chunk number 172
+ 2024-04-07 11:19:14,373 INFO     00:04:27.34  Producer:read 173 chunks and send it into input queue.
+ 2024-04-07 11:19:14,717 INFO     00:04:27.68  Consumer: finish filtering chunk number 173
+ 2024-04-07 11:19:15,818 INFO     00:04:28.79  Producer:read 174 chunks and send it into input queue.
+ 2024-04-07 11:19:16,146 INFO     00:04:29.11  Consumer: finish filtering chunk number 174
+ 2024-04-07 11:19:17,293 INFO     00:04:30.26  Producer:read 175 chunks and send it into input queue.
+ 2024-04-07 11:19:17,631 INFO     00:04:30.60  Consumer: finish filtering chunk number 175
+ 2024-04-07 11:19:18,939 INFO     00:04:31.91  Producer:read 176 chunks and send it into input queue.
+ 2024-04-07 11:19:19,295 INFO     00:04:32.26  Consumer: finish filtering chunk number 176
+ 2024-04-07 11:19:20,542 INFO     00:04:33.51  Producer:read 177 chunks and send it into input queue.
+ 2024-04-07 11:19:20,944 INFO     00:04:33.91  Consumer: finish filtering chunk number 177
+ 2024-04-07 11:19:22,269 INFO     00:04:35.24  Producer:read 178 chunks and send it into input queue.
+ 2024-04-07 11:19:22,645 INFO     00:04:35.61  Consumer: finish filtering chunk number 178
+ 2024-04-07 11:19:23,859 INFO     00:04:36.83  Producer:read 179 chunks and send it into input queue.
+ 2024-04-07 11:19:24,215 INFO     00:04:37.18  Consumer: finish filtering chunk number 179
+ 2024-04-07 11:19:25,432 INFO     00:04:38.40  Producer:read 180 chunks and send it into input queue.
+ 2024-04-07 11:19:25,868 INFO     00:04:38.83  Consumer: finish filtering chunk number 180
+ 2024-04-07 11:19:27,228 INFO     00:04:40.20  Producer:read 181 chunks and send it into input queue.
+ 2024-04-07 11:19:27,653 INFO     00:04:40.62  Consumer: finish filtering chunk number 181
+ 2024-04-07 11:19:28,959 INFO     00:04:41.93  Producer:read 182 chunks and send it into input queue.
+ 2024-04-07 11:19:29,452 INFO     00:04:42.42  Consumer: finish filtering chunk number 182
+ 2024-04-07 11:19:30,581 INFO     00:04:43.55  Producer:read 183 chunks and send it into input queue.
+ 2024-04-07 11:19:30,908 INFO     00:04:43.87  Consumer: finish filtering chunk number 183
+ 2024-04-07 11:19:31,991 INFO     00:04:44.96  Producer:read 184 chunks and send it into input queue.
+ 2024-04-07 11:19:32,314 INFO     00:04:45.28  Consumer: finish filtering chunk number 184
+ 2024-04-07 11:19:33,458 INFO     00:04:46.43  Producer:read 185 chunks and send it into input queue.
+ 2024-04-07 11:19:33,827 INFO     00:04:46.79  Consumer: finish filtering chunk number 185
+ 2024-04-07 11:19:34,833 INFO     00:04:47.80  Producer:read 186 chunks and send it into input queue.
+ 2024-04-07 11:19:35,160 INFO     00:04:48.13  Consumer: finish filtering chunk number 186
+ 2024-04-07 11:19:36,175 INFO     00:04:49.14  Producer:read 187 chunks and send it into input queue.
+ 2024-04-07 11:19:36,498 INFO     00:04:49.47  Consumer: finish filtering chunk number 187
+ 2024-04-07 11:19:37,561 INFO     00:04:50.53  Producer:read 188 chunks and send it into input queue.
+ 2024-04-07 11:19:37,865 INFO     00:04:50.83  Consumer: finish filtering chunk number 188
+ 2024-04-07 11:19:38,961 INFO     00:04:51.93  Producer:read 189 chunks and send it into input queue.
+ 2024-04-07 11:19:39,288 INFO     00:04:52.26  Consumer: finish filtering chunk number 189
+ 2024-04-07 11:19:40,354 INFO     00:04:53.32  Producer:read 190 chunks and send it into input queue.
+ 2024-04-07 11:19:40,657 INFO     00:04:53.62  Consumer: finish filtering chunk number 190
+ 2024-04-07 11:19:41,756 INFO     00:04:54.72  Producer:read 191 chunks and send it into input queue.
+ 2024-04-07 11:19:42,084 INFO     00:04:55.05  Consumer: finish filtering chunk number 191
+ 2024-04-07 11:19:43,308 INFO     00:04:56.28  Producer:read 192 chunks and send it into input queue.
+ 2024-04-07 11:19:43,646 INFO     00:04:56.61  Consumer: finish filtering chunk number 192
+ 2024-04-07 11:19:44,915 INFO     00:04:57.88  Producer:read 193 chunks and send it into input queue.
+ 2024-04-07 11:19:45,300 INFO     00:04:58.27  Consumer: finish filtering chunk number 193
+ 2024-04-07 11:19:46,420 INFO     00:04:59.39  Producer:read 194 chunks and send it into input queue.
+ 2024-04-07 11:19:46,748 INFO     00:04:59.72  Consumer: finish filtering chunk number 194
+ 2024-04-07 11:19:47,981 INFO     00:05:00.95  Producer:read 195 chunks and send it into input queue.
+ 2024-04-07 11:19:48,340 INFO     00:05:01.31  Consumer: finish filtering chunk number 195
+ 2024-04-07 11:19:49,640 INFO     00:05:02.61  Producer:read 196 chunks and send it into input queue.
+ 2024-04-07 11:19:49,976 INFO     00:05:02.94  Consumer: finish filtering chunk number 196
+ 2024-04-07 11:19:51,198 INFO     00:05:04.17  Producer:read 197 chunks and send it into input queue.
+ 2024-04-07 11:19:51,574 INFO     00:05:04.54  Consumer: finish filtering chunk number 197
+ 2024-04-07 11:19:52,738 INFO     00:05:05.71  Producer:read 198 chunks and send it into input queue.
+ 2024-04-07 11:19:53,110 INFO     00:05:06.08  Consumer: finish filtering chunk number 198
+ 2024-04-07 11:19:54,278 INFO     00:05:07.25  Producer:read 199 chunks and send it into input queue.
+ 2024-04-07 11:19:54,620 INFO     00:05:07.59  Consumer: finish filtering chunk number 199
+ 2024-04-07 11:19:55,702 INFO     00:05:08.67  Producer:read 200 chunks and send it into input queue.
+ 2024-04-07 11:19:56,046 INFO     00:05:09.01  Consumer: finish filtering chunk number 200
+ 2024-04-07 11:19:57,197 INFO     00:05:10.16  Producer:read 201 chunks and send it into input queue.
+ 2024-04-07 11:19:57,531 INFO     00:05:10.50  Consumer: finish filtering chunk number 201
+ 2024-04-07 11:19:58,695 INFO     00:05:11.66  Producer:read 202 chunks and send it into input queue.
+ 2024-04-07 11:19:59,075 INFO     00:05:12.04  Consumer: finish filtering chunk number 202
+ 2024-04-07 11:20:00,310 INFO     00:05:13.28  Producer:read 203 chunks and send it into input queue.
+ 2024-04-07 11:20:00,687 INFO     00:05:13.65  Consumer: finish filtering chunk number 203
+ 2024-04-07 11:20:02,139 INFO     00:05:15.11  Producer:read 204 chunks and send it into input queue.
+ 2024-04-07 11:20:02,625 INFO     00:05:15.59  Consumer: finish filtering chunk number 204
+ 2024-04-07 11:20:03,984 INFO     00:05:16.95  Producer:read 205 chunks and send it into input queue.
+ 2024-04-07 11:20:04,313 INFO     00:05:17.28  Consumer: finish filtering chunk number 205
+ 2024-04-07 11:20:05,541 INFO     00:05:18.51  Producer:read 206 chunks and send it into input queue.
+ 2024-04-07 11:20:05,907 INFO     00:05:18.87  Consumer: finish filtering chunk number 206
+ 2024-04-07 11:20:07,209 INFO     00:05:20.18  Producer:read 207 chunks and send it into input queue.
+ 2024-04-07 11:20:07,591 INFO     00:05:20.56  Consumer: finish filtering chunk number 207
+ 2024-04-07 11:20:09,109 INFO     00:05:22.08  Producer:read 208 chunks and send it into input queue.
+ 2024-04-07 11:20:09,474 INFO     00:05:22.44  Consumer: finish filtering chunk number 208
+ 2024-04-07 11:20:10,777 INFO     00:05:23.74  Producer:read 209 chunks and send it into input queue.
+ 2024-04-07 11:20:11,125 INFO     00:05:24.09  Consumer: finish filtering chunk number 209
+ 2024-04-07 11:20:12,396 INFO     00:05:25.36  Producer:read 210 chunks and send it into input queue.
+ 2024-04-07 11:20:12,734 INFO     00:05:25.70  Consumer: finish filtering chunk number 210
+ 2024-04-07 11:20:13,903 INFO     00:05:26.87  Producer:read 211 chunks and send it into input queue.
+ 2024-04-07 11:20:14,277 INFO     00:05:27.24  Consumer: finish filtering chunk number 211
+ 2024-04-07 11:20:15,401 INFO     00:05:28.37  Producer:read 212 chunks and send it into input queue.
+ 2024-04-07 11:20:15,758 INFO     00:05:28.73  Consumer: finish filtering chunk number 212
+ 2024-04-07 11:20:16,917 INFO     00:05:29.88  Producer:read 213 chunks and send it into input queue.
+ 2024-04-07 11:20:17,271 INFO     00:05:30.24  Consumer: finish filtering chunk number 213
+ 2024-04-07 11:20:18,597 INFO     00:05:31.56  Producer:read 214 chunks and send it into input queue.
+ 2024-04-07 11:20:19,121 INFO     00:05:32.09  Consumer: finish filtering chunk number 214
+ 2024-04-07 11:20:20,267 INFO     00:05:33.23  Producer:read 215 chunks and send it into input queue.
+ 2024-04-07 11:20:20,601 INFO     00:05:33.57  Consumer: finish filtering chunk number 215
+ 2024-04-07 11:20:21,768 INFO     00:05:34.74  Producer:read 216 chunks and send it into input queue.
+ 2024-04-07 11:20:22,152 INFO     00:05:35.12  Consumer: finish filtering chunk number 216
+ 2024-04-07 11:20:23,656 INFO     00:05:36.62  Producer:read 217 chunks and send it into input queue.
+ 2024-04-07 11:20:23,992 INFO     00:05:36.96  Consumer: finish filtering chunk number 217
+ 2024-04-07 11:20:25,110 INFO     00:05:38.08  Producer:read 218 chunks and send it into input queue.
+ 2024-04-07 11:20:25,477 INFO     00:05:38.44  Consumer: finish filtering chunk number 218
+ 2024-04-07 11:20:26,702 INFO     00:05:39.67  Producer:read 219 chunks and send it into input queue.
+ 2024-04-07 11:20:27,041 INFO     00:05:40.01  Consumer: finish filtering chunk number 219
+ 2024-04-07 11:20:28,198 INFO     00:05:41.16  Producer:read 220 chunks and send it into input queue.
+ 2024-04-07 11:20:28,556 INFO     00:05:41.52  Consumer: finish filtering chunk number 220
+ 2024-04-07 11:20:29,714 INFO     00:05:42.67  Producer:read 221 chunks and send it into input queue.
+ 2024-04-07 11:20:30,043 INFO     00:05:43.01  Consumer: finish filtering chunk number 221
+ 2024-04-07 11:20:31,141 INFO     00:05:44.11  Producer:read 222 chunks and send it into input queue.
+ 2024-04-07 11:20:31,533 INFO     00:05:44.50  Consumer: finish filtering chunk number 222
+ 2024-04-07 11:20:32,615 INFO     00:05:45.58  Producer:read 223 chunks and send it into input queue.
+ 2024-04-07 11:20:32,991 INFO     00:05:45.96  Consumer: finish filtering chunk number 223
+ 2024-04-07 11:20:34,123 INFO     00:05:47.09  Producer:read 224 chunks and send it into input queue.
+ 2024-04-07 11:20:34,467 INFO     00:05:47.43  Consumer: finish filtering chunk number 224
+ 2024-04-07 11:20:35,665 INFO     00:05:48.63  Producer:read 225 chunks and send it into input queue.
+ 2024-04-07 11:20:36,032 INFO     00:05:49.00  Consumer: finish filtering chunk number 225
+ 2024-04-07 11:20:37,238 INFO     00:05:50.21  Producer:read 226 chunks and send it into input queue.
+ 2024-04-07 11:20:37,594 INFO     00:05:50.56  Consumer: finish filtering chunk number 226
+ 2024-04-07 11:20:38,807 INFO     00:05:51.77  Producer:read 227 chunks and send it into input queue.
+ 2024-04-07 11:20:39,149 INFO     00:05:52.12  Consumer: finish filtering chunk number 227
+ 2024-04-07 11:20:40,285 INFO     00:05:53.25  Producer:read 228 chunks and send it into input queue.
+ 2024-04-07 11:20:40,621 INFO     00:05:53.59  Consumer: finish filtering chunk number 228
+ 2024-04-07 11:20:41,810 INFO     00:05:54.78  Producer:read 229 chunks and send it into input queue.
+ 2024-04-07 11:20:42,158 INFO     00:05:55.13  Consumer: finish filtering chunk number 229
+ 2024-04-07 11:20:43,303 INFO     00:05:56.27  Producer:read 230 chunks and send it into input queue.
+ 2024-04-07 11:20:43,641 INFO     00:05:56.61  Consumer: finish filtering chunk number 230
+ 2024-04-07 11:20:44,895 INFO     00:05:57.86  Producer:read 231 chunks and send it into input queue.
+ 2024-04-07 11:20:45,340 INFO     00:05:58.31  Consumer: finish filtering chunk number 231
+ 2024-04-07 11:20:46,694 INFO     00:05:59.66  Producer:read 232 chunks and send it into input queue.
+ 2024-04-07 11:20:47,016 INFO     00:05:59.98  Consumer: finish filtering chunk number 232
+ 2024-04-07 11:20:48,145 INFO     00:06:01.11  Producer:read 233 chunks and send it into input queue.
+ 2024-04-07 11:20:48,489 INFO     00:06:01.46  Consumer: finish filtering chunk number 233
+ 2024-04-07 11:20:49,605 INFO     00:06:02.57  Producer:read 234 chunks and send it into input queue.
+ 2024-04-07 11:20:49,952 INFO     00:06:02.92  Consumer: finish filtering chunk number 234
+ 2024-04-07 11:20:51,105 INFO     00:06:04.07  Producer:read 235 chunks and send it into input queue.
+ 2024-04-07 11:20:51,455 INFO     00:06:04.42  Consumer: finish filtering chunk number 235
+ 2024-04-07 11:20:52,579 INFO     00:06:05.55  Producer:read 236 chunks and send it into input queue.
+ 2024-04-07 11:20:52,892 INFO     00:06:05.86  Consumer: finish filtering chunk number 236
+ 2024-04-07 11:20:53,975 INFO     00:06:06.94  Producer:read 237 chunks and send it into input queue.
+ 2024-04-07 11:20:54,305 INFO     00:06:07.27  Consumer: finish filtering chunk number 237
+ 2024-04-07 11:20:55,450 INFO     00:06:08.42  Producer:read 238 chunks and send it into input queue.
+ 2024-04-07 11:20:55,779 INFO     00:06:08.75  Consumer: finish filtering chunk number 238
+ 2024-04-07 11:20:56,929 INFO     00:06:09.90  Producer:read 239 chunks and send it into input queue.
+ 2024-04-07 11:20:57,251 INFO     00:06:10.22  Consumer: finish filtering chunk number 239
+ 2024-04-07 11:20:58,339 INFO     00:06:11.31  Producer:read 240 chunks and send it into input queue.
+ 2024-04-07 11:20:58,690 INFO     00:06:11.66  Consumer: finish filtering chunk number 240
+ 2024-04-07 11:20:59,873 INFO     00:06:12.84  Producer:read 241 chunks and send it into input queue.
+ 2024-04-07 11:21:00,255 INFO     00:06:13.22  Consumer: finish filtering chunk number 241
+ 2024-04-07 11:21:01,473 INFO     00:06:14.44  Producer:read 242 chunks and send it into input queue.
+ 2024-04-07 11:21:01,827 INFO     00:06:14.79  Consumer: finish filtering chunk number 242
+ 2024-04-07 11:21:02,871 INFO     00:06:15.84  Producer:read 243 chunks and send it into input queue.
+ 2024-04-07 11:21:03,191 INFO     00:06:16.16  Consumer: finish filtering chunk number 243
+ 2024-04-07 11:21:04,278 INFO     00:06:17.25  Producer:read 244 chunks and send it into input queue.
+ 2024-04-07 11:21:04,602 INFO     00:06:17.57  Consumer: finish filtering chunk number 244
+ 2024-04-07 11:21:05,748 INFO     00:06:18.72  Producer:read 245 chunks and send it into input queue.
+ 2024-04-07 11:21:06,082 INFO     00:06:19.05  Consumer: finish filtering chunk number 245
+ 2024-04-07 11:21:07,160 INFO     00:06:20.13  Producer:read 246 chunks and send it into input queue.
+ 2024-04-07 11:21:07,504 INFO     00:06:20.47  Consumer: finish filtering chunk number 246
+ 2024-04-07 11:21:08,700 INFO     00:06:21.67  Producer:read 247 chunks and send it into input queue.
+ 2024-04-07 11:21:09,039 INFO     00:06:22.01  Consumer: finish filtering chunk number 247
+ 2024-04-07 11:21:10,221 INFO     00:06:23.19  Producer:read 248 chunks and send it into input queue.
+ 2024-04-07 11:21:10,567 INFO     00:06:23.53  Consumer: finish filtering chunk number 248
+ 2024-04-07 11:21:11,770 INFO     00:06:24.74  Producer:read 249 chunks and send it into input queue.
+ 2024-04-07 11:21:12,227 INFO     00:06:25.19  Consumer: finish filtering chunk number 249
+ 2024-04-07 11:21:13,561 INFO     00:06:26.53  Producer:read 250 chunks and send it into input queue.
+ 2024-04-07 11:21:13,953 INFO     00:06:26.92  Consumer: finish filtering chunk number 250
+ 2024-04-07 11:21:15,208 INFO     00:06:28.18  Producer:read 251 chunks and send it into input queue.
+ 2024-04-07 11:21:15,585 INFO     00:06:28.55  Consumer: finish filtering chunk number 251
+ 2024-04-07 11:21:16,779 INFO     00:06:29.75  Producer:read 252 chunks and send it into input queue.
+ 2024-04-07 11:21:17,113 INFO     00:06:30.08  Consumer: finish filtering chunk number 252
+ 2024-04-07 11:21:18,222 INFO     00:06:31.19  Producer:read 253 chunks and send it into input queue.
+ 2024-04-07 11:21:18,565 INFO     00:06:31.53  Consumer: finish filtering chunk number 253
+ 2024-04-07 11:21:19,659 INFO     00:06:32.63  Producer:read 254 chunks and send it into input queue.
+ 2024-04-07 11:21:19,973 INFO     00:06:32.94  Consumer: finish filtering chunk number 254
+ 2024-04-07 11:21:21,112 INFO     00:06:34.08  Producer:read 255 chunks and send it into input queue.
+ 2024-04-07 11:21:21,457 INFO     00:06:34.42  Consumer: finish filtering chunk number 255
+ 2024-04-07 11:21:22,548 INFO     00:06:35.52  Producer:read 256 chunks and send it into input queue.
+ 2024-04-07 11:21:22,867 INFO     00:06:35.83  Consumer: finish filtering chunk number 256
+ 2024-04-07 11:21:24,033 INFO     00:06:37.00  Producer:read 257 chunks and send it into input queue.
+ 2024-04-07 11:21:24,373 INFO     00:06:37.34  Consumer: finish filtering chunk number 257
+ 2024-04-07 11:21:25,530 INFO     00:06:38.50  Producer:read 258 chunks and send it into input queue.
+ 2024-04-07 11:21:25,846 INFO     00:06:38.81  Consumer: finish filtering chunk number 258
+ 2024-04-07 11:21:26,994 INFO     00:06:39.96  Producer:read 259 chunks and send it into input queue.
+ 2024-04-07 11:21:27,313 INFO     00:06:40.28  Consumer: finish filtering chunk number 259
+ 2024-04-07 11:21:28,360 INFO     00:06:41.33  Producer:read 260 chunks and send it into input queue.
+ 2024-04-07 11:21:28,703 INFO     00:06:41.67  Consumer: finish filtering chunk number 260
+ 2024-04-07 11:21:29,782 INFO     00:06:42.75  Producer:read 261 chunks and send it into input queue.
+ 2024-04-07 11:21:30,112 INFO     00:06:43.08  Consumer: finish filtering chunk number 261
+ 2024-04-07 11:21:31,191 INFO     00:06:44.16  Producer:read 262 chunks and send it into input queue.
+ 2024-04-07 11:21:31,514 INFO     00:06:44.48  Consumer: finish filtering chunk number 262
+ 2024-04-07 11:21:32,576 INFO     00:06:45.54  Producer:read 263 chunks and send it into input queue.
+ 2024-04-07 11:21:32,916 INFO     00:06:45.88  Consumer: finish filtering chunk number 263
+ 2024-04-07 11:21:33,996 INFO     00:06:46.96  Producer:read 264 chunks and send it into input queue.
+ 2024-04-07 11:21:34,326 INFO     00:06:47.29  Consumer: finish filtering chunk number 264
+ 2024-04-07 11:21:35,407 INFO     00:06:48.37  Producer:read 265 chunks and send it into input queue.
+ 2024-04-07 11:21:35,732 INFO     00:06:48.70  Consumer: finish filtering chunk number 265
+ 2024-04-07 11:21:36,822 INFO     00:06:49.79  Producer:read 266 chunks and send it into input queue.
+ 2024-04-07 11:21:37,137 INFO     00:06:50.10  Consumer: finish filtering chunk number 266
+ 2024-04-07 11:21:38,249 INFO     00:06:51.22  Producer:read 267 chunks and send it into input queue.
+ 2024-04-07 11:21:38,575 INFO     00:06:51.54  Consumer: finish filtering chunk number 267
+ 2024-04-07 11:21:39,703 INFO     00:06:52.67  Producer:read 268 chunks and send it into input queue.
+ 2024-04-07 11:21:40,035 INFO     00:06:53.00  Consumer: finish filtering chunk number 268
+ 2024-04-07 11:21:41,136 INFO     00:06:54.10  Producer:read 269 chunks and send it into input queue.
+ 2024-04-07 11:21:41,443 INFO     00:06:54.41  Consumer: finish filtering chunk number 269
+ 2024-04-07 11:21:42,605 INFO     00:06:55.57  Producer:read 270 chunks and send it into input queue.
+ 2024-04-07 11:21:42,916 INFO     00:06:55.88  Consumer: finish filtering chunk number 270
+ 2024-04-07 11:21:44,041 INFO     00:06:57.01  Producer:read 271 chunks and send it into input queue.
+ 2024-04-07 11:21:44,359 INFO     00:06:57.33  Consumer: finish filtering chunk number 271
+ 2024-04-07 11:21:45,531 INFO     00:06:58.50  Producer:read 272 chunks and send it into input queue.
+ 2024-04-07 11:21:45,853 INFO     00:06:58.82  Consumer: finish filtering chunk number 272
+ 2024-04-07 11:21:46,949 INFO     00:06:59.92  Producer:read 273 chunks and send it into input queue.
+ 2024-04-07 11:21:47,260 INFO     00:07:00.23  Consumer: finish filtering chunk number 273
+ 2024-04-07 11:21:48,342 INFO     00:07:01.31  Producer:read 274 chunks and send it into input queue.
+ 2024-04-07 11:21:48,669 INFO     00:07:01.64  Consumer: finish filtering chunk number 274
+ 2024-04-07 11:21:49,798 INFO     00:07:02.76  Producer:read 275 chunks and send it into input queue.
+ 2024-04-07 11:21:50,132 INFO     00:07:03.10  Consumer: finish filtering chunk number 275
+ 2024-04-07 11:21:51,267 INFO     00:07:04.23  Producer:read 276 chunks and send it into input queue.
+ 2024-04-07 11:21:51,586 INFO     00:07:04.55  Consumer: finish filtering chunk number 276
+ 2024-04-07 11:21:52,711 INFO     00:07:05.68  Producer:read 277 chunks and send it into input queue.
+ 2024-04-07 11:21:53,054 INFO     00:07:06.02  Consumer: finish filtering chunk number 277
+ 2024-04-07 11:21:54,194 INFO     00:07:07.16  Producer:read 278 chunks and send it into input queue.
+ 2024-04-07 11:21:54,525 INFO     00:07:07.49  Consumer: finish filtering chunk number 278
+ 2024-04-07 11:21:55,616 INFO     00:07:08.58  Producer:read 279 chunks and send it into input queue.
+ 2024-04-07 11:21:55,930 INFO     00:07:08.90  Consumer: finish filtering chunk number 279
+ 2024-04-07 11:21:57,070 INFO     00:07:10.04  Producer:read 280 chunks and send it into input queue.
+ 2024-04-07 11:21:57,385 INFO     00:07:10.35  Consumer: finish filtering chunk number 280
+ 2024-04-07 11:21:58,560 INFO     00:07:11.53  Producer:read 281 chunks and send it into input queue.
+ 2024-04-07 11:21:58,860 INFO     00:07:11.83  Consumer: finish filtering chunk number 281
+ 2024-04-07 11:22:00,018 INFO     00:07:12.99  Producer:read 282 chunks and send it into input queue.
+ 2024-04-07 11:22:00,348 INFO     00:07:13.32  Consumer: finish filtering chunk number 282
+ 2024-04-07 11:22:01,526 INFO     00:07:14.49  Producer:read 283 chunks and send it into input queue.
+ 2024-04-07 11:22:01,858 INFO     00:07:14.83  Consumer: finish filtering chunk number 283
+ 2024-04-07 11:22:03,013 INFO     00:07:15.98  Producer:read 284 chunks and send it into input queue.
+ 2024-04-07 11:22:03,334 INFO     00:07:16.30  Consumer: finish filtering chunk number 284
+ 2024-04-07 11:22:04,458 INFO     00:07:17.42  Producer:read 285 chunks and send it into input queue.
+ 2024-04-07 11:22:04,771 INFO     00:07:17.74  Consumer: finish filtering chunk number 285
+ 2024-04-07 11:22:05,927 INFO     00:07:18.89  Producer:read 286 chunks and send it into input queue.
+ 2024-04-07 11:22:06,276 INFO     00:07:19.24  Consumer: finish filtering chunk number 286
+ 2024-04-07 11:22:07,385 INFO     00:07:20.35  Producer:read 287 chunks and send it into input queue.
+ 2024-04-07 11:22:07,699 INFO     00:07:20.67  Consumer: finish filtering chunk number 287
+ 2024-04-07 11:22:08,843 INFO     00:07:21.81  Producer:read 288 chunks and send it into input queue.
+ 2024-04-07 11:22:09,178 INFO     00:07:22.15  Consumer: finish filtering chunk number 288
+ 2024-04-07 11:22:10,280 INFO     00:07:23.25  Producer:read 289 chunks and send it into input queue.
+ 2024-04-07 11:22:10,596 INFO     00:07:23.56  Consumer: finish filtering chunk number 289
+ 2024-04-07 11:22:11,900 INFO     00:07:24.87  Producer:read 290 chunks and send it into input queue.
+ 2024-04-07 11:22:12,293 INFO     00:07:25.26  Consumer: finish filtering chunk number 290
+ 2024-04-07 11:22:13,548 INFO     00:07:26.52  Producer:read 291 chunks and send it into input queue.
+ 2024-04-07 11:22:13,996 INFO     00:07:26.96  Consumer: finish filtering chunk number 291
+ 2024-04-07 11:22:15,309 INFO     00:07:28.28  Producer:read 292 chunks and send it into input queue.
+ 2024-04-07 11:22:15,655 INFO     00:07:28.62  Consumer: finish filtering chunk number 292
+ 2024-04-07 11:22:16,963 INFO     00:07:29.93  Producer:read 293 chunks and send it into input queue.
+ 2024-04-07 11:22:17,331 INFO     00:07:30.30  Consumer: finish filtering chunk number 293
+ 2024-04-07 11:22:18,666 INFO     00:07:31.63  Producer:read 294 chunks and send it into input queue.
+ 2024-04-07 11:22:19,013 INFO     00:07:31.98  Consumer: finish filtering chunk number 294
+ 2024-04-07 11:22:20,345 INFO     00:07:33.31  Producer:read 295 chunks and send it into input queue.
+ 2024-04-07 11:22:20,723 INFO     00:07:33.69  Consumer: finish filtering chunk number 295
+ 2024-04-07 11:22:22,010 INFO     00:07:34.98  Producer:read 296 chunks and send it into input queue.
+ 2024-04-07 11:22:22,329 INFO     00:07:35.30  Consumer: finish filtering chunk number 296
+ 2024-04-07 11:22:23,527 INFO     00:07:36.49  Producer:read 297 chunks and send it into input queue.
+ 2024-04-07 11:22:23,850 INFO     00:07:36.82  Consumer: finish filtering chunk number 297
+ 2024-04-07 11:22:24,976 INFO     00:07:37.94  Producer:read 298 chunks and send it into input queue.
+ 2024-04-07 11:22:25,298 INFO     00:07:38.27  Consumer: finish filtering chunk number 298
+ 2024-04-07 11:22:26,470 INFO     00:07:39.44  Producer:read 299 chunks and send it into input queue.
+ 2024-04-07 11:22:26,776 INFO     00:07:39.74  Consumer: finish filtering chunk number 299
+ 2024-04-07 11:22:27,926 INFO     00:07:40.89  Producer:read 300 chunks and send it into input queue.
+ 2024-04-07 11:22:28,258 INFO     00:07:41.23  Consumer: finish filtering chunk number 300
+ 2024-04-07 11:22:29,368 INFO     00:07:42.34  Producer:read 301 chunks and send it into input queue.
+ 2024-04-07 11:22:29,682 INFO     00:07:42.65  Consumer: finish filtering chunk number 301
+ 2024-04-07 11:22:30,762 INFO     00:07:43.73  Producer:read 302 chunks and send it into input queue.
+ 2024-04-07 11:22:31,092 INFO     00:07:44.06  Consumer: finish filtering chunk number 302
+ 2024-04-07 11:22:32,207 INFO     00:07:45.17  Producer:read 303 chunks and send it into input queue.
+ 2024-04-07 11:22:32,524 INFO     00:07:45.49  Consumer: finish filtering chunk number 303
+ 2024-04-07 11:22:33,617 INFO     00:07:46.58  Producer:read 304 chunks and send it into input queue.
+ 2024-04-07 11:22:33,947 INFO     00:07:46.91  Consumer: finish filtering chunk number 304
+ 2024-04-07 11:22:35,101 INFO     00:07:48.07  Producer:read 305 chunks and send it into input queue.
+ 2024-04-07 11:22:35,419 INFO     00:07:48.39  Consumer: finish filtering chunk number 305
+ 2024-04-07 11:22:36,506 INFO     00:07:49.47  Producer:read 306 chunks and send it into input queue.
+ 2024-04-07 11:22:36,820 INFO     00:07:49.79  Consumer: finish filtering chunk number 306
+ 2024-04-07 11:22:37,948 INFO     00:07:50.92  Producer:read 307 chunks and send it into input queue.
+ 2024-04-07 11:22:38,256 INFO     00:07:51.22  Consumer: finish filtering chunk number 307
+ 2024-04-07 11:22:39,355 INFO     00:07:52.32  Producer:read 308 chunks and send it into input queue.
+ 2024-04-07 11:22:39,682 INFO     00:07:52.65  Consumer: finish filtering chunk number 308
+ 2024-04-07 11:22:40,795 INFO     00:07:53.76  Producer:read 309 chunks and send it into input queue.
+ 2024-04-07 11:22:41,122 INFO     00:07:54.09  Consumer: finish filtering chunk number 309
+ 2024-04-07 11:22:42,253 INFO     00:07:55.22  Producer:read 310 chunks and send it into input queue.
+ 2024-04-07 11:22:42,582 INFO     00:07:55.55  Consumer: finish filtering chunk number 310
+ 2024-04-07 11:22:43,691 INFO     00:07:56.66  Producer:read 311 chunks and send it into input queue.
+ 2024-04-07 11:22:44,003 INFO     00:07:56.97  Consumer: finish filtering chunk number 311
+ 2024-04-07 11:22:45,144 INFO     00:07:58.11  Producer:read 312 chunks and send it into input queue.
+ 2024-04-07 11:22:45,454 INFO     00:07:58.42  Consumer: finish filtering chunk number 312
+ 2024-04-07 11:22:46,613 INFO     00:07:59.58  Producer:read 313 chunks and send it into input queue.
+ 2024-04-07 11:22:46,943 INFO     00:07:59.91  Consumer: finish filtering chunk number 313
+ 2024-04-07 11:22:48,041 INFO     00:08:01.01  Producer:read 314 chunks and send it into input queue.
+ 2024-04-07 11:22:48,335 INFO     00:08:01.30  Consumer: finish filtering chunk number 314
+ 2024-04-07 11:22:49,487 INFO     00:08:02.45  Producer:read 315 chunks and send it into input queue.
+ 2024-04-07 11:22:49,809 INFO     00:08:02.78  Consumer: finish filtering chunk number 315
+ 2024-04-07 11:22:50,983 INFO     00:08:03.95  Producer:read 316 chunks and send it into input queue.
+ 2024-04-07 11:22:51,281 INFO     00:08:04.25  Consumer: finish filtering chunk number 316
+ 2024-04-07 11:22:52,395 INFO     00:08:05.36  Producer:read 317 chunks and send it into input queue.
+ 2024-04-07 11:22:52,704 INFO     00:08:05.67  Consumer: finish filtering chunk number 317
+ 2024-04-07 11:22:53,884 INFO     00:08:06.85  Producer:read 318 chunks and send it into input queue.
+ 2024-04-07 11:22:54,204 INFO     00:08:07.17  Consumer: finish filtering chunk number 318
+ 2024-04-07 11:22:55,314 INFO     00:08:08.28  Producer:read 319 chunks and send it into input queue.
+ 2024-04-07 11:22:55,643 INFO     00:08:08.61  Consumer: finish filtering chunk number 319
+ 2024-04-07 11:22:56,754 INFO     00:08:09.72  Producer:read 320 chunks and send it into input queue.
+ 2024-04-07 11:22:57,082 INFO     00:08:10.05  Consumer: finish filtering chunk number 320
+ 2024-04-07 11:22:58,163 INFO     00:08:11.13  Producer:read 321 chunks and send it into input queue.
+ 2024-04-07 11:22:58,476 INFO     00:08:11.44  Consumer: finish filtering chunk number 321
+ 2024-04-07 11:22:59,577 INFO     00:08:12.54  Producer:read 322 chunks and send it into input queue.
+ 2024-04-07 11:22:59,888 INFO     00:08:12.86  Consumer: finish filtering chunk number 322
+ 2024-04-07 11:23:00,998 INFO     00:08:13.97  Producer:read 323 chunks and send it into input queue.
+ 2024-04-07 11:23:01,331 INFO     00:08:14.30  Consumer: finish filtering chunk number 323
+ 2024-04-07 11:23:02,396 INFO     00:08:15.36  Producer:read 324 chunks and send it into input queue.
+ 2024-04-07 11:23:02,717 INFO     00:08:15.68  Consumer: finish filtering chunk number 324
+ 2024-04-07 11:23:03,812 INFO     00:08:16.78  Producer:read 325 chunks and send it into input queue.
+ 2024-04-07 11:23:04,139 INFO     00:08:17.11  Consumer: finish filtering chunk number 325
+ 2024-04-07 11:23:05,250 INFO     00:08:18.22  Producer:read 326 chunks and send it into input queue.
+ 2024-04-07 11:23:05,561 INFO     00:08:18.53  Consumer: finish filtering chunk number 326
+ 2024-04-07 11:23:06,706 INFO     00:08:19.67  Producer:read 327 chunks and send it into input queue.
+ 2024-04-07 11:23:07,028 INFO     00:08:20.00  Consumer: finish filtering chunk number 327
+ 2024-04-07 11:23:08,154 INFO     00:08:21.12  Producer:read 328 chunks and send it into input queue.
+ 2024-04-07 11:23:08,481 INFO     00:08:21.45  Consumer: finish filtering chunk number 328
+ 2024-04-07 11:23:09,746 INFO     00:08:22.71  Producer:read 329 chunks and send it into input queue.
+ 2024-04-07 11:23:10,090 INFO     00:08:23.06  Consumer: finish filtering chunk number 329
+ 2024-04-07 11:23:11,215 INFO     00:08:24.18  Producer:read 330 chunks and send it into input queue.
+ 2024-04-07 11:23:11,637 INFO     00:08:24.60  Consumer: finish filtering chunk number 330
+ 2024-04-07 11:23:12,786 INFO     00:08:25.75  Producer:read 331 chunks and send it into input queue.
+ 2024-04-07 11:23:13,161 INFO     00:08:26.13  Consumer: finish filtering chunk number 331
+ 2024-04-07 11:23:14,441 INFO     00:08:27.41  Producer:read 332 chunks and send it into input queue.
+ 2024-04-07 11:23:14,861 INFO     00:08:27.83  Consumer: finish filtering chunk number 332
+ 2024-04-07 11:23:16,230 INFO     00:08:29.20  Producer:read 333 chunks and send it into input queue.
+ 2024-04-07 11:23:16,585 INFO     00:08:29.55  Consumer: finish filtering chunk number 333
+ 2024-04-07 11:23:17,757 INFO     00:08:30.72  Producer:read 334 chunks and send it into input queue.
+ 2024-04-07 11:23:18,080 INFO     00:08:31.05  Consumer: finish filtering chunk number 334
+ 2024-04-07 11:23:19,208 INFO     00:08:32.18  Producer:read 335 chunks and send it into input queue.
+ 2024-04-07 11:23:19,537 INFO     00:08:32.50  Consumer: finish filtering chunk number 335
+ 2024-04-07 11:23:20,682 INFO     00:08:33.65  Producer:read 336 chunks and send it into input queue.
+ 2024-04-07 11:23:21,042 INFO     00:08:34.01  Consumer: finish filtering chunk number 336
+ 2024-04-07 11:23:22,458 INFO     00:08:35.43  Producer:read 337 chunks and send it into input queue.
+ 2024-04-07 11:23:22,765 INFO     00:08:35.73  Consumer: finish filtering chunk number 337
+ 2024-04-07 11:23:23,833 INFO     00:08:36.80  Producer:read 338 chunks and send it into input queue.
+ 2024-04-07 11:23:24,131 INFO     00:08:37.10  Consumer: finish filtering chunk number 338
+ 2024-04-07 11:23:25,228 INFO     00:08:38.20  Producer:read 339 chunks and send it into input queue.
+ 2024-04-07 11:23:25,546 INFO     00:08:38.51  Consumer: finish filtering chunk number 339
+ 2024-04-07 11:23:26,625 INFO     00:08:39.59  Producer:read 340 chunks and send it into input queue.
+ 2024-04-07 11:23:26,934 INFO     00:08:39.90  Consumer: finish filtering chunk number 340
+ 2024-04-07 11:23:28,029 INFO     00:08:41.00  Producer:read 341 chunks and send it into input queue.
+ 2024-04-07 11:23:28,338 INFO     00:08:41.31  Consumer: finish filtering chunk number 341
+ 2024-04-07 11:23:29,420 INFO     00:08:42.39  Producer:read 342 chunks and send it into input queue.
+ 2024-04-07 11:23:29,749 INFO     00:08:42.72  Consumer: finish filtering chunk number 342
+ 2024-04-07 11:23:30,818 INFO     00:08:43.78  Producer:read 343 chunks and send it into input queue.
+ 2024-04-07 11:23:31,154 INFO     00:08:44.12  Consumer: finish filtering chunk number 343
+ 2024-04-07 11:23:32,305 INFO     00:08:45.27  Producer:read 344 chunks and send it into input queue.
+ 2024-04-07 11:23:32,612 INFO     00:08:45.58  Consumer: finish filtering chunk number 344
+ 2024-04-07 11:23:33,677 INFO     00:08:46.64  Producer:read 345 chunks and send it into input queue.
+ 2024-04-07 11:23:33,982 INFO     00:08:46.95  Consumer: finish filtering chunk number 345
+ 2024-04-07 11:23:35,059 INFO     00:08:48.03  Producer:read 346 chunks and send it into input queue.
+ 2024-04-07 11:23:35,368 INFO     00:08:48.34  Consumer: finish filtering chunk number 346
+ 2024-04-07 11:23:36,385 INFO     00:08:49.35  Producer:read 347 chunks and send it into input queue.
+ 2024-04-07 11:23:36,703 INFO     00:08:49.67  Consumer: finish filtering chunk number 347
+ 2024-04-07 11:23:37,729 INFO     00:08:50.70  Producer:read 348 chunks and send it into input queue.
+ 2024-04-07 11:23:38,042 INFO     00:08:51.01  Consumer: finish filtering chunk number 348
+ 2024-04-07 11:23:39,087 INFO     00:08:52.05  Producer:read 349 chunks and send it into input queue.
+ 2024-04-07 11:23:39,399 INFO     00:08:52.37  Consumer: finish filtering chunk number 349
+ 2024-04-07 11:23:40,449 INFO     00:08:53.42  Producer:read 350 chunks and send it into input queue.
+ 2024-04-07 11:23:40,747 INFO     00:08:53.71  Consumer: finish filtering chunk number 350
+ 2024-04-07 11:23:41,798 INFO     00:08:54.76  Producer:read 351 chunks and send it into input queue.
+ 2024-04-07 11:23:42,111 INFO     00:08:55.08  Consumer: finish filtering chunk number 351
+ 2024-04-07 11:23:43,177 INFO     00:08:56.14  Producer:read 352 chunks and send it into input queue.
+ 2024-04-07 11:23:43,477 INFO     00:08:56.44  Consumer: finish filtering chunk number 352
+ 2024-04-07 11:23:44,555 INFO     00:08:57.52  Producer:read 353 chunks and send it into input queue.
+ 2024-04-07 11:23:44,866 INFO     00:08:57.83  Consumer: finish filtering chunk number 353
+ 2024-04-07 11:23:45,944 INFO     00:08:58.91  Producer:read 354 chunks and send it into input queue.
+ 2024-04-07 11:23:46,299 INFO     00:08:59.27  Consumer: finish filtering chunk number 354
+ 2024-04-07 11:23:47,397 INFO     00:09:00.36  Producer:read 355 chunks and send it into input queue.
+ 2024-04-07 11:23:47,694 INFO     00:09:00.66  Consumer: finish filtering chunk number 355
+ 2024-04-07 11:23:48,791 INFO     00:09:01.76  Producer:read 356 chunks and send it into input queue.
+ 2024-04-07 11:23:49,118 INFO     00:09:02.09  Consumer: finish filtering chunk number 356
+ 2024-04-07 11:23:50,183 INFO     00:09:03.15  Producer:read 357 chunks and send it into input queue.
+ 2024-04-07 11:23:50,497 INFO     00:09:03.46  Consumer: finish filtering chunk number 357
+ 2024-04-07 11:23:51,563 INFO     00:09:04.53  Producer:read 358 chunks and send it into input queue.
+ 2024-04-07 11:23:51,865 INFO     00:09:04.83  Consumer: finish filtering chunk number 358
+ 2024-04-07 11:23:52,959 INFO     00:09:05.93  Producer:read 359 chunks and send it into input queue.
+ 2024-04-07 11:23:53,257 INFO     00:09:06.22  Consumer: finish filtering chunk number 359
+ 2024-04-07 11:23:54,363 INFO     00:09:07.33  Producer:read 360 chunks and send it into input queue.
+ 2024-04-07 11:23:54,661 INFO     00:09:07.63  Consumer: finish filtering chunk number 360
+ 2024-04-07 11:23:55,740 INFO     00:09:08.71  Producer:read 361 chunks and send it into input queue.
+ 2024-04-07 11:23:56,042 INFO     00:09:09.01  Consumer: finish filtering chunk number 361
+ 2024-04-07 11:23:57,097 INFO     00:09:10.06  Producer:read 362 chunks and send it into input queue.
+ 2024-04-07 11:23:57,426 INFO     00:09:10.39  Consumer: finish filtering chunk number 362
+ 2024-04-07 11:23:58,507 INFO     00:09:11.47  Producer:read 363 chunks and send it into input queue.
+ 2024-04-07 11:23:58,822 INFO     00:09:11.79  Consumer: finish filtering chunk number 363
+ 2024-04-07 11:23:59,891 INFO     00:09:12.86  Producer:read 364 chunks and send it into input queue.
+ 2024-04-07 11:24:00,216 INFO     00:09:13.18  Consumer: finish filtering chunk number 364
+ 2024-04-07 11:24:01,338 INFO     00:09:14.31  Producer:read 365 chunks and send it into input queue.
+ 2024-04-07 11:24:01,652 INFO     00:09:14.62  Consumer: finish filtering chunk number 365
+ 2024-04-07 11:24:02,761 INFO     00:09:15.73  Producer:read 366 chunks and send it into input queue.
+ 2024-04-07 11:24:03,082 INFO     00:09:16.05  Consumer: finish filtering chunk number 366
+ 2024-04-07 11:24:04,159 INFO     00:09:17.13  Producer:read 367 chunks and send it into input queue.
+ 2024-04-07 11:24:04,487 INFO     00:09:17.45  Consumer: finish filtering chunk number 367
+ 2024-04-07 11:24:05,532 INFO     00:09:18.50  Producer:read 368 chunks and send it into input queue.
+ 2024-04-07 11:24:05,867 INFO     00:09:18.83  Consumer: finish filtering chunk number 368
+ 2024-04-07 11:24:06,928 INFO     00:09:19.90  Producer:read 369 chunks and send it into input queue.
+ 2024-04-07 11:24:07,242 INFO     00:09:20.21  Consumer: finish filtering chunk number 369
+ 2024-04-07 11:24:08,289 INFO     00:09:21.26  Producer:read 370 chunks and send it into input queue.
+ 2024-04-07 11:24:08,587 INFO     00:09:21.55  Consumer: finish filtering chunk number 370
+ 2024-04-07 11:24:09,622 INFO     00:09:22.59  Producer:read 371 chunks and send it into input queue.
+ 2024-04-07 11:24:09,936 INFO     00:09:22.90  Consumer: finish filtering chunk number 371
+ 2024-04-07 11:24:10,953 INFO     00:09:23.92  Producer:read 372 chunks and send it into input queue.
+ 2024-04-07 11:24:11,283 INFO     00:09:24.25  Consumer: finish filtering chunk number 372
+ 2024-04-07 11:24:12,342 INFO     00:09:25.31  Producer:read 373 chunks and send it into input queue.
+ 2024-04-07 11:24:12,656 INFO     00:09:25.62  Consumer: finish filtering chunk number 373
+ 2024-04-07 11:24:13,734 INFO     00:09:26.70  Producer:read 374 chunks and send it into input queue.
+ 2024-04-07 11:24:14,046 INFO     00:09:27.01  Consumer: finish filtering chunk number 374
+ 2024-04-07 11:24:15,123 INFO     00:09:28.09  Producer:read 375 chunks and send it into input queue.
+ 2024-04-07 11:24:15,470 INFO     00:09:28.44  Consumer: finish filtering chunk number 375
+ 2024-04-07 11:24:16,503 INFO     00:09:29.47  Producer:read 376 chunks and send it into input queue.
+ 2024-04-07 11:24:16,823 INFO     00:09:29.79  Consumer: finish filtering chunk number 376
+ 2024-04-07 11:24:17,880 INFO     00:09:30.85  Producer:read 377 chunks and send it into input queue.
+ 2024-04-07 11:24:18,182 INFO     00:09:31.15  Consumer: finish filtering chunk number 377
+ 2024-04-07 11:24:19,216 INFO     00:09:32.18  Producer:read 378 chunks and send it into input queue.
+ 2024-04-07 11:24:19,544 INFO     00:09:32.51  Consumer: finish filtering chunk number 378
+ 2024-04-07 11:24:20,606 INFO     00:09:33.57  Producer:read 379 chunks and send it into input queue.
+ 2024-04-07 11:24:20,901 INFO     00:09:33.87  Consumer: finish filtering chunk number 379
+ 2024-04-07 11:24:21,966 INFO     00:09:34.93  Producer:read 380 chunks and send it into input queue.
+ 2024-04-07 11:24:22,285 INFO     00:09:35.25  Consumer: finish filtering chunk number 380
+ 2024-04-07 11:24:23,401 INFO     00:09:36.37  Producer:read 381 chunks and send it into input queue.
+ 2024-04-07 11:24:23,698 INFO     00:09:36.67  Consumer: finish filtering chunk number 381
+ 2024-04-07 11:24:24,764 INFO     00:09:37.73  Producer:read 382 chunks and send it into input queue.
+ 2024-04-07 11:24:25,062 INFO     00:09:38.03  Consumer: finish filtering chunk number 382
+ 2024-04-07 11:24:26,144 INFO     00:09:39.11  Producer:read 383 chunks and send it into input queue.
+ 2024-04-07 11:24:26,449 INFO     00:09:39.42  Consumer: finish filtering chunk number 383
+ 2024-04-07 11:24:27,576 INFO     00:09:40.54  Producer:read 384 chunks and send it into input queue.
+ 2024-04-07 11:24:28,056 INFO     00:09:41.02  Consumer: finish filtering chunk number 384
+ 2024-04-07 11:24:29,268 INFO     00:09:42.24  Producer:read 385 chunks and send it into input queue.
+ 2024-04-07 11:24:29,635 INFO     00:09:42.60  Consumer: finish filtering chunk number 385
+ 2024-04-07 11:24:30,826 INFO     00:09:43.79  Producer:read 386 chunks and send it into input queue.
+ 2024-04-07 11:24:31,160 INFO     00:09:44.13  Consumer: finish filtering chunk number 386
+ 2024-04-07 11:24:32,284 INFO     00:09:45.25  Producer:read 387 chunks and send it into input queue.
+ 2024-04-07 11:24:32,618 INFO     00:09:45.58  Consumer: finish filtering chunk number 387
+ 2024-04-07 11:24:33,725 INFO     00:09:46.69  Producer:read 388 chunks and send it into input queue.
+ 2024-04-07 11:24:34,050 INFO     00:09:47.02  Consumer: finish filtering chunk number 388
+ 2024-04-07 11:24:35,137 INFO     00:09:48.10  Producer:read 389 chunks and send it into input queue.
+ 2024-04-07 11:24:35,463 INFO     00:09:48.43  Consumer: finish filtering chunk number 389
+ 2024-04-07 11:24:36,679 INFO     00:09:49.65  Producer:read 390 chunks and send it into input queue.
+ 2024-04-07 11:24:37,035 INFO     00:09:50.00  Consumer: finish filtering chunk number 390
+ 2024-04-07 11:24:38,162 INFO     00:09:51.13  Producer:read 391 chunks and send it into input queue.
+ 2024-04-07 11:24:38,505 INFO     00:09:51.47  Consumer: finish filtering chunk number 391
+ 2024-04-07 11:24:39,583 INFO     00:09:52.55  Producer:read 392 chunks and send it into input queue.
+ 2024-04-07 11:24:39,927 INFO     00:09:52.89  Consumer: finish filtering chunk number 392
+ 2024-04-07 11:24:41,028 INFO     00:09:54.00  Producer:read 393 chunks and send it into input queue.
+ 2024-04-07 11:24:41,350 INFO     00:09:54.32  Consumer: finish filtering chunk number 393
+ 2024-04-07 11:24:42,443 INFO     00:09:55.41  Producer:read 394 chunks and send it into input queue.
+ 2024-04-07 11:24:42,923 INFO     00:09:55.89  Consumer: finish filtering chunk number 394
+ 2024-04-07 11:24:44,270 INFO     00:09:57.24  Producer:read 395 chunks and send it into input queue.
+ 2024-04-07 11:24:44,680 INFO     00:09:57.65  Consumer: finish filtering chunk number 395
+ 2024-04-07 11:24:45,913 INFO     00:09:58.88  Producer:read 396 chunks and send it into input queue.
+ 2024-04-07 11:24:46,280 INFO     00:09:59.25  Consumer: finish filtering chunk number 396
+ 2024-04-07 11:24:47,413 INFO     00:10:00.38  Producer:read 397 chunks and send it into input queue.
+ 2024-04-07 11:24:47,727 INFO     00:10:00.69  Consumer: finish filtering chunk number 397
+ 2024-04-07 11:24:48,795 INFO     00:10:01.76  Producer:read 398 chunks and send it into input queue.
+ 2024-04-07 11:24:49,119 INFO     00:10:02.07  Consumer: finish filtering chunk number 398
+ 2024-04-07 11:24:50,197 INFO     00:10:03.16  Producer:read 399 chunks and send it into input queue.
+ 2024-04-07 11:24:50,557 INFO     00:10:03.52  Consumer: finish filtering chunk number 399
+ 2024-04-07 11:24:51,649 INFO     00:10:04.62  Producer:read 400 chunks and send it into input queue.
+ 2024-04-07 11:24:51,960 INFO     00:10:04.93  Consumer: finish filtering chunk number 400
+ 2024-04-07 11:24:53,086 INFO     00:10:06.05  Producer:read 401 chunks and send it into input queue.
+ 2024-04-07 11:24:53,445 INFO     00:10:06.41  Consumer: finish filtering chunk number 401
+ 2024-04-07 11:24:54,577 INFO     00:10:07.54  Producer:read 402 chunks and send it into input queue.
+ 2024-04-07 11:24:54,911 INFO     00:10:07.88  Consumer: finish filtering chunk number 402
+ 2024-04-07 11:24:55,960 INFO     00:10:08.93  Producer:read 403 chunks and send it into input queue.
+ 2024-04-07 11:24:56,271 INFO     00:10:09.24  Consumer: finish filtering chunk number 403
+ 2024-04-07 11:24:57,369 INFO     00:10:10.34  Producer:read 404 chunks and send it into input queue.
+ 2024-04-07 11:24:57,678 INFO     00:10:10.65  Consumer: finish filtering chunk number 404
+ 2024-04-07 11:24:58,725 INFO     00:10:11.69  Producer:read 405 chunks and send it into input queue.
+ 2024-04-07 11:24:59,053 INFO     00:10:12.02  Consumer: finish filtering chunk number 405
+ 2024-04-07 11:25:00,069 INFO     00:10:13.04  Producer:read 406 chunks and send it into input queue.
+ 2024-04-07 11:25:00,402 INFO     00:10:13.37  Consumer: finish filtering chunk number 406
+ 2024-04-07 11:25:01,491 INFO     00:10:14.46  Producer:read 407 chunks and send it into input queue.
+ 2024-04-07 11:25:01,804 INFO     00:10:14.77  Consumer: finish filtering chunk number 407
+ 2024-04-07 11:25:02,925 INFO     00:10:15.89  Producer:read 408 chunks and send it into input queue.
+ 2024-04-07 11:25:03,292 INFO     00:10:16.26  Consumer: finish filtering chunk number 408
+ 2024-04-07 11:25:04,412 INFO     00:10:17.38  Producer:read 409 chunks and send it into input queue.
+ 2024-04-07 11:25:04,755 INFO     00:10:17.72  Consumer: finish filtering chunk number 409
+ 2024-04-07 11:25:05,890 INFO     00:10:18.86  Producer:read 410 chunks and send it into input queue.
+ 2024-04-07 11:25:06,228 INFO     00:10:19.20  Consumer: finish filtering chunk number 410
+ 2024-04-07 11:25:07,385 INFO     00:10:20.35  Producer:read 411 chunks and send it into input queue.
+ 2024-04-07 11:25:07,714 INFO     00:10:20.68  Consumer: finish filtering chunk number 411
+ 2024-04-07 11:25:08,972 INFO     00:10:21.94  Producer:read 412 chunks and send it into input queue.
+ 2024-04-07 11:25:09,324 INFO     00:10:22.29  Consumer: finish filtering chunk number 412
+ 2024-04-07 11:25:10,542 INFO     00:10:23.51  Producer:read 413 chunks and send it into input queue.
+ 2024-04-07 11:25:10,891 INFO     00:10:23.86  Consumer: finish filtering chunk number 413
+ 2024-04-07 11:25:11,977 INFO     00:10:24.94  Producer:read 414 chunks and send it into input queue.
+ 2024-04-07 11:25:12,543 INFO     00:10:25.51  Consumer: finish filtering chunk number 414
+ 2024-04-07 11:25:13,608 INFO     00:10:26.58  Producer:read 415 chunks and send it into input queue.
+ 2024-04-07 11:25:13,920 INFO     00:10:26.89  Consumer: finish filtering chunk number 415
+ 2024-04-07 11:25:15,072 INFO     00:10:28.04  Producer:read 416 chunks and send it into input queue.
+ 2024-04-07 11:25:15,395 INFO     00:10:28.36  Consumer: finish filtering chunk number 416
+ 2024-04-07 11:25:16,459 INFO     00:10:29.43  Producer:read 417 chunks and send it into input queue.
+ 2024-04-07 11:25:16,777 INFO     00:10:29.74  Consumer: finish filtering chunk number 417
+ 2024-04-07 11:25:17,891 INFO     00:10:30.86  Producer:read 418 chunks and send it into input queue.
+ 2024-04-07 11:25:18,214 INFO     00:10:31.18  Consumer: finish filtering chunk number 418
+ 2024-04-07 11:25:19,486 INFO     00:10:32.45  Producer:read 419 chunks and send it into input queue.
+ 2024-04-07 11:25:19,832 INFO     00:10:32.80  Consumer: finish filtering chunk number 419
+ 2024-04-07 11:25:21,101 INFO     00:10:34.07  Producer:read 420 chunks and send it into input queue.
+ 2024-04-07 11:25:21,484 INFO     00:10:34.45  Consumer: finish filtering chunk number 420
+ 2024-04-07 11:25:22,644 INFO     00:10:35.61  Producer:read 421 chunks and send it into input queue.
+ 2024-04-07 11:25:22,976 INFO     00:10:35.94  Consumer: finish filtering chunk number 421
+ 2024-04-07 11:25:24,080 INFO     00:10:37.05  Producer:read 422 chunks and send it into input queue.
+ 2024-04-07 11:25:24,417 INFO     00:10:37.38  Consumer: finish filtering chunk number 422
+ 2024-04-07 11:25:25,543 INFO     00:10:38.51  Producer:read 423 chunks and send it into input queue.
+ 2024-04-07 11:25:25,916 INFO     00:10:38.88  Consumer: finish filtering chunk number 423
+ 2024-04-07 11:25:26,994 INFO     00:10:39.96  Producer:read 424 chunks and send it into input queue.
+ 2024-04-07 11:25:27,324 INFO     00:10:40.29  Consumer: finish filtering chunk number 424
+ 2024-04-07 11:25:28,617 INFO     00:10:41.58  Producer:read 425 chunks and send it into input queue.
+ 2024-04-07 11:25:29,001 INFO     00:10:41.97  Consumer: finish filtering chunk number 425
+ 2024-04-07 11:25:30,385 INFO     00:10:43.35  Producer:read 426 chunks and send it into input queue.
+ 2024-04-07 11:25:30,723 INFO     00:10:43.69  Consumer: finish filtering chunk number 426
+ 2024-04-07 11:25:31,962 INFO     00:10:44.93  Producer:read 427 chunks and send it into input queue.
+ 2024-04-07 11:25:32,331 INFO     00:10:45.30  Consumer: finish filtering chunk number 427
+ 2024-04-07 11:25:33,579 INFO     00:10:46.55  Producer:read 428 chunks and send it into input queue.
+ 2024-04-07 11:25:34,079 INFO     00:10:47.05  Consumer: finish filtering chunk number 428
+ 2024-04-07 11:25:35,340 INFO     00:10:48.31  Producer:read 429 chunks and send it into input queue.
+ 2024-04-07 11:25:35,730 INFO     00:10:48.70  Consumer: finish filtering chunk number 429
+ 2024-04-07 11:25:36,896 INFO     00:10:49.86  Producer:read 430 chunks and send it into input queue.
+ 2024-04-07 11:25:37,247 INFO     00:10:50.21  Consumer: finish filtering chunk number 430
+ 2024-04-07 11:25:38,403 INFO     00:10:51.37  Producer:read 431 chunks and send it into input queue.
+ 2024-04-07 11:25:38,722 INFO     00:10:51.69  Consumer: finish filtering chunk number 431
+ 2024-04-07 11:25:39,814 INFO     00:10:52.78  Producer:read 432 chunks and send it into input queue.
+ 2024-04-07 11:25:40,126 INFO     00:10:53.09  Consumer: finish filtering chunk number 432
+ 2024-04-07 11:25:41,205 INFO     00:10:54.17  Producer:read 433 chunks and send it into input queue.
+ 2024-04-07 11:25:41,524 INFO     00:10:54.49  Consumer: finish filtering chunk number 433
+ 2024-04-07 11:25:42,564 INFO     00:10:55.53  Producer:read 434 chunks and send it into input queue.
+ 2024-04-07 11:25:42,860 INFO     00:10:55.83  Consumer: finish filtering chunk number 434
+ 2024-04-07 11:25:43,910 INFO     00:10:56.88  Producer:read 435 chunks and send it into input queue.
+ 2024-04-07 11:25:44,219 INFO     00:10:57.19  Consumer: finish filtering chunk number 435
+ 2024-04-07 11:25:45,269 INFO     00:10:58.24  Producer:read 436 chunks and send it into input queue.
+ 2024-04-07 11:25:45,594 INFO     00:10:58.56  Consumer: finish filtering chunk number 436
+ 2024-04-07 11:25:47,051 INFO     00:11:00.02  Producer:read 437 chunks and send it into input queue.
+ 2024-04-07 11:25:47,408 INFO     00:11:00.37  Consumer: finish filtering chunk number 437
+ 2024-04-07 11:25:48,489 INFO     00:11:01.46  Producer:read 438 chunks and send it into input queue.
+ 2024-04-07 11:25:48,836 INFO     00:11:01.80  Consumer: finish filtering chunk number 438
+ 2024-04-07 11:25:50,091 INFO     00:11:03.06  Producer:read 439 chunks and send it into input queue.
+ 2024-04-07 11:25:50,441 INFO     00:11:03.41  Consumer: finish filtering chunk number 439
+ 2024-04-07 11:25:51,741 INFO     00:11:04.71  Producer:read 440 chunks and send it into input queue.
+ 2024-04-07 11:25:52,124 INFO     00:11:05.09  Consumer: finish filtering chunk number 440
+ 2024-04-07 11:25:53,278 INFO     00:11:06.25  Producer:read 441 chunks and send it into input queue.
+ 2024-04-07 11:25:53,618 INFO     00:11:06.59  Consumer: finish filtering chunk number 441
+ 2024-04-07 11:25:54,791 INFO     00:11:07.76  Producer:read 442 chunks and send it into input queue.
+ 2024-04-07 11:25:55,141 INFO     00:11:08.11  Consumer: finish filtering chunk number 442
+ 2024-04-07 11:25:56,315 INFO     00:11:09.28  Producer:read 443 chunks and send it into input queue.
+ 2024-04-07 11:25:56,669 INFO     00:11:09.64  Consumer: finish filtering chunk number 443
+ 2024-04-07 11:25:57,787 INFO     00:11:10.75  Producer:read 444 chunks and send it into input queue.
+ 2024-04-07 11:25:58,138 INFO     00:11:11.11  Consumer: finish filtering chunk number 444
+ 2024-04-07 11:25:59,439 INFO     00:11:12.41  Producer:read 445 chunks and send it into input queue.
+ 2024-04-07 11:25:59,805 INFO     00:11:12.77  Consumer: finish filtering chunk number 445
+ 2024-04-07 11:26:01,140 INFO     00:11:14.11  Producer:read 446 chunks and send it into input queue.
+ 2024-04-07 11:26:01,471 INFO     00:11:14.44  Consumer: finish filtering chunk number 446
+ 2024-04-07 11:26:02,671 INFO     00:11:15.64  Producer:read 447 chunks and send it into input queue.
+ 2024-04-07 11:26:03,006 INFO     00:11:15.97  Consumer: finish filtering chunk number 447
+ 2024-04-07 11:26:04,234 INFO     00:11:17.20  Producer:read 448 chunks and send it into input queue.
+ 2024-04-07 11:26:04,619 INFO     00:11:17.59  Consumer: finish filtering chunk number 448
+ 2024-04-07 11:26:05,927 INFO     00:11:18.89  Producer:read 449 chunks and send it into input queue.
+ 2024-04-07 11:26:06,398 INFO     00:11:19.37  Consumer: finish filtering chunk number 449
+ 2024-04-07 11:26:07,783 INFO     00:11:20.75  Producer:read 450 chunks and send it into input queue.
+ 2024-04-07 11:26:08,125 INFO     00:11:21.09  Consumer: finish filtering chunk number 450
+ 2024-04-07 11:26:09,470 INFO     00:11:22.44  Producer:read 451 chunks and send it into input queue.
+ 2024-04-07 11:26:09,816 INFO     00:11:22.78  Consumer: finish filtering chunk number 451
+ 2024-04-07 11:26:11,135 INFO     00:11:24.10  Producer:read 452 chunks and send it into input queue.
+ 2024-04-07 11:26:11,589 INFO     00:11:24.56  Consumer: finish filtering chunk number 452
+ 2024-04-07 11:26:12,934 INFO     00:11:25.90  Producer:read 453 chunks and send it into input queue.
+ 2024-04-07 11:26:13,312 INFO     00:11:26.28  Consumer: finish filtering chunk number 453
+ 2024-04-07 11:26:14,472 INFO     00:11:27.44  Producer:read 454 chunks and send it into input queue.
+ 2024-04-07 11:26:14,813 INFO     00:11:27.78  Consumer: finish filtering chunk number 454
+ 2024-04-07 11:26:16,025 INFO     00:11:28.99  Producer:read 455 chunks and send it into input queue.
+ 2024-04-07 11:26:16,369 INFO     00:11:29.34  Consumer: finish filtering chunk number 455
+ 2024-04-07 11:26:17,420 INFO     00:11:30.39  Producer:read 456 chunks and send it into input queue.
+ 2024-04-07 11:26:17,733 INFO     00:11:30.70  Consumer: finish filtering chunk number 456
+ 2024-04-07 11:26:18,826 INFO     00:11:31.79  Producer:read 457 chunks and send it into input queue.
+ 2024-04-07 11:26:19,141 INFO     00:11:32.11  Consumer: finish filtering chunk number 457
+ 2024-04-07 11:26:20,348 INFO     00:11:33.32  Producer:read 458 chunks and send it into input queue.
+ 2024-04-07 11:26:20,746 INFO     00:11:33.71  Consumer: finish filtering chunk number 458
+ 2024-04-07 11:26:22,148 INFO     00:11:35.12  Producer:read 459 chunks and send it into input queue.
+ 2024-04-07 11:26:22,514 INFO     00:11:35.48  Consumer: finish filtering chunk number 459
+ 2024-04-07 11:26:23,878 INFO     00:11:36.84  Producer:read 460 chunks and send it into input queue.
+ 2024-04-07 11:26:24,236 INFO     00:11:37.20  Consumer: finish filtering chunk number 460
+ 2024-04-07 11:26:25,145 INFO     00:11:38.11  Producer:read 461 chunks and send it into input queue.
+ 2024-04-07 11:26:25,160 INFO     00:11:38.13  Producer: finish reading all chunks.
+ 2024-04-07 11:26:25,381 INFO     00:11:38.35  Consumer: finish filtering chunk number 461
+ 2024-04-07 11:26:25,381 INFO     00:11:38.35  Consumer:finish of filtering chunks using AhoCorasick.

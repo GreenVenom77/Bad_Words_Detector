@@ -31,6 +31,7 @@ class ProcessesPoolModel(ConcurrentModel):
         consumer_process1.join()
         consumer_process2.join()
         consumer_process3.join()
+        print("start merging")
 
 
 class MultiProcessingModel(ConcurrentModel):
@@ -41,7 +42,9 @@ class MultiProcessingModel(ConcurrentModel):
         producer_process.start()
         consumer_process.start()
         producer_process.join()
-        consumer_process.join()
+        consumer_process.kill()
+
+        print("finish concurrent")
 
 
 class MultiThreadingModel(ConcurrentModel):

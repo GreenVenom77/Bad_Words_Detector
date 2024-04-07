@@ -1,9 +1,9 @@
 {
     "data_file":"./46,080,374Rows_365Columns.rar",
     "bad_words_file":"./BadWords.csv",
-    "chunk_size":15000,
-    "filter_mode":"Regex",
-    "processing_mode":"MultiThreading",
+    "chunk_size":100000,
+    "filter_mode":"AhoCorasick",
+    "processing_mode":"MultiProcessing",
     "specify_columns":[1,2,3],
     "head_columns":[0,1,2]
 }

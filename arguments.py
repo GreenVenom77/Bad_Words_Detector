@@ -3,11 +3,13 @@ from dataclasses import dataclass
 from enum import Enum
 import json
 import os
+from time import time
 from Enums import FilterMode, ProcessingMode
 
 
 @dataclass
 class Args:
+
     data_file: str
     bad_words_file: str
     head_columns: list[int]
@@ -15,6 +17,7 @@ class Args:
     filter_mode: FilterMode
     processing_mode: ProcessingMode
     chunk_size: int
+    starting_time: float = time()
 
 
 def add_arguments(parser: ArgumentParser):

@@ -2,11 +2,13 @@ import multiprocessing.process
 import multiprocessing.queues
 from queue import Queue
 import threading
-import time
+from time import time
 import logging
+from typing import Any
 import pandas as pd
+from arguments import Args
 from filter import TextFilter
-from time_helper import ChunkInfo, elapsed
+from time_helper import ChunkFilteringInfo, ChunkInfo, elapsed
 
 logging.basicConfig(
     filename="logfile.log",
@@ -15,29 +17,18 @@ logging.basicConfig(
 )
 
 
-class DummyLock:
-    def acquire(self):
-        pass
-
-    def release(self):
-        pass
-
-
 class Consumer:
     def __init__(
         self,
+        input_queue: Queue[tuple[int, pd.DataFrame]] | Any,
+        filtering_info_queue: Queue[tuple[int, ChunkFilteringInfo]] | Any,
         text_filter: TextFilter,
-        input_queue: Queue[tuple[int, pd.DataFrame]],
-        statistics_dict,
-        use_statistics_dict_lock: bool,
+        args: Args,
     ):
         self.text_filter = text_filter
         self.input_queue = input_queue
-        self.statistics_dict = statistics_dict
-        if use_statistics_dict_lock:
-            self.statistics_dict_lock = multiprocessing.Lock()
-        else:
-            self.statistics_dict_lock = DummyLock()
+        self.filtering_info_queue = filtering_info_queue
+        self.args = args
 
     def start_filtering(self):
         self.text_filter.prepare()
@@ -45,42 +36,40 @@ class Consumer:
             if self.input_queue.empty():
                 continue
             if (tuple := self.input_queue.get()) is None:
+                self.input_queue.put(None)  # type: ignore # to handle multiple consumers case
                 break
             (index, chunk) = tuple
             # filtering
-            start_time = time.time()
+            start_time = time()
             healthy_chunk, unhealthy_chunk = self.text_filter.filter(chunk)
-            end_time = time.time()
+            end_time = time()
 
             # add the time taken to filter the chunk
-            self.statistics_dict_lock.acquire()
-            chunks_info: list[float | ChunkInfo] = self.statistics_dict["chunks_info"]
-            chunks_info[index] = ChunkInfo(
-                reading_time=self.statistics_dict["chunks_info"][index],
-                filtering_time=round(end_time - start_time, 4),
-                number_of_healthy=healthy_chunk.shape[0],
-                number_of_unhealthy=unhealthy_chunk.shape[0],
+            self.filtering_info_queue.put(
+                (
+                    index,
+                    ChunkFilteringInfo(
+                        filtering_time=round(end_time - start_time, 4),
+                        number_of_healthy=healthy_chunk.shape[0],
+                        number_of_unhealthy=unhealthy_chunk.shape[0],
+                    ),
+                )
             )
-            self.statistics_dict_lock.release()
-
-            elapsed_time = elapsed(self.statistics_dict["start_time"])
             logging.info(
                 "%s  Consumer: finish filtering chunk number %s",
-                elapsed_time,
+                elapsed(self.args.starting_time),
                 index + 1,
             )
 
     def run(self):
-        elapsed_time = elapsed(self.statistics_dict["start_time"])
         logging.info(
             "%s  consumer:start filtering chunks using %s.",
-            elapsed_time,
+            elapsed(self.args.starting_time),
             self.text_filter,
         )
         self.start_filtering()
-        elapsed_time = elapsed(self.statistics_dict["start_time"])
         logging.info(
             "%s  Consumer:finish of filtering chunks using %s.",
-            elapsed_time,
+            elapsed(self.args.starting_time),
             self.text_filter,
         )

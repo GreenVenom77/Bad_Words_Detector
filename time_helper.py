@@ -5,22 +5,16 @@ from typing import Any
 
 
 @dataclass
-class ChunkInfo:
-    reading_time: float
+class ChunkFilteringInfo:
     filtering_time: float
     number_of_healthy: int
     number_of_unhealthy: int
 
 
-def generate_statistics_dict() -> dict[str, Any]:
-
-    return {
-        "start_time": float(),
-        "chunk_size": int(),
-        "filtering_algorithm": str(),
-        "number_of_chunks": int(),
-        "chunks_info": list[float | ChunkInfo](),
-    }
+@dataclass
+class ChunkInfo:
+    reading_time: float
+    filtering_info: ChunkFilteringInfo
 
 
 def elapsed(starting_time: float):
