@@ -7,8 +7,9 @@ from time import time
 from typing import Any, Mapping
 import faker
 
+from Enums import FilterMode, ProcessingMode
 from arguments import Args
-from time_helper import ChunkInfo, elapsed
+from time_helper import ChunkFilteringInfo, ChunkInfo, elapsed
 
 logging.basicConfig(
     filename="logfile.log",
@@ -62,11 +63,11 @@ class StatisticsWriter:
                     setup_row(
                         self.args.chunk_size,  # type: ignore
                         index + 1,  # type: ignore
-                        chunk_info.number_of_healthy,  # type: ignore
-                        chunk_info.number_of_unhealthy,  # type: ignore
+                        chunk_info.filtering_info.number_of_healthy,  # type: ignore
+                        chunk_info.filtering_info.number_of_unhealthy,  # type: ignore
                         chunk_info.reading_time,  # type: ignore
-                        chunk_info.filtering_time,  # type: ignore
-                        chunk_info.reading_time + chunk_info.filtering_time,  # type: ignore
+                        chunk_info.filtering_info.filtering_time,  # type: ignore
+                        chunk_info.reading_time + chunk_info.filtering_info.filtering_time,  # type: ignore
                     )
                 )
             # region columns subtotal calculations
@@ -212,21 +213,30 @@ class StatisticsWriter:
         )
 
 
-# if __name__ == "__main__":
-#     faker = faker.Faker()
-#     dict = generate_statistics_dict()
-#     dict["start_time"] = time()
-#     dict["chunk_size"] = 1000
-#     dict["filtering_algorithm"] = "Khaled_saeed"
-#     dict["number_of_chunks"] = 10
-#     for _ in range(dict["number_of_chunks"]):
-#         chunks_info: list[ChunkInfo] = dict["chunks_info"]
-#         healthy_number = random.randint(0, 100)
-#         unhealthy_number = 100 - healthy_number
-#         filtering_time = round(random.uniform(0.01, 2), 4)
-#         reading_time = round(random.uniform(0.01, 2), 4)
-#         chunks_info.append(
-#             ChunkInfo(reading_time, filtering_time, healthy_number, unhealthy_number)
-#         )
-#     statistics_writer = StatisticsWriter(dict)
-#     statistics_writer.start()
+if __name__ == "__main__":
+    faker = faker.Faker()
+    chunks_info = list[ChunkInfo]()
+    chunk_size = 1000
+    for _ in range(100):
+        healthy_number = random.randint(0, chunk_size)
+        unhealthy_number = chunk_size - healthy_number
+        filtering_time = round(random.uniform(0.01, 2), 4)
+        reading_time = round(random.uniform(0.01, 2), 4)
+        chunks_info.append(
+            ChunkInfo(
+                reading_time,
+                ChunkFilteringInfo(filtering_time, healthy_number, unhealthy_number),
+            )
+        )
+    statistics_writer = StatisticsWriter(
+        Args(
+            data_file="",
+            bad_words_file="",
+            head_columns=[],
+            specify_columns=[],
+            processing_mode=ProcessingMode.ProcessesPool,
+            filter_mode=FilterMode.AhoCorasick,
+            chunk_size=1000,
+        )
+    )
+    statistics_writer.start(chunks_info)
