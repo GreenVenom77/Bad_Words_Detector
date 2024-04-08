@@ -65,13 +65,13 @@ class StatisticsWriter:
                         chunk_info.number_of_unhealthy,  # type: ignore
                         chunk_info.reading_time,  # type: ignore
                         chunk_info.filtering_time,  # type: ignore
-                        round(chunk_info.reading_time + chunk_info.filtering_time, 4),  #khaled
+                        round(chunk_info.reading_time + chunk_info.filtering_time, 4),  #type: ignore
                     )
                 )
             # region columns subtotal calculations
             reading_list = list(map(lambda ci: ci.reading_time, self.chunks_info))
             filtering_list = list(map(lambda ci: ci.filtering_time, self.chunks_info))
-            frame_time_list = [round(r + f, 4) for r, f in zip(reading_list, filtering_list)] #khaled
+            frame_time_list = [round(r + f, 4) for r, f in zip(reading_list, filtering_list)] 
             healthy_total = sum(map(lambda ci: ci.number_of_healthy, self.chunks_info))
             unhealthy_total = sum(
                 map(lambda ci: ci.number_of_unhealthy, self.chunks_info)
