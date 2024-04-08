@@ -1,4 +1,5 @@
-import multiprocessing
+import multiprocessing.process
+import multiprocessing.queues
 from queue import Queue
 from typing import Any, Dict, Iterator
 from pandas import DataFrame, read_csv
@@ -67,10 +68,6 @@ class Producer:
                 elapsed(self.args.starting_time),
                 number + 1,
             )
-
-        # else:
-        #     # add number of founded chunks to statistics dict
-        #     self.statistics_dict["number of chunks"] = number + 1
 
         # Signal end of input and compute read time statistics
         self.input_queue.put(None)  # type: ignore

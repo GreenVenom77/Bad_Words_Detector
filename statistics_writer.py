@@ -3,13 +3,11 @@ import logging
 import os
 import random
 import threading
-from time import time
 from typing import Any, Mapping
 import faker
-
 from Enums import FilterMode, ProcessingMode
 from arguments import Args
-from time_helper import ChunkFilteringInfo, ChunkInfo, elapsed
+from chunks_processing_info import ChunkFilteringInfo, ChunkInfo, elapsed
 
 logging.basicConfig(
     filename="logfile.log",
@@ -63,24 +61,20 @@ class StatisticsWriter:
                     setup_row(
                         self.args.chunk_size,  # type: ignore
                         index + 1,  # type: ignore
-                        chunk_info.filtering_info.number_of_healthy,  # type: ignore
-                        chunk_info.filtering_info.number_of_unhealthy,  # type: ignore
+                        chunk_info.number_of_healthy,  # type: ignore
+                        chunk_info.number_of_unhealthy,  # type: ignore
                         chunk_info.reading_time,  # type: ignore
-                        chunk_info.filtering_info.filtering_time,  # type: ignore
-                        chunk_info.reading_time + chunk_info.filtering_info.filtering_time,  # type: ignore
+                        chunk_info.filtering_time,  # type: ignore
+                        chunk_info.reading_time + chunk_info.filtering_time,  # type: ignore
                     )
                 )
             # region columns subtotal calculations
             reading_list = list(map(lambda ci: ci.reading_time, self.chunks_info))
-            filtering_list = list(
-                map(lambda ci: ci.filtering_info.filtering_time, self.chunks_info)
-            )
+            filtering_list = list(map(lambda ci: ci.filtering_time, self.chunks_info))
             frame_time_list = [r + f for r, f in zip(reading_list, filtering_list)]
-            healthy_total = sum(
-                map(lambda ci: ci.filtering_info.number_of_healthy, self.chunks_info)
-            )
+            healthy_total = sum(map(lambda ci: ci.number_of_healthy, self.chunks_info))
             unhealthy_total = sum(
-                map(lambda ci: ci.filtering_info.number_of_unhealthy, self.chunks_info)
+                map(lambda ci: ci.number_of_unhealthy, self.chunks_info)
             )
             reading_total = round(sum(reading_list), 4)
             filtering_total = round(sum(filtering_list), 4)
