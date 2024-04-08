@@ -7,7 +7,7 @@ from time import time
 from rarfile import RarFile
 import logging
 from arguments import Args
-from time_helper import elapsed
+from chunks_processing_info import elapsed
 
 # i/o bounds
 logging.basicConfig(

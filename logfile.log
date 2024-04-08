@@ -631,3 +631,12 @@
  2024-04-08 01:57:09,291 INFO     00:00:00.11  Writer:finish of write excel and csv files statistics .
  2024-04-08 02:09:25,917 INFO     00:00:00.12  Writer:starting write excel and csv files statistics ....
  2024-04-08 02:09:25,920 INFO     00:00:00.12  Writer:finish of write excel and csv files statistics .
+ 2024-04-08 02:25:08,884 INFO     Main: run in pool of processes
+ 2024-04-08 02:25:10,082 INFO     00:00:02.95  Producer: start reading chunks.
+ 2024-04-08 02:25:10,082 INFO     Initializing RarFile object...
+ 2024-04-08 02:25:10,083 INFO     RarFile object initialized successfully.
+ 2024-04-08 02:25:10,085 INFO     00:00:02.95  consumer:start filtering chunks using AhoCorasick.
+ 2024-04-08 02:25:11,166 INFO     00:00:04.03  consumer:start filtering chunks using AhoCorasick.
+ 2024-04-08 02:25:12,356 INFO     00:00:05.22  consumer:start filtering chunks using AhoCorasick.
+ 2024-04-08 02:25:13,652 INFO     00:00:06.52  Producer:read 1 chunks and send it into input queue.
+ 2024-04-08 02:25:14,294 INFO     00:00:07.16  Consumer: finish filtering chunk number 1

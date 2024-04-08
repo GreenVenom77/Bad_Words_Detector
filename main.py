@@ -1,14 +1,11 @@
-from typing import Callable
 import pandas as pd
 from Enums import FilterMode, ProcessingMode
 from concurrent_model import *
 from producer import Producer
 from consumer import Consumer
 from queue import Queue
-import threading
 import multiprocessing
 import logging
-from time import time
 from arguments import Args, parse_args
 from filter import *
 from statistics_writer import StatisticsWriter

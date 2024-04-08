@@ -8,7 +8,7 @@ from typing import Any
 import pandas as pd
 from arguments import Args
 from filter import TextFilter
-from time_helper import ChunkFilteringInfo, ChunkInfo, elapsed
+from chunks_processing_info import ChunkFilteringInfo, elapsed
 
 logging.basicConfig(
     filename="logfile.log",
