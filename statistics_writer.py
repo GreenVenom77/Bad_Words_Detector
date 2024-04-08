@@ -52,21 +52,33 @@ class StatisticsWriter:
             }
         return agg_values
 
-    def statistics_csv(self, df: DataFrame, aggregation_values: dict[str, dict]):
-        rows = []
+    def write_csv(self, df: DataFrame, aggregation_values: dict[str, dict]):
+        aggregation_rows = list[list[str | None]]()
         for key in ["sum", "average", "max", "min"]:
             label = key if key != "sum" else "total"
             fields = len(df.columns) - sum(
                 key in dict for dict in aggregation_values.values()
             )
-            rows.append(
+            aggregation_rows.append(
                 [None] * fields
                 + [
                     f"{label}:{aggregation_values[column][key]}"
                     for column in df.columns[fields:]
                 ]
             )
-        csv_df = concat([df, DataFrame(rows, columns=df.columns, index=None)], axis=0)
+        csv_df = concat(
+            [df, DataFrame(aggregation_rows, columns=df.columns, index=None)], axis=0
+        )
+        # replace csv columns
+        csv_df.columns = [
+            "chunk_size",
+            "chunk_number",
+            "No of healthy records",
+            "No of unhealthy records",
+            "reading_time",
+            "filtering_time",
+            "frame_Total_Time",
+        ]
         csv_df.to_csv(
             path_or_buf=f"output/Detailed_Log_{self.args.filter_mode.name}.csv",
             mode="a",
@@ -83,7 +95,7 @@ class StatisticsWriter:
         if not os.path.exists("output"):
             os.makedirs("output")
         csv_thread = threading.Thread(
-            target=lambda: self.statistics_csv(df, aggregation_values),
+            target=lambda: self.write_csv(df, aggregation_values),
         )
         csv_thread.start()
         csv_thread.join()
