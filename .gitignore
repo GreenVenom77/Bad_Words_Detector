@@ -3,9 +3,12 @@
 .venv
 .vscode
 .idea
+build
+dist
 output
 
 # Files
 46,080,374Rows_365Columns.rar
 args.json
 *.log
+*.spec
