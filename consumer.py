@@ -1,7 +1,5 @@
-import multiprocessing.process
 import multiprocessing.queues
 from queue import Queue
-import threading
 from time import time
 import logging
 from typing import Any
@@ -10,33 +8,27 @@ from arguments import Args
 from filter import TextFilter
 from chunks_processing_info import ChunkFilteringInfo, elapsed
 
-logging.basicConfig(
-    filename="logfile.log",
-    format=" %(asctime)s %(levelname)-8s %(message)s",
-    level=logging.INFO,
-)
-
 
 class Consumer:
     def __init__(
         self,
-        input_queue: Queue[tuple[int, pd.DataFrame]] | Any,
+        chunks_queue: Queue[tuple[int, pd.DataFrame]] | Any,
         filtering_info_queue: Queue[tuple[int, ChunkFilteringInfo]] | Any,
         text_filter: TextFilter,
         args: Args,
     ):
         self.text_filter = text_filter
-        self.input_queue = input_queue
+        self.chunks_queue = chunks_queue
         self.filtering_info_queue = filtering_info_queue
         self.args = args
 
     def start_filtering(self):
         self.text_filter.prepare()
         while True:
-            if self.input_queue.empty():
+            if self.chunks_queue.empty():
                 continue
-            if (tuple := self.input_queue.get()) is None:
-                self.input_queue.put(None)  # type: ignore # to handle multiple consumers case
+            if (tuple := self.chunks_queue.get()) is None:
+                self.chunks_queue.put(None)  # type: ignore # to handle multiple consumers case
                 break
             (index, chunk) = tuple
             # filtering

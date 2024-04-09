@@ -1,4 +1,3 @@
-import multiprocessing.process
 import multiprocessing.queues
 from queue import Queue
 from typing import Any, Dict, Iterator
@@ -9,22 +8,15 @@ import logging
 from arguments import Args
 from chunks_processing_info import elapsed
 
-# i/o bounds
-logging.basicConfig(
-    filename="logfile.log",
-    format=" %(asctime)s %(levelname)-8s %(message)s",
-    level=logging.INFO,
-)
-
 
 class Producer:
     def __init__(
         self,
-        input_queue: Queue[tuple[int, DataFrame]] | Any,
+        chunks_queue: Queue[tuple[int, DataFrame]] | Any,
         reading_info_queue: Queue[float] | Any,
         args: Args,
     ):
-        self.input_queue = input_queue
+        self.chunks_queue = chunks_queue
         self.reading_info_queue = reading_info_queue
         self.args = args
 
@@ -41,7 +33,7 @@ class Producer:
             with rar_ref.open(rar_ref.namelist()[0]) as file:
                 chunks = read_csv(
                     file,
-                    usecols=self.args.specify_columns,
+                    usecols=self.args.columns,
                     chunksize=self.args.chunk_size,
                     iterator=True,
                 )
@@ -62,7 +54,7 @@ class Producer:
         )
         # Process chunks of data until there are no more chunks
         for number, chunk in enumerate(self.read_chunks()):
-            self.input_queue.put((number, chunk))
+            self.chunks_queue.put((number, chunk))
             logging.info(
                 "%s  Producer:read %s chunks and send it into input queue.",
                 elapsed(self.args.starting_time),
@@ -70,7 +62,7 @@ class Producer:
             )
 
         # Signal end of input and compute read time statistics
-        self.input_queue.put(None)  # type: ignore
+        self.chunks_queue.put(None)  # type: ignore
         logging.info(
             "%s  Producer: finish reading all chunks.", elapsed(self.args.starting_time)
         )

@@ -1,20 +1,14 @@
-import csv
 import logging
+import openpyxl
 import os
 import random
 import threading
 from typing import Any, Mapping
 import faker
-from pandas import DataFrame, concat
+from pandas import DataFrame, ExcelWriter, concat
 from Enums import FilterMode, ProcessingMode
 from arguments import Args
 from chunks_processing_info import ChunkFilteringInfo, ChunkInfo, elapsed
-
-logging.basicConfig(
-    filename="logfile.log",
-    format=" %(asctime)s %(levelname)-8s %(message)s",
-    level=logging.INFO,
-)
 
 
 class StatisticsWriter:
@@ -39,8 +33,10 @@ class StatisticsWriter:
             ]
         )
 
-    def calculate_aggregation_values(self, df: DataFrame) -> dict:
-        agg_values = {}
+    def calculate_aggregation_values(
+        self, df: DataFrame
+    ) -> dict[str, dict[str, float | int]]:
+        agg_values = dict[str, dict[str, float | int]]()
         for column in df.columns[2:4]:
             agg_values[column] = {"sum": round(df[column].sum(), 4)}
         for column in df.columns[4:]:
@@ -52,7 +48,9 @@ class StatisticsWriter:
             }
         return agg_values
 
-    def write_csv(self, df: DataFrame, aggregation_values: dict[str, dict]):
+    def write_csv(
+        self, df: DataFrame, aggregation_values: dict[str, dict[str, float | int]]
+    ):
         aggregation_rows = list[list[str | None]]()
         for key in ["sum", "average", "max", "min"]:
             label = key if key != "sum" else "total"
@@ -60,7 +58,10 @@ class StatisticsWriter:
                 key in dict for dict in aggregation_values.values()
             )
             aggregation_rows.append(
-                [None] * fields
+                [
+                    None,
+                ]
+                * fields
                 + [
                     f"{label}:{aggregation_values[column][key]}"
                     for column in df.columns[fields:]
@@ -85,6 +86,50 @@ class StatisticsWriter:
             index=False,
         )
 
+    def write_excel(self, aggregations: dict[str, dict[str, float | int]]):
+        path = "output/StatisticalSummary_CS342Spring2024.xlsx"
+        # setup row
+        data: dict[str, int | float] = {
+            "D.frame size": self.args.chunk_size,
+            "Sum No of healthy records": aggregations["healthy_records"]["sum"],
+            "Sum No of unhealthy records": aggregations["unhealthy_records"]["sum"],
+            "avg_Reading Time": aggregations["reading_time"]["average"],
+            "Total Reading Time": aggregations["reading_time"]["sum"],
+            "Max Reading Time": aggregations["reading_time"]["max"],
+            "Min Reading Time": aggregations["reading_time"]["min"],
+            "avg_filtering Time": aggregations["filtering_time"]["average"],
+            "Total_filtering Time": aggregations["filtering_time"]["sum"],
+            "Max_filtering Time": aggregations["filtering_time"]["max"],
+            "Min_filtering Time": aggregations["filtering_time"]["min"],
+            "Avg Frame_processing_Time": aggregations["frame_total_time"]["average"],
+            "Total Frame_processing_Time": aggregations["frame_total_time"]["sum"],
+            "Max Frame_processing_Time": aggregations["frame_total_time"]["max"],
+            "Min Frame_processing_Time": aggregations["frame_total_time"]["min"],
+        }
+        columns = list(data.keys())
+        values = list(data.values())
+        # check if the file exists
+        if not os.path.exists(path):
+            # create a new workbook and worksheet if the file doesn't exist
+            workbook = openpyxl.Workbook()
+            worksheet = workbook.create_sheet(self.args.filter_mode.name)
+            worksheet.append(columns)
+            # if excel created a default sheet
+            # if "Sheet" in workbook.sheetnames:
+            del workbook["Sheet"]
+        else:
+            workbook = openpyxl.load_workbook(path)
+            if self.args.filter_mode.name in workbook.sheetnames:
+                worksheet = workbook[self.args.filter_mode.name]
+            else:
+                worksheet = workbook.create_sheet(self.args.filter_mode.name)
+                worksheet.append(columns)
+
+        # append data to the worksheet
+        worksheet.append(values)
+        # save the workbook
+        workbook.save(path)
+
     def start(self, chunks_info: list[ChunkInfo]) -> None:
         logging.info(
             "%s  Writer:starting write excel and csv files statistics ....",
@@ -95,10 +140,16 @@ class StatisticsWriter:
         if not os.path.exists("output"):
             os.makedirs("output")
         csv_thread = threading.Thread(
-            target=lambda: self.write_csv(df, aggregation_values),
+            target=lambda: self.write_csv(df, aggregation_values)
         )
+        excel_thread = threading.Thread(
+            target=lambda: self.write_excel(aggregation_values)
+        )
+        excel_thread.start()
         csv_thread.start()
         csv_thread.join()
+        excel_thread.join()
+
         logging.info(
             "%s  Writer:finish of write excel and csv files statistics .",
             elapsed(self.args.starting_time),
@@ -132,65 +183,3 @@ if __name__ == "__main__":
         )
     )
     statistics_writer.start(chunks_info)
-
-# def excel_writer(self, sheet_name):
-
-#     # measure reading total time and avg time
-#     total_time_of_read = sum(self.__statistics_dictionary["reading"])
-#     avg_time_of_read = (
-#         total_time_of_read / self.__statistics_dictionary["number of chunks"]
-#     )
-
-#     # measure filtering total time and avg time
-#     total_time_of_filter = sum(self.__statistics_dictionary["filtering"])
-#     avg_time_of_filter = (
-#         total_time_of_filter / self.__statistics_dictionary["number of chunks"]
-#     )
-#     # measure writing total time and avg time
-#     total_time_of_writing = sum(self.__statistics_dictionary["writing"])
-#     avg_time_of_writing = (
-#         total_time_of_writing / self.__statistics_dictionary["number of chunks"]
-#     )
-
-#     # measure processing total time and avg time
-#     total_time_of_processing = (
-#         sum(self.__statistics_dictionary["reading"])
-#         + sum(self.__statistics_dictionary["filtering"])
-#         + sum(self.__statistics_dictionary["writing"])
-#     )
-#     avg_time_of_processing = (
-#         total_time_of_processing / self.__statistics_dictionary["number of chunks"]
-#     )
-
-#     data = {
-#         "D.frame size": self.__statistics_dictionary["chunksize"],
-#         "avg_Reading Time": avg_time_of_read,
-#         "avg_filtering Time": avg_time_of_filter,
-#         "Total_processing_Time": total_time_of_processing,
-#         "avg_processing_Time": avg_time_of_processing,
-#     }
-
-#     headers = list(data.keys())
-#     # check if the file exists
-#     try:
-#         workbook = openpyxl.load_workbook("./output/output.xlsx")
-#         if sheet_name in workbook.sheetnames:
-#             worksheet = workbook[sheet_name]
-#         else:
-#             worksheet = workbook.create_sheet(sheet_name)
-#             worksheet.append(headers)
-#     except FileNotFoundError:
-#         # create a new workbook and worksheet if the file doesn't exist
-#         workbook = openpyxl.Workbook()
-#         worksheet = workbook.create_sheet(sheet_name)
-#         worksheet.append(headers)
-
-#     # delete the default 'Sheet' worksheet
-#     if "Sheet" in workbook.sheetnames:
-#         del workbook["Sheet"]
-
-#     # append data to the worksheet
-#     values = [data[header] for header in headers]
-#     worksheet.append(values)
-#     # save the workbook
-#     workbook.save("./output/output.xlsx")

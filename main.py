@@ -16,6 +16,7 @@ logging.basicConfig(
     filename="logfile.log",
     format=" %(asctime)s %(levelname)-8s %(message)s",
     level=logging.INFO,
+    force=True,
 )
 
 
@@ -53,15 +54,15 @@ def setup_producer_consumer(args: Args) -> tuple[Producer, Consumer]:
     else:
         text_filter: TextFilter = RegexFilter(bad_words)
     if args.processing_mode == ProcessingMode.MultiThreading:
-        input_queue = Queue[tuple[int, DataFrame]](maxsize=1000)
+        chunks_queue = Queue[tuple[int, DataFrame]](maxsize=1000)
         reading_info_queue = Queue[float]()
         filtering_info_queue = Queue[tuple[int, ChunkFilteringInfo]]()
     else:
-        input_queue = multiprocessing.Queue(maxsize=1000)
+        chunks_queue = multiprocessing.Queue(maxsize=1000)
         reading_info_queue = manager.Queue()
         filtering_info_queue = manager.Queue()
-    producer = Producer(input_queue, reading_info_queue, args)
-    consumer = Consumer(input_queue, filtering_info_queue, text_filter, args)
+    producer = Producer(chunks_queue, reading_info_queue, args)
+    consumer = Consumer(chunks_queue, filtering_info_queue, text_filter, args)
 
     return producer, consumer
 

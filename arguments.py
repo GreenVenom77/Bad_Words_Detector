@@ -1,6 +1,5 @@
 from argparse import ArgumentParser
 from dataclasses import dataclass
-from enum import Enum
 import json
 import os
 from time import time
@@ -12,8 +11,7 @@ class Args:
 
     data_file: str
     bad_words_file: str
-    head_columns: list[int]
-    specify_columns: list[int]
+    columns: list[int]
     filter_mode: FilterMode
     processing_mode: ProcessingMode
     chunk_size: int
@@ -57,18 +55,11 @@ def add_arguments(parser: ArgumentParser):
         help="the concurrent model that will work",
     )
     parser.add_argument(
-        "-sc",
-        "--specify_columns",
+        "-c",
+        "--columns",
         type=lambda v: list(map(int, (v.split(",")))),
         default=[0, 2, 4],
         help="specified columns that will be filtered in format column1,column... like 1,2,3,4",
-    )
-    parser.add_argument(
-        "-hc",
-        "--head_columns",
-        type=lambda v: list(map(int, (v.split(",")))),
-        default=[0, 1, 2],
-        help="specified index cols that will be chosen to filter in format column1,column... like 1,2,3,4",
     )
 
 
