@@ -1,158 +1,72 @@
-from producer import ProducerThread
-from consumer import ConsumerThread
+import pandas as pd
+from Enums import FilterMode, ProcessingMode
+from concurrent_model import *
+from producer import Producer
+from consumer import Consumer
 from queue import Queue
-import argparse
-import threading
 import multiprocessing
-import json
-import os
 import logging
-import time
+from arguments import Args, parse_args
+from filter import *
+from statistics_writer import StatisticsWriter
+from chunks_processing_info import ChunkFilteringInfo
 
 
+logging.basicConfig(
+    filename="logfile.log",
+    format=" %(asctime)s %(levelname)-8s %(message)s",
+    level=logging.INFO,
+    force=True,
+)
 
 
-logging.basicConfig(filename='logfile.log', format=' %(asctime)s %(levelname)-8s %(message)s', level=logging.INFO)
-
-def main(args):
-    # Set up the producer-consumer model
-    
-        
-    dataFile=args.dataFile
-    badWordsFileName=args.badWords_file
-    rows_at_chunk=args.chunk_size
-    mode=args.mode
-    head=args.head
-    specify_cols=args.specify_cols
-    filter_mode=args.filter_mode
-
-    start_time=time.time()
-    
-    if mode=="multiprocessing":
-        logging.info("Main: run in process")
-        input_queue =multiprocessing.Queue()
-        success_queue = multiprocessing.Queue()
-         
-        fail_queue = multiprocessing.Queue()
-        badWordsQueue=multiprocessing.Queue()
-        #Create a shared time dictionary
-        manager = multiprocessing.Manager()
-        timedict = manager.dict({
-            'chunksize': int(),
-            'number of chunks': int(),
-            'reading': [],
-            'filtering': [],
-            'writing': []
-        })
-        lock=multiprocessing.Lock()
-
-    
-        producer = ProducerThread(dataFile,rows_at_chunk, input_queue,timedict,badWordsFileName,badWordsQueue,specify_cols,start_time)
-        consumer = ConsumerThread(input_queue,success_queue,fail_queue,badWordsQueue,timedict,head,filter_mode,start_time,lock)
-       
-        producer_process=multiprocessing.Process(target=producer.run)
-        consumer_process=multiprocessing.Process(target=consumer.run)
-      
-        try:
-            producer_process.start()
-            consumer_process.start()
-
-            producer_process.join()
-            consumer_process.join()
-
-        except Exception as e:
-            logging.error("Error occurred while running program: {}".format(str(e)))
-        
-        
-
-    elif mode=="threading":
-        logging.info("Main: run in threads")
-        input_queue = Queue(maxsize=10000)
-        success_queue = Queue()
-        fail_queue = Queue()
-        badWordsQueue=Queue()
-        timedict={
-            'chunksize':0, 
-            'number of chunks':0,
-            'reading':[],
-            'filtering':[],
-            'writing':[]
-            }
-        
-        lock=threading.Lock()
-        producer = ProducerThread(dataFile,rows_at_chunk, input_queue,timedict,badWordsFileName,badWordsQueue,specify_cols,start_time)
-        consumer = ConsumerThread(input_queue,success_queue,fail_queue,badWordsQueue,timedict,head,filter_mode,start_time,lock)
-        
-        producer_thread=threading.Thread(target=producer.run)
-        consumer_thread=threading.Thread(target=consumer.run)
-
-        producer_thread.start()
-        consumer_thread.start()
-        
-        producer_thread.join()
-        consumer_thread.join()
-
-        
+def main(args: Args):
+    producer, consumer = setup_producer_consumer(args)
+    writer = StatisticsWriter(args)
+    concurrent_model = setup_concurrent_model(args.processing_mode)
+    try:
+        chunks_info = concurrent_model.start(producer, consumer)
+        writer.start(chunks_info)
+    except Exception as e:
+        logging.exception("Exception occurred while running program: {}".format(str(e)))
 
 
-
-    elif mode=="processes_pool":
-        logging.info("Main: run in pool of processes")
-        input_queue = multiprocessing.Queue()
-        success_queue = multiprocessing.Queue()
-        fail_queue = multiprocessing.Queue()
-        badWordsQueue=multiprocessing.Queue()
-        lock=multiprocessing.Lock()
-        manager=multiprocessing.Manager()
-        timedict = manager.dict({
-            'chunksize': 0,
-            'number of chunks': 0,
-            'reading': [],
-            'filtering': [],
-            'writing': []
-        })
-        producer = ProducerThread(dataFile,rows_at_chunk, input_queue,timedict,badWordsFileName,badWordsQueue,specify_cols,start_time)
-        consumer = ConsumerThread(input_queue,success_queue,fail_queue,badWordsQueue,timedict,head,filter_mode,start_time,lock)
-
-        # Create a pool with 3 processes
-        pool = multiprocessing.Pool(processes=4)
-
-        # Start the producer process asynchronously
-        producer_process = pool.apply_async(producer.run)
-
-        # Start the 4 consumer processes asynchronously
-        consumer_process1=pool.apply_async(consumer.run) 
-        consumer_process2=pool.apply_async(consumer.run) 
-        consumer_process3=pool.apply_async(consumer.run) 
-
-        # Close the pool and wait for all processes to finish
-        pool.close()
-        pool.join()
+def setup_concurrent_model(processing_mode: ProcessingMode) -> ConcurrentModel:
+    match processing_mode:
+        case ProcessingMode.MultiThreading:
+            logging.info("Main: run in threads")
+            return MultiThreadingModel()
+        case ProcessingMode.MultiProcessing:
+            logging.info("Main: run in processes")
+            return MultiProcessingModel()
+        case ProcessingMode.ProcessesPool:
+            logging.info("Main: run in pool of processes")
+            return ProcessesPoolModel()
 
 
-
-
-
-
-
-if __name__=="__main__":
-    parser = argparse.ArgumentParser(description='filter specify cols from very big csv RARED file against bad words file using RE')
-    
-    # Check if args.json exists and load arguments from it if it does
-    if os.path.exists('args.json'):
-        with open('args.json', 'r') as f:
-            args_dict = json.load(f)
-            args = argparse.Namespace(**args_dict)
+def setup_producer_consumer(args: Args) -> tuple[Producer, Consumer]:
+    bad_words: list[str] = (
+        pd.read_csv(args.bad_words_file, header=None).iloc[:, 0].tolist()
+    )
+    manager = multiprocessing.Manager()
+    if args.filter_mode == FilterMode.AhoCorasick:
+        text_filter: TextFilter = AhoCorasickFilter(bad_words)
     else:
-        parser.add_argument('-d', '--data_file', type=str, help='The csv file that we will filter it')
-        parser.add_argument('-b', '--bad_words_file', type=str,  help='The name of bad words file name')
-        parser.add_argument('-c', '--chunk-size', type=int, default='1000', help='The chunk size will be processed (default: "1000")')
-        parser.add_argument('-m', '--mode', type=str, default="multiprocessing", help='the concurrency model that will work')
-        parser.add_argument('-s', '--specify_cols', type=int, default=[0,2,4], help='specified cols that will be filtered')
-        parser.add_argument('-h', '--head_cols', type=int, default=[0,1,2], help='specified index cols that will be chosen to filter')
-        args = parser.parse_args()
+        text_filter: TextFilter = RegexFilter(bad_words)
+    if args.processing_mode == ProcessingMode.MultiThreading:
+        chunks_queue = Queue[tuple[int, DataFrame]](maxsize=1000)
+        reading_info_queue = Queue[float]()
+        filtering_info_queue = Queue[tuple[int, ChunkFilteringInfo]]()
+    else:
+        chunks_queue = multiprocessing.Queue(maxsize=1000)
+        reading_info_queue = manager.Queue()
+        filtering_info_queue = manager.Queue()
+    producer = Producer(chunks_queue, reading_info_queue, args)
+    consumer = Consumer(chunks_queue, filtering_info_queue, text_filter, args)
 
-    while(args.chunk_size<=150000):
-        main(args)
-        args.chunk_size+=10000
-        
+    return producer, consumer
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    main(args)
