@@ -175,8 +175,7 @@ if __name__ == "__main__":
         Args(
             data_file="",
             bad_words_file="",
-            head_columns=[],
-            specify_columns=[],
+            columns=[],
             processing_mode=ProcessingMode.ProcessesPool,
             filter_mode=FilterMode.AhoCorasick,
             chunk_size=1000,
