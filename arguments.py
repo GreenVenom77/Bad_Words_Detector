@@ -79,8 +79,8 @@ def parse_args() -> Args:
     add_arguments(parser)
     args = parser.parse_args()
     # if user provided enum values as str so i convert it
-    if args.filter_mode is str:
+    if type(args.filter_mode) == str:
         args.filter_mode = FilterMode[args.filter_mode]
-    if args.processing_mode is str:
+    if type(args.processing_mode) == str:
         args.processing_mode = ProcessingMode[args.processing_mode]
     return Args(**vars(args))
