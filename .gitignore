@@ -10,5 +10,6 @@ output
 # Files
 46,080,374Rows_365Columns.rar
 _args.json
+args.json
 *.log
 *.spec
