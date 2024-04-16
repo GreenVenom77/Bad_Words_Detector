@@ -39,7 +39,7 @@ faker
 
 ### First method
 
-#### 1- Clone the repo ( using HTTPS or SSH ) and run it through any IDE you like as below:
+#### 1- Clone the repo ( using HTTPS or SSH ) and run it through any IDE you like.
 
 #### 2- Navigate to the args.json file and put your .csv file in .rar compression format and pass the path into the data_file section.
 
