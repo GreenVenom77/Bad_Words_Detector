@@ -14,7 +14,7 @@ Subject: CS342 Automata and Language Theory
 
 ## Usage
 
-Detect bad words from a .csv file compressed in a .rar format using the provided Bad_Words.csv file and output bot excel and .csv files that have analytics about the process.
+Detect bad words from a .csv file compressed in a .rar format using the provided Bad_Words.csv file and output both excel and .csv files that have analytics about the process.
 
 ## Documentation
 
