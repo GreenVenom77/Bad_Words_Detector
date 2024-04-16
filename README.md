@@ -14,7 +14,7 @@ Subject: CS342 Automata and Language Theory
 
 ## Usage
 
-Detect bad words from a .csv file compressed in a .rar format using the provided Bad_Words.csv file.
+Detect bad words from a .csv file compressed in a .rar format using the provided Bad_Words.csv file and output bot excel and .csv files that have analytics about the process.
 
 ## Documentation
 
@@ -39,9 +39,9 @@ faker
 
 ### First method
 
-#### 1- Clone the Repo and run it through any IDE you like as below:
+#### 1- Clone the repo ( using HTTPS or SSH ) and run it through any IDE you like as below:
 
-#### 2- Navigate to the args.json file and put your .csv file in .rar compression path in the data_file section.
+#### 2- Navigate to the args.json file and put your .csv file in .rar compression format and pass the path into the data_file section.
 
 #### 3- Navigate then to the main.py file and run the file.
 
@@ -54,8 +54,10 @@ faker
 ![Running](.assets/Run.png)
 ### Second method
 
-#### 1- Clone the repo and navigate to it's folder with your terminal example:
+#### 1- Clone the repo ( using HTTPS or SSH ) and navigate to the project's folder with your terminal:
 ```sh
+git clone https://github.com/GreenVenom77/Bad_Words_Detector.git
+
 cd Bad_Words_Detector
 ```
 
