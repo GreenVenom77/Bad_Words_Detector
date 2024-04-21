@@ -37,7 +37,7 @@ class AhoCorasickFilter(TextFilter):
         # health_filter is a series of bool values like =[0,1,0,1,1,...]
         # each item represent if row is healthy or not
         # so the sample [0,1,0,1,1] means
-        # that there is two heathy rows whose index 0,2 and 3 healthy rows 1,3,4
+        # that there is two unhealthy rows whose index 0,2 and 3 healthy rows 1,3,4
         health_filter = reduce(
             lambda x, y: x & y,
             [
@@ -66,7 +66,7 @@ class RegexFilter(TextFilter):
         # health_filter is a series of bool values like =[0,1,0,1,1,...]
         # each item represent if row is healthy or not
         # so the sample [0,1,0,1,1] means
-        # that there is two heathy rows whose index 0,2 and 3 healthy rows 1,3,4
+        # that there is two unhealthy rows whose index 0,2 and 3 healthy rows 1,3,4
         health_filter = reduce(
             lambda x, y: x & y,
             [
