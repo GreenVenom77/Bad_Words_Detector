@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from functools import reduce
 import re
 import ahocorasick
-from pandas import DataFrame
+from pandas import DataFrame, Series
 
 
 # interface (abstract class)
@@ -17,8 +17,8 @@ class TextFilter(ABC):
         pass
 
     @abstractmethod
-    def filter(self, chunk: DataFrame) -> tuple[DataFrame, DataFrame]:
-        """Filters Healthy and UnHealthy Rows"""
+    def filter(self, chunk: DataFrame) -> tuple[int, int]:
+        """Filters Healthy and UnHealthy Rows count"""
         pass
 
 
@@ -33,7 +33,11 @@ class AhoCorasickFilter(TextFilter):
             self.automaton.add_word(word, word)
         self.automaton.make_automaton()
 
-    def filter(self, chunk: DataFrame) -> tuple[DataFrame, DataFrame]:
+    def filter(self, chunk: DataFrame) -> tuple[int, int]:
+        # health_filter is a series of bool values like =[0,1,0,1,1,...]
+        # each item represent if row is healthy or not
+        # so the sample [0,1,0,1,1] means
+        # that there is two heathy rows whose index 0,2 and 3 healthy rows 1,3,4
         health_filter = reduce(
             lambda x, y: x & y,
             [
@@ -43,7 +47,9 @@ class AhoCorasickFilter(TextFilter):
                 for column in chunk.columns
             ],
         )
-        return chunk[health_filter], chunk[~health_filter]
+        healthy_rows_number = sum(health_filter)
+        unhealthy_rows_number = len(health_filter) - healthy_rows_number
+        return healthy_rows_number, unhealthy_rows_number
 
     def __repr__(self) -> str:
         return "AhoCorasick"
@@ -56,8 +62,11 @@ class RegexFilter(TextFilter):
     def prepare(self) -> None:
         self.pattern = "|".join(map(re.escape, self.bad_words))
 
-    def filter(self, chunk: DataFrame) -> tuple[DataFrame, DataFrame]:
-
+    def filter(self, chunk: DataFrame) -> tuple[int, int]:
+        # health_filter is a series of bool values like =[0,1,0,1,1,...]
+        # each item represent if row is healthy or not
+        # so the sample [0,1,0,1,1] means
+        # that there is two heathy rows whose index 0,2 and 3 healthy rows 1,3,4
         health_filter = reduce(
             lambda x, y: x & y,
             [
@@ -67,7 +76,9 @@ class RegexFilter(TextFilter):
                 for column in chunk.columns
             ],
         )
-        return chunk[health_filter], chunk[~health_filter]
+        healthy_rows_number = sum(health_filter)
+        unhealthy_rows_number = len(health_filter) - healthy_rows_number
+        return healthy_rows_number, unhealthy_rows_number
 
     def __repr__(self) -> str:
         return "Regex"

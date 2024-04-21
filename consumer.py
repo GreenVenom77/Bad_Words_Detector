@@ -33,7 +33,7 @@ class Consumer:
             (index, chunk) = tuple
             # filtering
             start_time = time()
-            healthy_chunk, unhealthy_chunk = self.text_filter.filter(chunk)
+            healthy_rows_number, unhealthy_rows_number = self.text_filter.filter(chunk)
             end_time = time()
 
             # add the time taken to filter the chunk
@@ -42,8 +42,8 @@ class Consumer:
                     index,
                     ChunkFilteringInfo(
                         filtering_time=round(end_time - start_time, 4),
-                        number_of_healthy=healthy_chunk.shape[0],
-                        number_of_unhealthy=unhealthy_chunk.shape[0],
+                        number_of_healthy=healthy_rows_number,
+                        number_of_unhealthy=unhealthy_rows_number,
                     ),
                 )
             )
