@@ -18,7 +18,7 @@ Detect bad words from a .csv file compressed in a .rar format using the provided
 
 ## Documentation
 
-[Documentation](Docs.md)
+[Documentation](.assets/Docs/Docs.md)
 
 ## Required Packages
 
