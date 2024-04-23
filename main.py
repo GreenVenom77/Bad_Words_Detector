@@ -76,8 +76,8 @@ if __name__ == "__main__":
     # endregion
 
     # region for benchmark usage
-    while args.chunk_size <= 150_000:
-        main(args)
-        args.chunk_size += 20_000
-        args.starting_time = time()
+    # while args.chunk_size <= 150_000:
+    #     main(args)
+    #     args.chunk_size += 20_000
+    #     args.starting_time = time()
     # endregion
