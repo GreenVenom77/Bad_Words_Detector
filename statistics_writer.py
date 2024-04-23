@@ -26,7 +26,8 @@ class StatisticsWriter:
                     "reading_time": chunk.reading_time,
                     "filtering_time": chunk.filtering_time,
                     "frame_total_time": round(
-                        chunk.reading_time + chunk.filtering_time, 2
+                        chunk.reading_time + chunk.filtering_time,
+                        self.args.rounding_place,
                     ),
                 }
                 for i, chunk in enumerate(chunks_info, start=1)
@@ -38,11 +39,13 @@ class StatisticsWriter:
     ) -> dict[str, dict[str, float | int]]:
         agg_values = dict[str, dict[str, float | int]]()
         for column in df.columns[2:4]:
-            agg_values[column] = {"sum": round(df[column].sum(), 2)}
+            agg_values[column] = {
+                "sum": round(df[column].sum(), self.args.rounding_place)
+            }
         for column in df.columns[4:]:
             agg_values[column] = {
-                "sum": round(df[column].sum(), 2),
-                "average": round(df[column].mean(), 2),
+                "sum": round(df[column].sum(), self.args.rounding_place),
+                "average": round(df[column].mean(), self.args.rounding_place),
                 "max": df[column].max(),
                 "min": df[column].min(),
             }

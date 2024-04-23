@@ -15,6 +15,7 @@ class Args:
     filter_mode: FilterMode
     processing_mode: ProcessingMode
     chunk_size: int
+    rounding_place: int
     starting_time: float = time()
 
 
@@ -60,6 +61,13 @@ def add_arguments(parser: ArgumentParser):
         type=lambda v: list(map(int, (v.split(",")))),
         default=[0, 2, 4],
         help="specified columns that will be filtered in format column1,column... like 1,2,3,4",
+    )
+    parser.add_argument(
+        "-r",
+        "--rounding_place",
+        type=int,
+        default=3,
+        help="how many digits you want after the decimal point",
     )
 
 

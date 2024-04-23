@@ -1,3 +1,4 @@
+from time import time
 import pandas as pd
 from Enums import FilterMode, ProcessingMode
 from concurrent_model import *
@@ -68,5 +69,15 @@ def setup_producer_consumer(args: Args) -> tuple[Producer, Consumer]:
 
 
 if __name__ == "__main__":
+
     args = parse_args()
+    # region for normal usage
     main(args)
+    # endregion
+
+    # region for benchmark usage
+    while args.chunk_size <= 150_000:
+        main(args)
+        args.chunk_size += 20_000
+        args.starting_time = time()
+    # endregion

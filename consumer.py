@@ -41,7 +41,9 @@ class Consumer:
                 (
                     index,
                     ChunkFilteringInfo(
-                        filtering_time=round(end_time - start_time, 2),
+                        filtering_time=round(
+                            end_time - start_time, self.args.rounding_place
+                        ),
                         number_of_healthy=healthy_rows_number,
                         number_of_unhealthy=unhealthy_rows_number,
                     ),

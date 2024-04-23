@@ -41,7 +41,9 @@ class Producer:
                 for chunk in chunks:
                     end_time = time()
                     yield chunk
-                    self.reading_info_queue.put(round(end_time - start_time, 2))
+                    self.reading_info_queue.put(
+                        round(end_time - start_time, self.args.rounding_place)
+                    )
                     start_time = time()
 
     def run(self):
