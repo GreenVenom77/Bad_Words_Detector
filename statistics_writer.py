@@ -26,7 +26,7 @@ class StatisticsWriter:
                     "reading_time": chunk.reading_time,
                     "filtering_time": chunk.filtering_time,
                     "frame_total_time": round(
-                        chunk.reading_time + chunk.filtering_time, 4
+                        chunk.reading_time + chunk.filtering_time, 2
                     ),
                 }
                 for i, chunk in enumerate(chunks_info, start=1)
@@ -38,11 +38,11 @@ class StatisticsWriter:
     ) -> dict[str, dict[str, float | int]]:
         agg_values = dict[str, dict[str, float | int]]()
         for column in df.columns[2:4]:
-            agg_values[column] = {"sum": round(df[column].sum(), 4)}
+            agg_values[column] = {"sum": round(df[column].sum(), 2)}
         for column in df.columns[4:]:
             agg_values[column] = {
-                "sum": round(df[column].sum(), 4),
-                "average": round(df[column].mean(), 4),
+                "sum": round(df[column].sum(), 2),
+                "average": round(df[column].mean(), 2),
                 "max": df[column].max(),
                 "min": df[column].min(),
             }
@@ -154,31 +154,3 @@ class StatisticsWriter:
             "%s  Writer:finish of write excel and csv files statistics .",
             elapsed(self.args.starting_time),
         )
-
-
-if __name__ == "__main__":
-    faker = faker.Faker()
-    chunks_info = list[ChunkInfo]()
-    chunk_size = 1000
-    for _ in range(10):
-        healthy_number = random.randint(0, chunk_size)
-        unhealthy_number = chunk_size - healthy_number
-        filtering_time = round(random.uniform(0.01, 2), 4)
-        reading_time = round(random.uniform(0.01, 2), 4)
-        chunks_info.append(
-            ChunkInfo(
-                reading_time,
-                ChunkFilteringInfo(filtering_time, healthy_number, unhealthy_number),
-            )
-        )
-    statistics_writer = StatisticsWriter(
-        Args(
-            data_file="",
-            bad_words_file="",
-            columns=[],
-            processing_mode=ProcessingMode.ProcessesPool,
-            filter_mode=FilterMode.AhoCorasick,
-            chunk_size=1000,
-        )
-    )
-    statistics_writer.start(chunks_info)
