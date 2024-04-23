@@ -12,7 +12,7 @@ class TextFilter(ABC):
         pass
 
     @abstractmethod
-    def prepare() -> None:
+    def prepare(self) -> None:
         """you must call once before you calling filter function"""
         pass
 
