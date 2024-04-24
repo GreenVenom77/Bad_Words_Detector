@@ -34,18 +34,15 @@ class AhoCorasickFilter(TextFilter):
         self.automaton.make_automaton()
 
     def filter(self, chunk: DataFrame) -> tuple[int, int]:
-        # health_filter is a series of bool values like =[0,1,0,1,1,...]
-        # each item represent if row is healthy or not
-        # so the sample [0,1,0,1,1] means
-        # that there is two unhealthy rows whose index 0,2 and 3 healthy rows 1,3,4
-        health_filter = reduce(
-            lambda x, y: x & y,
-            [
-                chunk[column]
-                .astype(str)
-                .apply(lambda field: len(list(self.automaton.iter(field.lower()))) == 0)
-                for column in chunk.columns
-            ],
+        health_filter = chunk.apply(
+            lambda row: not any(
+                map(
+                    lambda field: len(list(self.automaton.iter(str(field).lower())))
+                    != 0,
+                    row,
+                )
+            ),
+            axis=1,
         )
         healthy_rows_number = sum(health_filter)
         unhealthy_rows_number = len(health_filter) - healthy_rows_number
@@ -60,21 +57,16 @@ class RegexFilter(TextFilter):
         self.bad_words = bad_words
 
     def prepare(self) -> None:
-        self.pattern = "|".join(map(re.escape, self.bad_words))
+        self.pattern = re.compile(
+            "|".join(map(re.escape, self.bad_words)), flags=re.IGNORECASE
+        )
 
     def filter(self, chunk: DataFrame) -> tuple[int, int]:
-        # health_filter is a series of bool values like =[0,1,0,1,1,...]
-        # each item represent if row is healthy or not
-        # so the sample [0,1,0,1,1] means
-        # that there is two unhealthy rows whose index 0,2 and 3 healthy rows 1,3,4
-        health_filter = reduce(
-            lambda x, y: x & y,
-            [
-                ~chunk[column]
-                .astype(str)
-                .str.contains(self.pattern, regex=True, flags=re.I, na=False)
-                for column in chunk.columns
-            ],
+        health_filter = chunk.apply(
+            lambda row: not any(
+                map(lambda field: self.pattern.search(str(field)), row)
+            ),
+            axis=1,
         )
         healthy_rows_number = sum(health_filter)
         unhealthy_rows_number = len(health_filter) - healthy_rows_number
