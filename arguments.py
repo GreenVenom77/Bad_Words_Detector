@@ -66,7 +66,7 @@ def add_arguments(parser: ArgumentParser):
         "-r",
         "--rounding_place",
         type=int,
-        default=3,
+        default=2,
         help="how many digits you want after the decimal point",
     )
 
