@@ -23,6 +23,8 @@ Detect bad words from a .csv file compressed in a .rar format using the provided
 ## Required Packages
 
 ```
+Python 3.10 or above
+
 pandas
 
 pyahocorasick
