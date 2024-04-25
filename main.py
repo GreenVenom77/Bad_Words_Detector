@@ -54,6 +54,7 @@ def setup_producer_consumer(args: Args) -> tuple[Producer, Consumer]:
         text_filter: TextFilter = AhoCorasickFilter(bad_words)
     else:
         text_filter: TextFilter = RegexFilter(bad_words)
+
     if args.processing_mode == ProcessingMode.MultiThreading:
         chunks_queue = Queue[tuple[int, DataFrame]](maxsize=1000)
         reading_info_queue = Queue[float]()
@@ -62,6 +63,8 @@ def setup_producer_consumer(args: Args) -> tuple[Producer, Consumer]:
         chunks_queue = multiprocessing.Queue(maxsize=1000)
         reading_info_queue = manager.Queue()
         filtering_info_queue = manager.Queue()
+
+    text_filter.prepare()
     producer = Producer(chunks_queue, reading_info_queue, args)
     consumer = Consumer(chunks_queue, filtering_info_queue, text_filter, args)
 

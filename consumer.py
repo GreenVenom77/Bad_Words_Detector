@@ -23,7 +23,6 @@ class Consumer:
         self.args = args
 
     def start_filtering(self):
-        self.text_filter.prepare()
         while True:
             if self.chunks_queue.empty():
                 continue
