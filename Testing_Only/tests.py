@@ -35,7 +35,7 @@ def generate_test_csv():
         return [col1, col2, col3]
 
     # Read bad words from the file
-    with open("./TestingBadWords.csv", 'r') as f:
+    with open("./BadWords.csv", 'r') as f:
         bad_words = [line.strip() for line in f]
 
     # Generate CSV file
@@ -61,7 +61,7 @@ def generate_test_csv():
 def args():
     args = Args(
         data_file="./Outputs/test_data.rar",
-        bad_words_file="./TestingBadWords.csv",
+        bad_words_file="./BadWords.csv",
         columns=[0, 1, 2],
         filter_mode=FilterMode.AhoCorasick,
         processing_mode=ProcessingMode.MultiThreading,
