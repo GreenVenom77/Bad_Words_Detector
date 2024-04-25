@@ -1,8 +1,8 @@
-from abc import ABC, abstractmethod
-from functools import reduce
 import re
+from abc import ABC, abstractmethod
+
 import ahocorasick
-from pandas import DataFrame, Series
+from pandas import DataFrame
 
 
 # interface (abstract class)

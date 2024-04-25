@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from queue import Queue
 from time import time
-from typing import Any
 
 
 @dataclass

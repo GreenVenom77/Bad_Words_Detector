@@ -1,10 +1,12 @@
-import multiprocessing.queues
 from queue import Queue
-from typing import Any, Dict, Iterator
-from pandas import DataFrame, read_csv
-from time import time
-from rarfile import RarFile
 import logging
+from queue import Queue
+from time import time
+from typing import Any, Iterator
+
+from pandas import DataFrame, read_csv
+from rarfile import RarFile
+
 from arguments import Args
 from chunks_processing_info import elapsed
 

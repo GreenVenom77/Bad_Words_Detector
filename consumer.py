@@ -1,12 +1,13 @@
-import multiprocessing.queues
+import logging
 from queue import Queue
 from time import time
-import logging
 from typing import Any
+
 import pandas as pd
+
 from arguments import Args
-from filter import TextFilter
 from chunks_processing_info import ChunkFilteringInfo, elapsed
+from filter import TextFilter
 
 
 class Consumer:

@@ -1,14 +1,12 @@
 import logging
-import openpyxl
 import os
-import random
 import threading
-from typing import Any, Mapping
-import faker
-from pandas import DataFrame, ExcelWriter, concat
-from Enums import FilterMode, ProcessingMode
+
+import openpyxl
+from pandas import DataFrame, concat
+
 from arguments import Args
-from chunks_processing_info import ChunkFilteringInfo, ChunkInfo, elapsed
+from chunks_processing_info import ChunkInfo, elapsed
 
 
 class StatisticsWriter:
