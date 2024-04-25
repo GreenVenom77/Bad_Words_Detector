@@ -27,8 +27,6 @@ Python 3.10 or newer
 
 pandas
 
-pytest
-
 pyahocorasick
 
 rarfile
@@ -36,6 +34,10 @@ rarfile
 openpyxl
 
 faker
+
+pytest
+
+random
 ```
 
 ## How To Use

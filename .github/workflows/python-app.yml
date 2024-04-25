@@ -35,4 +35,18 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov
-        pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+        pytest Testing_Only/tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: |
+          junit/test-results.xml
+          coverage.xml
+          htmlcov/
+    - name: Upload Generated Files
+      uses: actions/upload-artifact@v2
+      with:
+        name: generated-files
+        path: |
+          Testing_Only/OutPuts
