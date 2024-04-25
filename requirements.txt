@@ -9,3 +9,5 @@ pytz==2024.1
 rarfile==4.2
 six==1.16.0
 tzdata==2024.1
+
+pytest~=8.1.1
