@@ -36,8 +36,6 @@ openpyxl
 faker
 
 pytest
-
-random
 ```
 
 ## How To Use

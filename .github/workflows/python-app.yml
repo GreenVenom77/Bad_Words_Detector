@@ -44,9 +44,3 @@ jobs:
           junit/test-results.xml
           coverage.xml
           htmlcov/
-    - name: Upload Generated Files
-      uses: actions/upload-artifact@v2
-      with:
-        name: generated-files
-        path: |
-          Testing_Only/OutPuts
