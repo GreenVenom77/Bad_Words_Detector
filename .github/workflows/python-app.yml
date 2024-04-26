@@ -38,10 +38,6 @@ jobs:
       working-directory: Testing_Only
       run: |
         pytest testing_setup.py --junitxml=junit/test-setup-results.xml
-    - name: Test with pytest (test_concurrent_model.py)
-      working-directory: Testing_Only
-      run: |
-        pytest test_concurrent_model.py --junitxml=junit/test-concurrent-model-results.xml
     - name: Test with pytest (test_producer_consumer.py)
       working-directory: Testing_Only
       run: |

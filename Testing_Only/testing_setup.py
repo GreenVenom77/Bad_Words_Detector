@@ -2,11 +2,14 @@ import csv
 import os
 import random
 import sys
+
 import pytest
 import rarfile
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+from concurrent_model import MultiThreadingModel, MultiProcessingModel, ProcessesPoolModel
+from main import setup_concurrent_model
 from Enums import ProcessingMode, FilterMode
 from arguments import Args
 
@@ -65,3 +68,9 @@ def args():
 @pytest.fixture
 def test_data(args, generate_test_csv):
     return {'args': args, 'generate_test_csv': generate_test_csv}
+
+
+def test_setup_concurrent_model():
+    assert isinstance(setup_concurrent_model(ProcessingMode.MultiThreading), MultiThreadingModel)
+    assert isinstance(setup_concurrent_model(ProcessingMode.MultiProcessing), MultiProcessingModel)
+    assert isinstance(setup_concurrent_model(ProcessingMode.ProcessesPool), ProcessesPoolModel)
