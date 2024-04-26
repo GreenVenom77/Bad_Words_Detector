@@ -67,7 +67,7 @@ def args():
         chunk_size=10000,
         rounding_place=2
     )
-
+    return args
 
 @pytest.fixture
 def test_data(args, generate_test_data, badwords_list):
