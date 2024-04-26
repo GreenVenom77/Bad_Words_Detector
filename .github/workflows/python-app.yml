@@ -27,17 +27,19 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Debug
-      run: ls
+      run: |
+        ls
+        sudo apt-get install rar unrar
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest (test_setup.py)
+    - name: Test with pytest (test_concurrent_models.py)
       working-directory: tests
       run: |
-        pytest conftest.py --junitxml=junit/test-setup-results.xml
+        pytest test_concurrent_models.py --junitxml=junit/test-setup-results.xml
     - name: Test with pytest (test_producer_consumer.py)
       working-directory: tests
       run: |
@@ -55,5 +57,5 @@ jobs:
     - name: Upload specified folder as artifact
       uses: actions/upload-artifact@v3
       with:
-        name: OutPuts Folder
-        path: Outputs
+        name: TestOutPuts Folder
+        path: ./TestOutputs

@@ -4,25 +4,24 @@ import random
 import sys
 
 import pytest
-import rarfile
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from concurrent_model import MultiThreadingModel, MultiProcessingModel, ProcessesPoolModel
-from main import setup_concurrent_model
+
 from Enums import ProcessingMode, FilterMode
 from arguments import Args
 
 
 @pytest.fixture(scope="session")
-def generate_test_csv():
+def generate_test_data():
     num_rows = 1000000  # Adjust the number of rows as needed
-    output_csv_path = "./Outputs/test_data.csv"  # Specify the output CSV path
-    output_rar_path = "./Outputs/test_data.rar"  # Specify the output RAR path
+    output_csv_path = "./TestOutputs/test_data.csv"  # Specify the output CSV path
+    output_rar_path = "./TestOutputs/test_data.rar"  # Specify the output RAR path
 
     # Check if the output directory exists, create it if not
     output_dir = os.path.dirname(output_csv_path)
     if not os.path.exists(output_dir):
+        os.remove(output_dir)
         os.makedirs(output_dir)
 
     # Function to generate a row with or without bad words
@@ -44,8 +43,7 @@ def generate_test_csv():
             writer.writerow(generate_row(bad_words))
 
     # Compress CSV to RAR
-    with rarfile.RarFile(output_rar_path, 'w') as rf:
-        rf.write(output_csv_path, arcname=os.path.basename(output_csv_path))
+    os.system(f'rar a {output_rar_path} {output_csv_path}')
 
     # Return the path to the generated RAR file and the total number of rows
     yield output_rar_path, num_rows
@@ -54,7 +52,7 @@ def generate_test_csv():
 @pytest.fixture
 def args():
     args = Args(
-        data_file="./Outputs/test_data.rar",
+        data_file="./TestOutputs/test_data.rar",
         bad_words_file="./BadWords.csv",
         columns=[0, 1, 2],
         filter_mode=FilterMode.AhoCorasick,
@@ -66,11 +64,5 @@ def args():
 
 
 @pytest.fixture
-def test_data(args, generate_test_csv):
-    return {'args': args, 'generate_test_csv': generate_test_csv}
-
-
-def test_setup_concurrent_model():
-    assert isinstance(setup_concurrent_model(ProcessingMode.MultiThreading), MultiThreadingModel)
-    assert isinstance(setup_concurrent_model(ProcessingMode.MultiProcessing), MultiProcessingModel)
-    assert isinstance(setup_concurrent_model(ProcessingMode.ProcessesPool), ProcessesPoolModel)
+def test_data(args, generate_test_data):
+    return {'args': args, 'generate_test_csv': generate_test_data}
