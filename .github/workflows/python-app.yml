@@ -1,4 +1,4 @@
-name: Python application
+name: Application Tests
 
 on:
   push:
@@ -9,16 +9,16 @@ permissions:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest, windows-latest]
         python-version: ["3.10", "3.11", "3.12"]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
@@ -32,15 +32,26 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
+    - name: Test with pytest (test_setup.py)
       run: |
-        pip install pytest pytest-cov
-        pytest Testing_Only/tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
-    - name: Upload Test Results
-      uses: actions/upload-artifact@v2
+        pytest Testing_Only/test_setup.py --junitxml=junit/test-setup-results.xml
+    - name: Test with pytest (test_concurrent_model.py)
+      run: |
+        pytest Testing_Only/test_concurrent_model.py --junitxml=junit/test-concurrent-model-results.xml
+    - name: Test with pytest (test_producer_consumer.py)
+      run: |
+        pytest Testing_Only/test_producer_consumer.py --junitxml=junit/test-producer-consumer-results.xml
+    - name: Test with pytest (test_filter.py)
+      run: |
+        pytest Testing_Only/test_filter.py --junitxml=junit/test-filter-results.xml
+    - name: Upload pytest test results
+      uses: actions/upload-artifact@v3
       with:
-        name: test-results
-        path: |
-          junit/test-results.xml
-          coverage.xml
-          htmlcov/
+        name: pytest-results-${{ matrix.python-version }}
+        path: junit/test-results-${{ matrix.python-version }}.xml
+    # Upload the specified folder as an artifact
+    - name: Upload specified folder as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: OutPuts Folder
+        path: Outputs
