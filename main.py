@@ -22,9 +22,10 @@ logging.basicConfig(
 
 
 def main(args: Args):
-    producer, consumer = setup_producer_consumer(args)
-    writer = StatisticsWriter(args)
+    text_filter = setup_text_filter(args.filter_mode, args.bad_words_file)
     concurrent_model = setup_concurrent_model(args.processing_mode)
+    producer, consumer = Producer(args), Consumer(text_filter, args)
+    writer = StatisticsWriter(args)
     try:
         chunks_info = concurrent_model.start(producer, consumer)
         writer.start(chunks_info)
@@ -32,43 +33,23 @@ def main(args: Args):
         logging.exception("Exception occurred while running program: {}".format(str(e)))
 
 
+def setup_text_filter(filter_mode: FilterMode, bad_words_path: str) -> TextFilter:
+    bad_words: list[str] = pd.read_csv(bad_words_path, header=None).iloc[:, 0].tolist()
+    if filter_mode == FilterMode.AhoCorasick:
+        filter = AhoCorasickFilter()
+    else:
+        filter = RegexFilter()
+    filter.prepare(bad_words)
+    return filter
+
+
 def setup_concurrent_model(processing_mode: ProcessingMode) -> ConcurrentModel:
-    match processing_mode:
-        case ProcessingMode.MultiThreading:
-            logging.info("Main: run in threads")
-            return MultiThreadingModel()
-        case ProcessingMode.MultiProcessing:
-            logging.info("Main: run in processes")
-            return MultiProcessingModel()
-        case ProcessingMode.ProcessesPool:
-            logging.info("Main: run in pool of processes")
-            return ProcessesPoolModel()
-
-
-def setup_producer_consumer(args: Args) -> tuple[Producer, Consumer]:
-    bad_words: list[str] = (
-        pd.read_csv(args.bad_words_file, header=None).iloc[:, 0].tolist()
-    )
-    manager = multiprocessing.Manager()
-    if args.filter_mode == FilterMode.AhoCorasick:
-        text_filter: TextFilter = AhoCorasickFilter(bad_words)
+    if processing_mode == ProcessingMode.MultiThreading:
+        return MultiThreadingModel()
+    elif processing_mode == ProcessingMode.MultiProcessing:
+        return MultiProcessingModel()
     else:
-        text_filter: TextFilter = RegexFilter(bad_words)
-
-    if args.processing_mode == ProcessingMode.MultiThreading:
-        chunks_queue = Queue[tuple[int, DataFrame]](maxsize=1000)
-        reading_info_queue = Queue[float]()
-        filtering_info_queue = Queue[tuple[int, ChunkFilteringInfo]]()
-    else:
-        chunks_queue = multiprocessing.Queue(maxsize=1000)
-        reading_info_queue = manager.Queue()
-        filtering_info_queue = manager.Queue()
-
-    text_filter.prepare()
-    producer = Producer(chunks_queue, reading_info_queue, args)
-    consumer = Consumer(chunks_queue, filtering_info_queue, text_filter, args)
-
-    return producer, consumer
+        return ProcessesPoolModel()
 
 
 if __name__ == "__main__":
