@@ -39,29 +39,23 @@ jobs:
     - name: Test with pytest (test_concurrent_models.py)
       working-directory: tests
       run: |
-        pytest test_concurrent_models.py --junitxml=junit/test-setup-results.xml
+        pytest test_concurrent_models.py
     - name: Test with pytest (test_producer_consumer.py)
       working-directory: tests
       run: |
-        pytest test_producer_consumer.py --junitxml=junit/test-producer-consumer-results.xml
+        pytest test_producer_consumer.py
     - name: Test with pytest (test_filter.py)
       working-directory: tests
       run: |
-        pytest test_filter.py --junitxml=junit/test-filter-results.xml
+        pytest test_filter.py
     - name: Test with pytest (test_application.py)
       working-directory: tests
       run: |
-        pytest test_application.py --junitxml=junit/test-filter-results.xml
+        pytest test_application.py
     - name: Debug after Tests
       run: |
         mv logfile.log TestOutputs
         ls
-    - name: Upload pytest test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: pytest-results-${{ matrix.python-version }}
-        path: junit/test-results-${{ matrix.python-version }}.xml
-    # Upload the specified folder as an artifact
     - name: Upload specified folder as artifact
       uses: actions/upload-artifact@v3
       with:
