@@ -26,7 +26,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Debug
+    - name: Debug before Tests
       run: |
         ls
         sudo apt-get install rar unrar
@@ -48,6 +48,9 @@ jobs:
       working-directory: tests
       run: |
         pytest test_filter.py --junitxml=junit/test-filter-results.xml
+    - name: Debug after Tests
+      run: |
+        ls
     - name: Upload pytest test results
       uses: actions/upload-artifact@v3
       with:
