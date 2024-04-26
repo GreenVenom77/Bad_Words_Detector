@@ -21,7 +21,6 @@ def generate_test_data():
     # Check if the output directory exists, create it if not
     output_dir = os.path.dirname(output_csv_path)
     if not os.path.exists(output_dir):
-        os.remove(output_dir)
         os.makedirs(output_dir)
 
     # Function to generate a row with or without bad words
