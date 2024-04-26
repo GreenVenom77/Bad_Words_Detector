@@ -48,9 +48,12 @@ jobs:
       working-directory: tests
       run: |
         pytest test_filter.py --junitxml=junit/test-filter-results.xml
+    - name: Test with pytest (test_application.py)
+      working-directory: tests
+      run: |
+        pytest test_application.py --junitxml=junit/test-filter-results.xml
     - name: Debug after Tests
       run: |
-        ls
         mv logfile.log TestOutputs
         ls
     - name: Upload pytest test results

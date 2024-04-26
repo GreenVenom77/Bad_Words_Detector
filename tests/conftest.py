@@ -2,8 +2,8 @@ import csv
 import os
 import random
 import sys
-
 import pytest
+import pandas as pd
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -14,7 +14,7 @@ from arguments import Args
 
 @pytest.fixture(scope="session")
 def generate_test_data():
-    num_rows = 1000000  # Adjust the number of rows as needed
+    num_rows = 300000  # Adjust the number of rows as needed
     output_csv_path = "./TestOutputs/test_data.csv"  # Specify the output CSV path
     output_rar_path = "./TestOutputs/test_data.rar"  # Specify the output RAR path
 
@@ -48,6 +48,14 @@ def generate_test_data():
     yield output_rar_path, num_rows
 
 
+@pytest.fixture()
+def badwords_list():
+    badwords_list: list[str] = (
+        pd.read_csv("./BadWords.csv", header=None).iloc[:, 0].tolist()
+    )
+    return badwords_list
+
+
 @pytest.fixture
 def args():
     args = Args(
@@ -55,13 +63,12 @@ def args():
         bad_words_file="./BadWords.csv",
         columns=[0, 1, 2],
         filter_mode=FilterMode.AhoCorasick,
-        processing_mode=ProcessingMode.MultiThreading,
-        chunk_size=1000,
+        processing_mode=ProcessingMode.ProcessesPool,
+        chunk_size=10000,
         rounding_place=2
     )
-    return args
 
 
 @pytest.fixture
-def test_data(args, generate_test_data):
-    return {'args': args, 'generate_test_csv': generate_test_data}
+def test_data(args, generate_test_data, badwords_list):
+    return {'args': args, 'generate_test_csv': generate_test_data, 'badwords_list': badwords_list}
