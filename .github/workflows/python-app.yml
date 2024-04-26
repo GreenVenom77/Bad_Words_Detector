@@ -51,6 +51,8 @@ jobs:
     - name: Debug after Tests
       run: |
         ls
+        mv logfile.log TestOutputs
+        ls
     - name: Upload pytest test results
       uses: actions/upload-artifact@v3
       with:
@@ -61,4 +63,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: TestOutPuts Folder
-        path: ./TestOutputs
+        path: ./TestOutputs/
