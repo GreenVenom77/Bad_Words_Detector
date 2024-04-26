@@ -34,7 +34,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest (test_setup.py)
       run: |
-        pytest ./Testing_Only/test_setup.py --junitxml=junit/test-setup-results.xml
+        -m pytest ./Testing_Only/test_setup.py --junitxml=junit/test-setup-results.xml
     - name: Test with pytest (test_concurrent_model.py)
       run: |
         pytest ./Testing_Only/test_concurrent_model.py --junitxml=junit/test-concurrent-model-results.xml
