@@ -26,6 +26,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Debug
+      run: ls
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -33,17 +35,21 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest (test_setup.py)
+      working-directory: Testing_Only
       run: |
-        -m pytest ./Testing_Only/test_setup.py --junitxml=junit/test-setup-results.xml
+        pytest test_setup.py --junitxml=junit/test-setup-results.xml
     - name: Test with pytest (test_concurrent_model.py)
+      working-directory: Testing_Only
       run: |
-        pytest ./Testing_Only/test_concurrent_model.py --junitxml=junit/test-concurrent-model-results.xml
+        pytest test_concurrent_model.py --junitxml=junit/test-concurrent-model-results.xml
     - name: Test with pytest (test_producer_consumer.py)
+      working-directory: Testing_Only
       run: |
-        pytest ./Testing_Only/test_producer_consumer.py --junitxml=junit/test-producer-consumer-results.xml
+        pytest test_producer_consumer.py --junitxml=junit/test-producer-consumer-results.xml
     - name: Test with pytest (test_filter.py)
+      working-directory: Testing_Only
       run: |
-        pytest ./Testing_Only/test_filter.py --junitxml=junit/test-filter-results.xml
+        pytest test_filter.py --junitxml=junit/test-filter-results.xml
     - name: Upload pytest test results
       uses: actions/upload-artifact@v3
       with:
