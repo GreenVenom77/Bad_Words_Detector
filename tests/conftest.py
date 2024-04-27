@@ -14,7 +14,7 @@ from arguments import Args
 
 @pytest.fixture(scope="session")
 def generate_test_data():
-    num_rows = 2000000  # Adjust the number of rows as needed
+    num_rows = 1300000  # Adjust the number of rows as needed
     output_csv_path = "./TestOutputs/test_data.csv"  # Specify the output CSV path
     output_rar_path = "./TestOutputs/test_data.rar"  # Specify the output RAR path
 
