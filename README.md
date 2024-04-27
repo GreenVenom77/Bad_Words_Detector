@@ -33,8 +33,6 @@ rarfile
 
 openpyxl
 
-faker
-
 pytest
 ```
 
