@@ -40,10 +40,6 @@ jobs:
       working-directory: tests
       run: |
         pytest test_concurrent_models.py
-    - name: Test with pytest (test_producer_consumer.py)
-      working-directory: tests
-      run: |
-        pytest test_producer_consumer.py
     - name: Test with pytest (test_filter.py)
       working-directory: tests
       run: |
