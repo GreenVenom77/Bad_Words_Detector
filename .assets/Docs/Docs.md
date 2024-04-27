@@ -13,7 +13,7 @@ A very big .csv file is compressed into .rar format, this .csv file contains bad
 - Design: Kareem Essam, Abd El Rahman Mohamed Mohamed
 - Support: Ahmed Gharieb
 ## Scope
--Must Have: Python, pandas, pyahocorasick, rarfile, openpyxl, faker
+-Must Have: Python, pandas, pyahocorasick, rarfile, openpyxl
 ## Timeline
 ### Initial commit
 
