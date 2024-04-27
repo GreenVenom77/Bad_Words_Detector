@@ -45,7 +45,7 @@ class ProcessesPoolModel(ConcurrentModel):
 
             pool.close()
             pool.join()
-
+            chunks_queue.get()
             return merge_chunks_info(reading_info_queue, filtering_info_queue)
 
 
@@ -74,6 +74,7 @@ class MultiProcessingModel(ConcurrentModel):
             consumer_process.start()
             producer_process.join()
             consumer_process.join()
+            chunks_queue.get()
             return merge_chunks_info(reading_info_queue, filtering_info_queue)
 
 
@@ -102,4 +103,5 @@ class MultiThreadingModel(ConcurrentModel):
         consumer_thread.start()
         producer_thread.join()
         consumer_thread.join()
+        chunks_queue.get()
         return merge_chunks_info(reading_info_queue, filtering_info_queue)

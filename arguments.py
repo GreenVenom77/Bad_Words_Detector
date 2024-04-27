@@ -82,7 +82,7 @@ def parse_args() -> Args:
 
     parser = ArgumentParser(
         prog="Bad Words Filter App",
-        description="filter the specified columns from a big compressed csv file the bad words rows.",
+        description="filter bad words rows from a big compressed csv file.",
     )
     add_arguments(parser)
     args = parser.parse_args()
