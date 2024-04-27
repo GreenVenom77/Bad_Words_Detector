@@ -31,6 +31,7 @@ class ProcessesPoolModel(ConcurrentModel):
         consumer_process1.join()
         consumer_process2.join()
         consumer_process3.join()
+        consumer.chunks_queue.get()
         return merge_chunks_info(
             producer.reading_info_queue, consumer.filtering_info_queue
         )
@@ -45,6 +46,7 @@ class MultiProcessingModel(ConcurrentModel):
         consumer_process.start()
         producer_process.join()
         consumer_process.join()
+        consumer.chunks_queue.get()
         return merge_chunks_info(
             producer.reading_info_queue, consumer.filtering_info_queue
         )
@@ -59,6 +61,7 @@ class MultiThreadingModel(ConcurrentModel):
         consumer_thread.start()
         producer_thread.join()
         consumer_thread.join()
+        consumer.chunks_queue.get()
         return merge_chunks_info(
             producer.reading_info_queue, consumer.filtering_info_queue
         )
