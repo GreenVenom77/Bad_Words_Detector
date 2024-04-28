@@ -1,16 +1,12 @@
-from time import time
 import pandas as pd
 from Enums import FilterMode, ProcessingMode
 from concurrent_model import *
 from producer import Producer
 from consumer import Consumer
-from queue import Queue
-import multiprocessing
 import logging
 from arguments import Args, parse_args
 from filter import *
 from statistics_writer import StatisticsWriter
-from chunks_processing_info import ChunkFilteringInfo
 
 
 logging.basicConfig(
