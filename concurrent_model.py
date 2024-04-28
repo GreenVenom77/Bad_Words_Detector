@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 import multiprocessing
 import multiprocessing.process
 from queue import Queue
-
 from pandas import DataFrame
 from consumer import Consumer
 from threading import Thread

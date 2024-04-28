@@ -1,6 +1,5 @@
 import re
 from abc import ABC, abstractmethod
-
 import ahocorasick
 from pandas import DataFrame
 
