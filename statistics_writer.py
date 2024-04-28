@@ -1,10 +1,9 @@
 import logging
 import os
 import threading
-
 import openpyxl
 from pandas import DataFrame, concat
-
+from pandas import DataFrame, concat
 from arguments import Args
 from chunks_processing_info import ChunkInfo, elapsed
 

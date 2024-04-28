@@ -7,38 +7,22 @@ from pandas import DataFrame
 
 # interface (abstract class)
 class TextFilter(ABC):
-    @abstractmethod
-    def __init__(self, bad_words: list[str]):
-        pass
 
     @abstractmethod
-    def prepare(self) -> None:
+    def prepare(self, bad_words: list[str]) -> None:
         """you must call once before you calling filter function"""
         pass
 
     @abstractmethod
-    def filter(self, chunk: DataFrame) -> tuple[int, int]:
-        """Filters Healthy and UnHealthy Rows count"""
+    def is_unhealthy(self, field: str) -> bool:
         pass
 
-
-class AhoCorasickFilter(TextFilter):
-    def __init__(self, bad_words: list[str]):
-        self.bad_words = bad_words
-
-    def prepare(self) -> None:
-        # making the trie and aho search
-        self.automaton = ahocorasick.Automaton()
-        for word in map(lambda x: x.lower(), self.bad_words):
-            self.automaton.add_word(word, word)
-        self.automaton.make_automaton()
-
     def filter(self, chunk: DataFrame) -> tuple[int, int]:
+        """Filters Healthy and UnHealthy Rows count"""
         health_filter = chunk.apply(
             lambda row: not any(
                 map(
-                    lambda field: len(list(self.automaton.iter(str(field).lower())))
-                    != 0,
+                    lambda field: self.is_unhealthy(str(field)),
                     row,
                 )
             ),
@@ -48,29 +32,24 @@ class AhoCorasickFilter(TextFilter):
         unhealthy_rows_number = len(health_filter) - healthy_rows_number
         return healthy_rows_number, unhealthy_rows_number
 
-    def __repr__(self) -> str:
-        return "AhoCorasick"
+
+class AhoCorasickFilter(TextFilter):
+    def prepare(self, bad_words: list[str]) -> None:
+        self.automaton = ahocorasick.Automaton()
+        for word in map(lambda x: x.lower(), bad_words):
+            self.automaton.add_word(word, word)
+        self.automaton.make_automaton()
+
+    def is_unhealthy(self, field: str) -> bool:
+        return len(list(self.automaton.iter(field.lower()))) != 0
 
 
 class RegexFilter(TextFilter):
-    def __init__(self, bad_words: list[str]):
-        self.bad_words = bad_words
 
-    def prepare(self) -> None:
+    def prepare(self, bad_words: list[str]) -> None:
         self.pattern = re.compile(
-            "|".join(map(re.escape, self.bad_words)), flags=re.IGNORECASE
+            "|".join(map(re.escape, bad_words)), flags=re.IGNORECASE
         )
 
-    def filter(self, chunk: DataFrame) -> tuple[int, int]:
-        health_filter = chunk.apply(
-            lambda row: not any(
-                map(lambda field: self.pattern.search(str(field)), row)
-            ),
-            axis=1,
-        )
-        healthy_rows_number = sum(health_filter)
-        unhealthy_rows_number = len(health_filter) - healthy_rows_number
-        return healthy_rows_number, unhealthy_rows_number
-
-    def __repr__(self) -> str:
-        return "Regex"
+    def is_unhealthy(self, field: str) -> bool:
+        return self.pattern.search(field) is not None

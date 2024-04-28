@@ -1,7 +1,7 @@
 {
   "data_file": "./46,080,374Rows_365Columns.rar",
   "bad_words_file": "./BadWords.csv",
-  "chunk_size": 10000,
+  "chunk_size": 150000,
   "filter_mode": "AhoCorasick",
   "processing_mode": "ProcessesPool",
   "columns": [
