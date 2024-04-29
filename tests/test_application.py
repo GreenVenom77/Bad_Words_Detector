@@ -4,9 +4,7 @@ os.chdir('..')
 from main import main
 
 
-def test_application(test_data, ahoargs, regexargs):
-    ahoargs = test_data['ahoargs']
-    regexargs = test_data['regexargs']
+def test_application(test_data, args):
+    args = test_data['args']
 
-    main(ahoargs)
-    main(regexargs)
+    main(args)

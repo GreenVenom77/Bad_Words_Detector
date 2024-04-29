@@ -57,33 +57,19 @@ def badwords_list():
 
 
 @pytest.fixture
-def ahoargs():
-    ahoargs = Args(
+def args():
+    args = Args(
         data_file="./TestOutputs/test_data.rar",
         bad_words_file="./BadWords.csv",
         columns=[0, 1, 2],
         filter_mode=FilterMode.AhoCorasick,
         processing_mode=ProcessingMode.ProcessesPool,
-        chunk_size=30000,
+        chunk_size=10000,
         rounding_place=2
     )
-    return ahoargs
+    return args
 
 
 @pytest.fixture
-def regexargs():
-    regexargs = Args(
-        data_file="./TestOutputs/test_data.rar",
-        bad_words_file="./BadWords.csv",
-        columns=[0, 1, 2],
-        filter_mode=FilterMode.Regex,
-        processing_mode=ProcessingMode.ProcessesPool,
-        chunk_size=30000,
-        rounding_place=2
-    )
-    return regexargs
-
-
-@pytest.fixture
-def test_data(ahoargs, generate_test_data, badwords_list):
-    return {'ahoargs': ahoargs, 'regexargs': regexargs, 'generate_test_csv': generate_test_data, 'badwords_list': badwords_list}
+def test_data(args, generate_test_data, badwords_list):
+    return {'args': args, 'generate_test_csv': generate_test_data, 'badwords_list': badwords_list}

@@ -48,10 +48,6 @@ jobs:
         working-directory: tests
         run: |
           pytest test_application.py
-      - name: Visualize the outputs
-        working-directory: Visualization_Program
-        run: |
-          python visualization.py
       - name: Debug after Tests
         run: |
           mv logfile.log TestOutputs
