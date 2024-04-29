@@ -51,6 +51,7 @@ jobs:
       - name: Debug after Tests
         run: |
           mv logfile.log TestOutputs
+          mv output TestOutputs
           ls
       - name: Upload specified folder as artifact
         uses: actions/upload-artifact@v3
