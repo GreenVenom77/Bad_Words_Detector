@@ -64,7 +64,7 @@ def ahoargs():
         columns=[0, 1, 2],
         filter_mode=FilterMode.AhoCorasick,
         processing_mode=ProcessingMode.ProcessesPool,
-        chunk_size=10000,
+        chunk_size=30000,
         rounding_place=2
     )
     return ahoargs
@@ -76,9 +76,9 @@ def regexargs():
         data_file="./TestOutputs/test_data.rar",
         bad_words_file="./BadWords.csv",
         columns=[0, 1, 2],
-        filter_mode=FilterMode.AhoCorasick,
+        filter_mode=FilterMode.Regex,
         processing_mode=ProcessingMode.ProcessesPool,
-        chunk_size=10000,
+        chunk_size=30000,
         rounding_place=2
     )
     return regexargs
