@@ -69,6 +69,7 @@ def args():
     )
     return args
 
+
 @pytest.fixture
 def test_data(args, generate_test_data, badwords_list):
     return {'args': args, 'generate_test_csv': generate_test_data, 'badwords_list': badwords_list}
