@@ -1,9 +1,12 @@
+import os
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from openpyxl import load_workbook
 from openpyxl.drawing.image import Image
 from io import BytesIO
+
+os.chdir('..')
 
 class ExcelPlotter:
     def __init__(self, excel_file_path, sheet1_name, sheet2_name):
@@ -83,7 +86,7 @@ class ExcelPlotter:
     
 
 # Usage
-excel_plotter = ExcelPlotter('StatisticalSummary_CS342Spring2024.xlsx', 'AhoCorasick', 'Regex')
+excel_plotter = ExcelPlotter('output/StatisticalSummary_CS342Spring2024.xlsx', 'AhoCorasick', 'Regex')
 excel_plotter.read_excel_data()
 excel_plotter.plot_and_embed()
 excel_plotter.plot_ahocorasick_only()
