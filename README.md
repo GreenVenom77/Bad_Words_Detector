@@ -1,6 +1,7 @@
 
 ## Badges
 
+
 ![GitHub Repo stars](https://img.shields.io/github/stars/GreenVenom77/Bad_Words_Detector)
 ![GitHub forks](https://img.shields.io/github/forks/GreenVenom77/Bad_Words_Detector)
 ![GitHub watchers](https://img.shields.io/github/watchers/GreenVenom77/Bad_Words_Detector)
