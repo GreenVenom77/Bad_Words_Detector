@@ -1,13 +1,13 @@
+<h1 align="center">Bad Words Detector</h1>
 
-## Badges
-
+<div align="center">
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/GreenVenom77/Bad_Words_Detector)
 ![GitHub forks](https://img.shields.io/github/forks/GreenVenom77/Bad_Words_Detector)
 ![GitHub watchers](https://img.shields.io/github/watchers/GreenVenom77/Bad_Words_Detector)
 ![GitHub last commit](https://img.shields.io/github/last-commit/GreenVenom77/Bad_Words_Detector)
 ![Github Created At](https://img.shields.io/github/created-at/GreenVenom77/Bad_Words_Detector)
-# Bad Words Detector
+</div>
 
 A project given to FCI 2021-2025 Suez University Class to test their capabilities in the subject.
 
@@ -39,14 +39,13 @@ pytest
 
 ## How To Use
 
-
 ### First method
 
-#### 1- Clone the repo ( using HTTPS or SSH ) and run it through any IDE you like.
+#### 1- Clone the repo ( using HTTPS or SSH ) and run it through any IDE you like
 
-#### 2- Navigate to the args.json file and put your .csv file in .rar compression format and pass the path into the data_file section.
+#### 2- Navigate to the args.json file and put your .csv file in .rar compression format and pass the path into the data_file section
 
-#### 3- Navigate then to the main.py file and run the file.
+#### 3- Navigate then to the main.py file and run the file
 
 ### Screenshots
 
@@ -55,26 +54,31 @@ pytest
 ![Main File](.assets/Main.png)
 
 ![Running](.assets/Run.png)
+
 ### Second method
 
-#### 1- Clone the repo ( using HTTPS or SSH ) and navigate to the project's folder with your terminal:
+#### 1- Clone the repo ( using HTTPS or SSH ) and navigate to the project's folder with your terminal
+
 ```sh
 git clone https://github.com/GreenVenom77/Bad_Words_Detector.git
 
 cd Bad_Words_Detector
 ```
 
-#### 2- Run the help command to see the arguments:
+#### 2- Run the help command to see the arguments
+
 ```sh
 python main.py -h
 ```
 
-#### 3- Run the program using the command below:
+#### 3- Run the program using the command below
+
 ```sh
 python main.py -d './46,080,374Rows_365Columns.rar' -b './BadWords.csv' -s 150000 -f 'AhoCorasick' -p 'ProcessesPool' -c '1,2,3'
 ```
 
 ### Help menu
+
 ```sh
 usage: Bad Words Filter App [-h] -d DATA_FILE -b BAD_WORDS_FILE [-s CHUNK_SIZE] [-f {Regex,AhoCorasick}]
                             [-p {MultiThreading,MultiProcessing,ProcessesPool}] [-c COLUMNS]
@@ -98,4 +102,5 @@ options:
 ```
 
 # Community
+
 Any contribution is very welcomed even if it's a small one.
