@@ -10,7 +10,8 @@
 </div>
 
 <div align="center">
-![Alt](https://repobeats.axiom.co/api/embed/06548b9abd015ac3db9f0b5dc8656d425fe5672d.svg "Repobeats analytics image")
+  
+  ![Alt](https://repobeats.axiom.co/api/embed/06548b9abd015ac3db9f0b5dc8656d425fe5672d.svg "Repobeats analytics image")
 </div>
 
 A project given to FCI 2021-2025 Suez University Class to test their capabilities in the subject.
