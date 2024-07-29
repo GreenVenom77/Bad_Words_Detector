@@ -9,6 +9,8 @@
 ![Github Created At](https://img.shields.io/github/created-at/GreenVenom77/Bad_Words_Detector?color=1a73e8)
 </div>
 
+![Alt](https://repobeats.axiom.co/api/embed/06548b9abd015ac3db9f0b5dc8656d425fe5672d.svg "Repobeats analytics image")
+
 A project given to FCI 2021-2025 Suez University Class to test their capabilities in the subject.
 
 Subject: CS342 Automata and Language Theory
