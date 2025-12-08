@@ -13,15 +13,15 @@ class TextFilter(ABC):
         pass
 
     @abstractmethod
-    def is_unhealthy(self, field: str) -> bool:
+    def is_healthy(self, field: str) -> bool:
         pass
 
     def filter(self, chunk: DataFrame) -> tuple[int, int]:
         """Filters Healthy and UnHealthy Rows count"""
         health_filter = chunk.apply(
-            lambda row: not any(
+            lambda row: all(
                 map(
-                    lambda field: self.is_unhealthy(str(field)),
+                    lambda field: self.is_healthy(str(field)),
                     row,
                 )
             ),
@@ -39,8 +39,8 @@ class AhoCorasickFilter(TextFilter):
             self.automaton.add_word(word, word)
         self.automaton.make_automaton()
 
-    def is_unhealthy(self, field: str) -> bool:
-        return len(list(self.automaton.iter(field.lower()))) != 0
+    def is_healthy(self, field: str) -> bool:
+        return len(list(self.automaton.iter(field.lower()))) == 0
 
 
 class RegexFilter(TextFilter):
@@ -50,5 +50,5 @@ class RegexFilter(TextFilter):
             "|".join(map(re.escape, bad_words)), flags=re.IGNORECASE
         )
 
-    def is_unhealthy(self, field: str) -> bool:
-        return self.pattern.search(field) is not None
+    def is_healthy(self, field: str) -> bool:
+        return self.pattern.search(field) is None
